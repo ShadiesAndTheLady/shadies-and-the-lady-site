@@ -1,0 +1,46 @@
+/*
+  File purpose: Visual styling for the full website.
+  We will progressively add colors, layout, typography, and responsiveness.
+*/
+
+:root {
+  --color-bg: #000000;
+  --color-primary: #f2c49b; /* Shady Beige */
+  --color-accent: #cf2b21;  /* Lady Red */
+  --color-text: #f5f5f5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+nav a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+section {
+  min-height: 60vh;
+  padding: 4rem 1.25rem;
+}
