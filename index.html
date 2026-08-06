@@ -1,44 +1,281 @@
 <!DOCTYPE html>
 <!--
-  File purpose: Main one-page website structure for Shadies & The Lady.
-  This file contains all content sections and links to CSS/JS.
+  File purpose: Main one-page website for Shadies & The Lady.
+  Contains all content sections, semantic structure, and links to CSS/JS.
 -->
 <html lang="en">
 <head>
+  <!-- Basic page setup -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Shadies & The Lady - Belgian pop/rock cover band for weddings, festivals, pubs, private and corporate events." />
-  <title>Shadies & The Lady | Pop/Rock Cover Band</title>
+
+  <!-- SEO basics -->
+  <meta
+    name="description"
+    content="Shadies & The Lady is a Belgian pop/rock cover band from Limburg for weddings, festivals, private parties, pubs, and corporate events."
+  />
+  <meta
+    name="keywords"
+    content="Shadies & The Lady, cover band, pop rock, Limburg, Belgium, wedding band, festival band, live music"
+  />
+
+  <title>Shadies & The Lady | Belgian Pop/Rock Cover Band</title>
+
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#members">Members</a>
-      <a href="#repertoire">Repertoire</a>
-      <a href="#gigs">Gigs</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#videos">Videos</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <!-- Site Header + Navigation -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a class="brand" href="#home" aria-label="Go to homepage section">
+        Shadies & The Lady
+      </a>
+
+      <button class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#members">Members</a>
+        <a href="#repertoire">Repertoire</a>
+        <a href="#gigs">Gigs</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#videos">Videos</a>
+        <a href="#contact">Contact</a>
+        <a class="btn btn-nav" href="#contact">Book Us</a>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <section id="home">
-      <h1>Shadies & The Lady</h1>
-      <p>Energetic pop/rock covers from Limburg, Belgium.</p>
+    <!-- Home / Hero -->
+    <section id="home" class="section hero">
+      <div class="container hero-content">
+        <p class="eyebrow">Belgian Pop/Rock Cover Band</p>
+        <h1>Shadies & The Lady</h1>
+        <p class="lead">
+          Energetic live covers for weddings, festivals, pubs, private parties,
+          and corporate events.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contact">Book the Band</a>
+          <a class="btn btn-secondary" href="#gigs">See Upcoming Gigs</a>
+        </div>
+      </div>
     </section>
 
-    <section id="about"><h2>About the Band</h2></section>
-    <section id="members"><h2>Band Members</h2></section>
-    <section id="repertoire"><h2>Repertoire</h2></section>
-    <section id="gigs"><h2>Upcoming Gigs</h2></section>
-    <section id="gallery"><h2>Gallery</h2></section>
-    <section id="videos"><h2>Videos</h2></section>
-    <section id="contact"><h2>Contact</h2></section>
+    <!-- About -->
+    <section id="about" class="section reveal">
+      <div class="container">
+        <h2>About the Band</h2>
+        <p>
+          We are an all-round pop/rock cover band from Limburg, Belgium.
+        </p>
+        <p>
+          We all share a big passion for music, both old and new, and love to make
+          people happy by playing their favorite songs.
+        </p>
+        <p>
+          Our repertoire spans several decades, combining timeless classics with
+          modern hits. Whether it's a festival, wedding, private party, pub, or
+          corporate event, we enjoy creating an energetic atmosphere that gets
+          people singing and dancing.
+        </p>
+      </div>
+    </section>
+
+    <!-- Band Members -->
+    <section id="members" class="section reveal">
+      <div class="container">
+        <h2>Band Members</h2>
+        <div class="members-grid">
+          <article class="member-card">
+            <h3>Diana Breat</h3>
+            <p>Singer</p>
+          </article>
+          <article class="member-card">
+            <h3>Matthew Coppens</h3>
+            <p>Guitar</p>
+          </article>
+          <article class="member-card">
+            <h3>Bart Vangerven</h3>
+            <p>Guitar</p>
+          </article>
+          <article class="member-card">
+            <h3>Dirk Geens</h3>
+            <p>Bass</p>
+          </article>
+          <article class="member-card">
+            <h3>Philippe Pauwels</h3>
+            <p>Drums</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Repertoire -->
+    <section id="repertoire" class="section reveal">
+      <div class="container">
+        <h2>Repertoire</h2>
+        <p class="section-intro">
+          We perform songs by artists including:
+        </p>
+        <ul class="artist-list" aria-label="Artists in repertoire">
+          <li>Roxette</li>
+          <li>The Outfield</li>
+          <li>Meredith Brooks</li>
+          <li>The Cranberries</li>
+          <li>Skunk Anansie</li>
+          <li>Alannah Myles</li>
+          <li>Bette Midler</li>
+          <li>Dolly Parton</li>
+          <li>Snow Patrol</li>
+          <li>Benson Boone</li>
+          <li>Radiohead</li>
+          <li>The Calling</li>
+          <li>Blondie</li>
+          <li>Anouk</li>
+          <li>The Beaches</li>
+          <li>Joan Jett</li>
+          <li>Queen</li>
+          <li>Lenny Kravitz</li>
+          <li>Nirvana</li>
+          <li>The Beatles</li>
+          <li>Bryan Adams</li>
+          <li>Tina Turner</li>
+          <li>Journey</li>
+          <li>Kings of Leon</li>
+          <li>The Killers</li>
+          <li>David Gilmour</li>
+          <li>Guns N' Roses</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Upcoming Gigs -->
+    <section id="gigs" class="section reveal">
+      <div class="container">
+        <h2>Upcoming Gigs</h2>
+        <div class="gigs-timeline">
+          <article class="gig-card">
+            <p class="gig-date">29 August</p>
+            <h3>2 Jaar De Stip</h3>
+            <p>Stevoort</p>
+          </article>
+          <article class="gig-card">
+            <p class="gig-date">19 September</p>
+            <h3>Pilspop</h3>
+            <p>Paal</p>
+          </article>
+          <article class="gig-card">
+            <p class="gig-date">20 September</p>
+            <h3>Live Show</h3>
+            <p>Geel</p>
+          </article>
+          <article class="gig-card">
+            <p class="gig-date">3 October</p>
+            <h3>Live Show</h3>
+            <p>Paal</p>
+          </article>
+          <article class="gig-card">
+            <p class="gig-date">10 November</p>
+            <h3>Durango Sessions</h3>
+            <p>Paal</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="section reveal">
+      <div class="container">
+        <h2>Gallery</h2>
+        <p class="section-intro">
+          Live moments, crowd energy, and behind-the-scenes photos.
+        </p>
+
+        <!--
+          Replace placeholder blocks with images later.
+          Example:
+          <img src="assets/images/photo-01.jpg" alt="Band performing on stage" />
+        -->
+        <div class="gallery-grid">
+          <div class="gallery-placeholder">Photo Placeholder</div>
+          <div class="gallery-placeholder">Photo Placeholder</div>
+          <div class="gallery-placeholder">Photo Placeholder</div>
+          <div class="gallery-placeholder">Photo Placeholder</div>
+          <div class="gallery-placeholder">Photo Placeholder</div>
+          <div class="gallery-placeholder">Photo Placeholder</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Videos -->
+    <section id="videos" class="section reveal">
+      <div class="container">
+        <h2>Videos</h2>
+        <p class="section-intro">
+          Watch us live and feel the atmosphere.
+        </p>
+
+        <!--
+          Replace VIDEO_ID with your YouTube video IDs later.
+          Example src:
+          https://www.youtube.com/embed/VIDEO_ID
+        -->
+        <div class="video-grid">
+          <article class="video-card">
+            <div class="video-frame">
+              <iframe
+                src="https://www.youtube.com/embed/VIDEO_ID_1"
+                title="Shadies & The Lady performance video 1"
+                loading="lazy"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </article>
+          <article class="video-card">
+            <div class="video-frame">
+              <iframe
+                src="https://www.youtube.com/embed/VIDEO_ID_2"
+                title="Shadies & The Lady performance video 2"
+                loading="lazy"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section reveal">
+      <div class="container">
+        <h2>Contact</h2>
+        <p class="section-intro">
+          Ready to bring live energy to your event? Get in touch for bookings.
+        </p>
+
+        <div class="contact-card">
+          <p><strong>Email:</strong> your-email@example.com</p>
+          <p><strong>Phone:</strong> +32 XX XX XX XX</p>
+          <p><strong>Location:</strong> Limburg, Belgium</p>
+          <p><strong>Social:</strong> Facebook / Instagram / YouTube</p>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Shadies & The Lady. All rights reserved.</p>
+    </div>
+  </footer>
 
   <script src="js/script.js"></script>
 </body>
