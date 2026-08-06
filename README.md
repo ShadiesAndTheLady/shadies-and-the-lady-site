@@ -1,2 +1,2 @@
-# shadies-and-the-lady-site
-Official website for Shadies &amp; The Lady
+# Shadies & The Lady Website
+Coming soon
