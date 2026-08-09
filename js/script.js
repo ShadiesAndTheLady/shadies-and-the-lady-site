@@ -1,10 +1,11 @@
 /*
-  File purpose: Site interactions and language handling.
+  File purpose: Site interactions, language handling, and lightweight UI behavior.
   Includes:
   1) Mobile menu behavior
   2) Reveal animation
   3) EN/NL translations with Dutch default
-  4) Formspree contact form submission status handling
+  4) Gallery lightbox navigation
+  5) Copy-email and Formspree contact form handling
 */
 
 (function () {
