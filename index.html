@@ -1,71 +1,47 @@
 <!DOCTYPE html>
 <!--
   File purpose: Main one-page website for Shadies & The Lady.
-  Contains all content sections, semantic structure, and links to CSS/JS.
+  Includes bilingual content hooks, booking info, and contact form integration.
 -->
 <html lang="nl" data-current-lang="nl">
 <head>
-  <!-- Basic page setup -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- SEO basics -->
+  <!-- SEO -->
   <meta
     name="description"
-    content="Shadies & The Lady is een all-round Belgische pop/rock coverband uit Limburg. Wij spelen op trouwfeesten, festivals, privéfeesten, cafés en bedrijfsevents."
-    data-i18n="meta.description"
+    content="Shadies & The Lady is een all-round Belgische pop/rock coverband uit Limburg. Wij spelen op trouwfeesten, festivals, privefeesten, cafes en bedrijfsevents."
     data-i18n-attr="content"
-    data-i18n-en="Shadies & The Lady is an all-round Belgian pop/rock cover band from Limburg. We play at weddings, festivals, private parties, pubs, and corporate events."
-    data-i18n-nl="Shadies & The Lady is een all-round Belgische pop/rock coverband uit Limburg. Wij spelen op trouwfeesten, festivals, privéfeesten, cafés en bedrijfsevents."
+    data-i18n-key="meta.description"
   />
   <meta
     name="keywords"
-    content="Shadies & The Lady, coverband, pop covers, rock covers, Limburg, België, trouwband, festivalband, live muziek"
+    content="Shadies & The Lady, coverband, pop covers, rock covers, Limburg, Belgie, trouwband, festivalband, live muziek"
   />
-
-  <!-- Social sharing preview -->
   <meta
     property="og:title"
     content="Shadies & The Lady | Belgische Pop/Rock Coverband"
-    data-i18n="meta.ogTitle"
     data-i18n-attr="content"
-    data-i18n-en="Shadies & The Lady | Belgian Pop/Rock Cover Band"
-    data-i18n-nl="Shadies & The Lady | Belgische Pop/Rock Coverband"
+    data-i18n-key="meta.ogTitle"
   />
   <meta
     property="og:description"
-    content="Energetische live covers voor trouwfeesten, festivals, privéfeesten, cafés en bedrijfsevents."
-    data-i18n="meta.ogDescription"
+    content="Energetische live covers voor trouwfeesten, festivals, privefeesten, cafes en bedrijfsevents."
     data-i18n-attr="content"
-    data-i18n-en="Energetic live covers for weddings, festivals, private parties, pubs, and corporate events."
-    data-i18n-nl="Energetische live covers voor trouwfeesten, festivals, privéfeesten, cafés en bedrijfsevents."
+    data-i18n-key="meta.ogDescription"
   />
   <meta property="og:type" content="website" />
 
-  <title
-    data-i18n="meta.title"
-    data-i18n-en="Shadies & The Lady | Belgian Pop/Rock Cover Band"
-    data-i18n-nl="Shadies & The Lady | Belgische Pop/Rock Coverband"
-  >
-    Shadies & The Lady | Belgische Pop/Rock Coverband
-  </title>
+  <title data-i18n-key="meta.title">Shadies & The Lady | Belgische Pop/Rock Coverband</title>
 
-  <!-- Stylesheet -->
   <link rel="stylesheet" href="css/style.css" />
-
-  <!-- Browser tab icon -->
-  <link
-    rel="icon"
-    type="image/png"
-    sizes="32x32"
-    href="assets/images/Shadies-and-the-lady_favicon.png"
-  />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/Shadies-and-the-lady_favicon.png" />
 </head>
 <body>
-  <!-- Site Header + Navigation -->
   <header class="site-header">
     <div class="container nav-container">
-      <a class="brand" href="#home" aria-label="Ga naar home sectie">
+      <a class="brand" href="#home" aria-label="Ga naar home sectie" data-i18n-aria-label-key="brand.homeAria">
         <img
           class="brand-logo"
           src="assets/images/Shadies-and-the-lady_logo.png"
@@ -73,40 +49,32 @@
           width="400"
           height="400"
         />
-        <span
-          class="brand-text"
-          data-i18n="brand.name"
-          data-i18n-en="Shadies &amp; The Lady"
-          data-i18n-nl="Shadies &amp; The Lady"
-        >Shadies &amp; The Lady</span>
+        <span class="brand-text">Shadies &amp; The Lady</span>
       </a>
 
       <button
         class="nav-toggle"
         aria-label="Open navigatiemenu"
         aria-expanded="false"
-        data-i18n-aria-label="nav.toggle"
-        data-i18n-aria-label-en="Open navigation menu"
-        data-i18n-aria-label-nl="Open navigatiemenu"
+        data-i18n-aria-label-key="nav.toggleAria"
       >
         <span></span>
         <span></span>
         <span></span>
       </button>
 
-      <nav class="site-nav" aria-label="Hoofdnavigatie">
-        <a href="#home" data-i18n="nav.home" data-i18n-en="Home" data-i18n-nl="Home">Home</a>
-        <a href="#about" data-i18n="nav.about" data-i18n-en="About" data-i18n-nl="Over Ons">Over Ons</a>
-        <a href="#members" data-i18n="nav.members" data-i18n-en="Members" data-i18n-nl="Bandleden">Bandleden</a>
-        <a href="#repertoire" data-i18n="nav.repertoire" data-i18n-en="Repertoire" data-i18n-nl="Repertoire">Repertoire</a>
-        <a href="#gigs" data-i18n="nav.gigs" data-i18n-en="Gigs" data-i18n-nl="Optredens">Optredens</a>
-        <a href="#gallery" data-i18n="nav.gallery" data-i18n-en="Gallery" data-i18n-nl="Galerij">Galerij</a>
-        <a href="#videos" data-i18n="nav.videos" data-i18n-en="Videos" data-i18n-nl="Video's">Video's</a>
-        <a href="#contact" data-i18n="nav.contact" data-i18n-en="Contact" data-i18n-nl="Contact">Contact</a>
-        <a class="btn btn-nav" href="#contact" data-i18n="nav.book" data-i18n-en="Book Us" data-i18n-nl="Boek Ons">Boek Ons</a>
+      <nav class="site-nav" aria-label="Hoofdnavigatie" data-i18n-aria-label-key="nav.mainAria">
+        <a href="#home" data-i18n-key="nav.home">Home</a>
+        <a href="#band" data-i18n-key="nav.band">Band</a>
+        <a href="#repertoire" data-i18n-key="nav.repertoire">Repertoire</a>
+        <a href="#gigs-booking" data-i18n-key="nav.gigsBooking">Optredens &amp; Boeken</a>
+        <a href="#gallery" data-i18n-key="nav.gallery">Galerij</a>
+        <a href="#videos" data-i18n-key="nav.videos">Video's</a>
+        <a href="#contact" data-i18n-key="nav.contact">Contact</a>
+        <a class="btn btn-nav" href="#contact" data-i18n-key="nav.book">Boek Ons</a>
       </nav>
 
-      <div class="language-switcher" aria-label="Taalkeuze">
+      <div class="language-switcher" aria-label="Taalkeuze" data-i18n-aria-label-key="lang.aria">
         <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
         <button type="button" class="lang-btn is-active" data-lang="nl" aria-pressed="true">NL</button>
       </div>
@@ -116,73 +84,59 @@
   <main>
     <section id="home" class="section hero">
       <div class="container hero-content">
-        <p class="eyebrow" data-i18n="hero.eyebrow" data-i18n-en="Belgian Pop/Rock Cover Band" data-i18n-nl="Belgische Pop/Rock Coverband">Belgische Pop/Rock Coverband</p>
-        <h1 data-i18n="hero.title" data-i18n-en="Shadies &amp; The Lady" data-i18n-nl="Shadies &amp; The Lady">Shadies &amp; The Lady</h1>
-        <p
-          class="lead"
-          data-i18n="hero.lead"
-          data-i18n-en="Energetic live covers for weddings, festivals, pubs, private parties, and corporate events."
-          data-i18n-nl="Energetische live covers voor trouwfeesten, festivals, cafés, privéfeesten en bedrijfsevents."
-        >
-          Energetische live covers voor trouwfeesten, festivals, cafés, privéfeesten en bedrijfsevents.
+        <p class="eyebrow" data-i18n-key="hero.eyebrow">Belgische Pop/Rock Coverband</p>
+        <h1>Shadies &amp; The Lady</h1>
+        <p class="lead" data-i18n-key="hero.lead">
+          Energetische live covers voor trouwfeesten, festivals, cafes, privefeesten en bedrijfsevents.
         </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#contact" data-i18n="hero.ctaPrimary" data-i18n-en="Book the Band" data-i18n-nl="Boek de Band">Boek de Band</a>
-          <a class="btn btn-secondary" href="#gigs" data-i18n="hero.ctaSecondary" data-i18n-en="See Upcoming Gigs" data-i18n-nl="Bekijk Optredens">Bekijk Optredens</a>
+          <a class="btn btn-primary" href="#contact" data-i18n-key="hero.ctaPrimary">Boek de Band</a>
+          <a class="btn btn-secondary" href="#gigs-booking" data-i18n-key="hero.ctaSecondary">Bekijk Optredens</a>
         </div>
       </div>
     </section>
 
-    <section id="about" class="section reveal">
+    <section id="band" class="section reveal">
       <div class="container">
-        <h2 data-i18n="about.title" data-i18n-en="About the Band" data-i18n-nl="Over de Band">Over de Band</h2>
-        <p
-          data-i18n="about.p1"
-          data-i18n-en="We are an all-round pop/rock cover band from Limburg, Belgium."
-          data-i18n-nl="Wij zijn een all-round pop/rock coverband uit Limburg, België."
-        >
-          Wij zijn een all-round pop/rock coverband uit Limburg, België.
-        </p>
-        <p
-          data-i18n="about.p2"
-          data-i18n-en="We all share a big passion for music, both old and new, and love to make people happy by playing their favorite songs."
-          data-i18n-nl="We delen allemaal een grote passie voor muziek, zowel oud als nieuw, en we maken mensen graag blij met hun favoriete songs."
-        >
+        <h2 data-i18n-key="band.title">Over de Band</h2>
+        <p data-i18n-key="band.p1">Wij zijn een all-round pop/rock coverband uit Limburg, Belgie.</p>
+        <p data-i18n-key="band.p2">
           We delen allemaal een grote passie voor muziek, zowel oud als nieuw, en we maken mensen graag blij met hun favoriete songs.
         </p>
-        <p
-          data-i18n="about.p3"
-          data-i18n-en="Our repertoire spans several decades, combining timeless classics with modern hits. Whether it is a festival, wedding, private party, pub, or corporate event, we enjoy creating an energetic atmosphere that gets people singing and dancing."
-          data-i18n-nl="Ons repertoire gaat over meerdere decennia en combineert tijdloze klassiekers met moderne hits. Of het nu een festival, trouwfeest, privéfeest, café-optreden of bedrijfsevent is: wij zorgen voor een energieke sfeer die mensen laat zingen en dansen."
-        >
-          Ons repertoire gaat over meerdere decennia en combineert tijdloze klassiekers met moderne hits. Of het nu een festival, trouwfeest, privéfeest, café-optreden of bedrijfsevent is: wij zorgen voor een energieke sfeer die mensen laat zingen en dansen.
+        <p data-i18n-key="band.p3">
+          Ons repertoire gaat over meerdere decennia en combineert tijdloze klassiekers met moderne hits. Of het nu een festival, trouwfeest, privefeest, cafe-optreden of bedrijfsevent is: wij zorgen voor een energieke sfeer die mensen laat zingen en dansen.
         </p>
-      </div>
-    </section>
 
-    <section id="members" class="section reveal">
-      <div class="container">
-        <h2 data-i18n="members.title" data-i18n-en="Band Members" data-i18n-nl="Bandleden">Bandleden</h2>
+        <h3 class="subsection-title" data-i18n-key="band.membersTitle">Bandleden</h3>
+        <p class="section-intro" data-i18n-key="band.membersIntro">
+          Voeg later kleine headshots toe per bandlid door de placeholder te vervangen met een foto.
+        </p>
+
         <div class="members-grid">
           <article class="member-card">
-            <h3>Diana Breat</h3>
-            <p data-i18n="members.role.singer" data-i18n-en="Singer" data-i18n-nl="Zang">Zang</p>
+            <div class="member-photo" aria-hidden="true">Foto</div>
+            <h4>Diana Breat</h4>
+            <p data-i18n-key="role.singer">Zang</p>
           </article>
           <article class="member-card">
-            <h3>Matthew Coppens</h3>
-            <p data-i18n="members.role.guitar" data-i18n-en="Guitar" data-i18n-nl="Gitaar">Gitaar</p>
+            <div class="member-photo" aria-hidden="true">Foto</div>
+            <h4>Matthew Coppens</h4>
+            <p data-i18n-key="role.guitar">Gitaar</p>
           </article>
           <article class="member-card">
-            <h3>Bart Vangerven</h3>
-            <p data-i18n="members.role.guitar" data-i18n-en="Guitar" data-i18n-nl="Gitaar">Gitaar</p>
+            <div class="member-photo" aria-hidden="true">Foto</div>
+            <h4>Bart Vangerven</h4>
+            <p data-i18n-key="role.guitar">Gitaar</p>
           </article>
           <article class="member-card">
-            <h3>Dirk Geens</h3>
-            <p data-i18n="members.role.bass" data-i18n-en="Bass" data-i18n-nl="Bas">Bas</p>
+            <div class="member-photo" aria-hidden="true">Foto</div>
+            <h4>Dirk Geens</h4>
+            <p data-i18n-key="role.bass">Bas</p>
           </article>
           <article class="member-card">
-            <h3>Philippe Pauwels</h3>
-            <p data-i18n="members.role.drums" data-i18n-en="Drums" data-i18n-nl="Drums">Drums</p>
+            <div class="member-photo" aria-hidden="true">Foto</div>
+            <h4>Philippe Pauwels</h4>
+            <p data-i18n-key="role.drums">Drums</p>
           </article>
         </div>
       </div>
@@ -190,16 +144,9 @@
 
     <section id="repertoire" class="section reveal">
       <div class="container">
-        <h2 data-i18n="repertoire.title" data-i18n-en="Repertoire" data-i18n-nl="Repertoire">Repertoire</h2>
-        <p
-          class="section-intro"
-          data-i18n="repertoire.intro"
-          data-i18n-en="We perform songs by artists including:"
-          data-i18n-nl="Wij spelen songs van artiesten zoals:"
-        >
-          Wij spelen songs van artiesten zoals:
-        </p>
-        <ul class="artist-list" aria-label="Artiesten in repertoire">
+        <h2 data-i18n-key="repertoire.title">Repertoire</h2>
+        <p class="section-intro" data-i18n-key="repertoire.intro">Wij spelen songs van artiesten zoals:</p>
+        <ul class="artist-list" aria-label="Artiesten in repertoire" data-i18n-aria-label-key="repertoire.aria">
           <li>Roxette</li>
           <li>The Outfield</li>
           <li>Meredith Brooks</li>
@@ -231,74 +178,117 @@
       </div>
     </section>
 
-    <section id="gigs" class="section reveal">
+    <section id="gigs-booking" class="section reveal">
       <div class="container">
-        <h2 data-i18n="gigs.title" data-i18n-en="Upcoming Gigs" data-i18n-nl="Aankomende Optredens">Aankomende Optredens</h2>
+        <h2 data-i18n-key="gigsBooking.title">Optredens &amp; Boeken</h2>
+        <p class="section-intro" data-i18n-key="gigsBooking.intro">
+          Actieve kalender, duidelijke boekingsflow en praktische technische info op een plek.
+        </p>
+
+        <h3 class="subsection-title" data-i18n-key="gigs.title">Aankomende Optredens</h3>
         <div class="gigs-timeline">
           <article class="gig-card">
             <p class="gig-date">29 August</p>
-            <h3>2 Jaar De Stip</h3>
+            <h4>2 Jaar De Stip</h4>
             <p>Stevoort</p>
           </article>
           <article class="gig-card">
             <p class="gig-date">19 September</p>
-            <h3>Pilspop</h3>
+            <h4>Pilspop</h4>
             <p>Paal</p>
           </article>
           <article class="gig-card">
             <p class="gig-date">20 September</p>
-            <h3>Den Thijs Aant Water Live</h3>
+            <h4>Den Thijs Aant Water Live</h4>
             <p>Brasserie Den Thijs, Geel</p>
           </article>
           <article class="gig-card">
             <p class="gig-date">3 October</p>
-            <h3>Private Birthday Party</h3>
+            <h4>Private Birthday Party</h4>
             <p>Paal</p>
           </article>
           <article class="gig-card">
             <p class="gig-date">10 November</p>
-            <h3>Durango Sessions</h3>
+            <h4>Durango Sessions</h4>
             <p>Paal</p>
           </article>
+        </div>
+
+        <h3 class="subsection-title" data-i18n-key="booking.title">Boekingsinformatie</h3>
+        <div class="booking-grid">
+          <article class="booking-card">
+            <h4 data-i18n-key="booking.step1Title">1. Neem contact op</h4>
+            <p data-i18n-key="booking.step1Text">Stuur ons je datum, locatie, type event en verwachte timing.</p>
+          </article>
+          <article class="booking-card">
+            <h4 data-i18n-key="booking.step2Title">2. Ontvang voorstel</h4>
+            <p data-i18n-key="booking.step2Text">Wij bevestigen beschikbaarheid en bezorgen een voorstel op maat.</p>
+          </article>
+          <article class="booking-card">
+            <h4 data-i18n-key="booking.step3Title">3. Bevestiging</h4>
+            <p data-i18n-key="booking.step3Text">Na akkoord stemmen we opbouw, setduur en praktische details af.</p>
+          </article>
+          <article class="booking-card">
+            <h4 data-i18n-key="booking.priceTitle">Prijsrichtlijn</h4>
+            <p data-i18n-key="booking.priceText">Prijs hangt af van eventtype, duur, locatie en technische noden.</p>
+          </article>
+        </div>
+
+        <h3 class="subsection-title" data-i18n-key="tech.title">Technische Setup</h3>
+        <div class="tech-layout">
+          <article class="contact-card">
+            <h4 data-i18n-key="tech.provideTitle">Wat wij kunnen voorzien</h4>
+            <ul class="check-list">
+              <li data-i18n-key="tech.provide1">Volledig PA-systeem voor kleine tot middelgrote events</li>
+              <li data-i18n-key="tech.provide2">Podiumverlichting</li>
+              <li data-i18n-key="tech.provide3">Flexibele setlengtes en pauzeplanning</li>
+            </ul>
+          </article>
+          <article class="contact-card">
+            <h4 data-i18n-key="tech.needTitle">Wat wij nodig hebben</h4>
+            <ul class="check-list">
+              <li data-i18n-key="tech.need1">Stabiele stroomvoorziening dicht bij de speelplek</li>
+              <li data-i18n-key="tech.need2">Voldoende speelruimte</li>
+              <li data-i18n-key="tech.need3">Vlotte toegang voor opbouw en afbouw</li>
+            </ul>
+          </article>
+        </div>
+
+        <h3 class="subsection-title" data-i18n-key="request.title">Boekingsaanvraag Template</h3>
+        <div class="contact-card">
+          <ul class="check-list">
+            <li data-i18n-key="request.item1">Type event</li>
+            <li data-i18n-key="request.item2">Datum en locatie</li>
+            <li data-i18n-key="request.item3">Geschat aantal aanwezigen</li>
+            <li data-i18n-key="request.item4">Binnen of buiten</li>
+            <li data-i18n-key="request.item5">Gewenst speelmoment en duur</li>
+            <li data-i18n-key="request.item6">Moeten wij PA/licht voorzien?</li>
+            <li data-i18n-key="request.item7">Contactpersoon en telefoonnummer</li>
+            <li data-i18n-key="request.item8">Speciale wensen of songvoorkeuren</li>
+          </ul>
         </div>
       </div>
     </section>
 
     <section id="gallery" class="section reveal">
       <div class="container">
-        <h2 data-i18n="gallery.title" data-i18n-en="Gallery" data-i18n-nl="Galerij">Galerij</h2>
-        <p
-          class="section-intro"
-          data-i18n="gallery.intro"
-          data-i18n-en="Live moments, crowd energy, and behind-the-scenes photos."
-          data-i18n-nl="Live momenten, publiekssfeer en beelden achter de schermen."
-        >
-          Live momenten, publiekssfeer en beelden achter de schermen.
-        </p>
-
+        <h2 data-i18n-key="gallery.title">Galerij</h2>
+        <p class="section-intro" data-i18n-key="gallery.intro">Live momenten, sfeerbeelden en foto's achter de schermen.</p>
         <div class="gallery-grid">
-          <div class="gallery-placeholder" data-i18n="gallery.placeholder" data-i18n-en="Photo Placeholder" data-i18n-nl="Foto Placeholder">Foto Placeholder</div>
-          <div class="gallery-placeholder" data-i18n="gallery.placeholder" data-i18n-en="Photo Placeholder" data-i18n-nl="Foto Placeholder">Foto Placeholder</div>
-          <div class="gallery-placeholder" data-i18n="gallery.placeholder" data-i18n-en="Photo Placeholder" data-i18n-nl="Foto Placeholder">Foto Placeholder</div>
-          <div class="gallery-placeholder" data-i18n="gallery.placeholder" data-i18n-en="Photo Placeholder" data-i18n-nl="Foto Placeholder">Foto Placeholder</div>
-          <div class="gallery-placeholder" data-i18n="gallery.placeholder" data-i18n-en="Photo Placeholder" data-i18n-nl="Foto Placeholder">Foto Placeholder</div>
-          <div class="gallery-placeholder" data-i18n="gallery.placeholder" data-i18n-en="Photo Placeholder" data-i18n-nl="Foto Placeholder">Foto Placeholder</div>
+          <div class="gallery-placeholder" data-i18n-key="gallery.placeholder">Foto Placeholder</div>
+          <div class="gallery-placeholder" data-i18n-key="gallery.placeholder">Foto Placeholder</div>
+          <div class="gallery-placeholder" data-i18n-key="gallery.placeholder">Foto Placeholder</div>
+          <div class="gallery-placeholder" data-i18n-key="gallery.placeholder">Foto Placeholder</div>
+          <div class="gallery-placeholder" data-i18n-key="gallery.placeholder">Foto Placeholder</div>
+          <div class="gallery-placeholder" data-i18n-key="gallery.placeholder">Foto Placeholder</div>
         </div>
       </div>
     </section>
 
     <section id="videos" class="section reveal">
       <div class="container">
-        <h2 data-i18n="videos.title" data-i18n-en="Videos" data-i18n-nl="Video's">Video's</h2>
-        <p
-          class="section-intro"
-          data-i18n="videos.intro"
-          data-i18n-en="Watch us live and feel the atmosphere."
-          data-i18n-nl="Bekijk ons live en voel de sfeer."
-        >
-          Bekijk ons live en voel de sfeer.
-        </p>
-
+        <h2 data-i18n-key="videos.title">Video's</h2>
+        <p class="section-intro" data-i18n-key="videos.intro">Bekijk ons live en voel de sfeer.</p>
         <div class="video-grid">
           <article class="video-card">
             <div class="video-frame">
@@ -326,37 +316,71 @@
 
     <section id="contact" class="section reveal">
       <div class="container">
-        <h2 data-i18n="contact.title" data-i18n-en="Contact" data-i18n-nl="Contact">Contact</h2>
-        <p
-          class="section-intro"
-          data-i18n="contact.intro"
-          data-i18n-en="Ready to bring live energy to your event? Get in touch for bookings."
-          data-i18n-nl="Klaar om live energie naar jouw event te brengen? Neem contact op voor boekingen."
-        >
-          Klaar om live energie naar jouw event te brengen? Neem contact op voor boekingen.
+        <h2 data-i18n-key="contact.title">Contact</h2>
+        <p class="section-intro" data-i18n-key="contact.intro">
+          Klaar om live energie op jouw event te brengen? Stuur je aanvraag hieronder.
         </p>
 
-        <div class="contact-card">
-          <p>
-            <strong data-i18n="contact.emailLabel" data-i18n-en="Email:" data-i18n-nl="E-mail:">E-mail:</strong>
-            shadiesandthelady@pm.me
-          </p>
-          <p>
-            <strong data-i18n="contact.phoneLabel" data-i18n-en="Phone:" data-i18n-nl="Telefoon:">Telefoon:</strong>
-            +32 XX XX XX XX
-          </p>
-          <p>
-            <strong data-i18n="contact.locationLabel" data-i18n-en="Location:" data-i18n-nl="Locatie:">Locatie:</strong>
-            Limburg, Belgium
-          </p>
-          <p>
-            <strong data-i18n="contact.socialLabel" data-i18n-en="Social:" data-i18n-nl="Socials:">Socials:</strong>
-            <a href="https://www.facebook.com/people/Shadies-The-Lady/61582410604672/" target="_blank" rel="noopener noreferrer">Facebook</a>
-            |
-            <a href="https://www.instagram.com/shadiesandthelady" target="_blank" rel="noopener noreferrer">Instagram</a>
-            |
-            <a href="https://linktr.ee/shadiesandthelady" target="_blank" rel="noopener noreferrer">Linktree</a>
-          </p>
+        <div class="contact-layout">
+          <article class="contact-card">
+            <p><strong data-i18n-key="contact.emailLabel">E-mail:</strong> shadiesandthelady@pm.me</p>
+            <p><strong data-i18n-key="contact.phoneLabel">Telefoon:</strong> +32 XX XX XX XX</p>
+            <p><strong data-i18n-key="contact.locationLabel">Locatie:</strong> Limburg, Belgie</p>
+            <p>
+              <strong data-i18n-key="contact.socialLabel">Socials:</strong>
+              <a href="https://www.facebook.com/people/Shadies-The-Lady/61582410604672/" target="_blank" rel="noopener noreferrer">Facebook</a>
+              |
+              <a href="https://www.instagram.com/shadiesandthelady" target="_blank" rel="noopener noreferrer">Instagram</a>
+              |
+              <a href="https://linktr.ee/shadiesandthelady" target="_blank" rel="noopener noreferrer">Linktree</a>
+            </p>
+          </article>
+
+          <form
+            id="contact-form"
+            class="contact-form contact-card"
+            action="https://formspree.io/f/YOUR_FORM_ID"
+            method="POST"
+            novalidate
+          >
+            <p class="form-note" data-i18n-key="form.note">
+              Vul het formulier in voor een snelle offerte op maat.
+            </p>
+
+            <label for="name" data-i18n-key="form.nameLabel">Naam</label>
+            <input id="name" name="name" type="text" required />
+
+            <label for="email" data-i18n-key="form.emailLabel">E-mail</label>
+            <input id="email" name="email" type="email" required />
+
+            <label for="phone" data-i18n-key="form.phoneLabel">Telefoon</label>
+            <input id="phone" name="phone" type="text" />
+
+            <label for="eventType" data-i18n-key="form.eventTypeLabel">Type event</label>
+            <select id="eventType" name="eventType" required>
+              <option value="" data-i18n-key="form.selectDefault">Selecteer</option>
+              <option value="wedding" data-i18n-key="form.eventWedding">Trouwfeest</option>
+              <option value="festival" data-i18n-key="form.eventFestival">Festival</option>
+              <option value="private" data-i18n-key="form.eventPrivate">Privefeest</option>
+              <option value="corporate" data-i18n-key="form.eventCorporate">Bedrijfsevent</option>
+              <option value="other" data-i18n-key="form.eventOther">Anders</option>
+            </select>
+
+            <label for="eventDate" data-i18n-key="form.dateLabel">Datum</label>
+            <input id="eventDate" name="eventDate" type="date" />
+
+            <label for="location" data-i18n-key="form.locationLabel">Locatie</label>
+            <input id="location" name="location" type="text" />
+
+            <label for="message" data-i18n-key="form.messageLabel">Bericht</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hp-field" />
+            <input type="hidden" name="_subject" value="Nieuwe boekingsaanvraag via website" />
+
+            <button type="submit" class="btn btn-primary" data-i18n-key="form.submit">Verstuur aanvraag</button>
+            <p id="form-status" class="form-status" aria-live="polite"></p>
+          </form>
         </div>
       </div>
     </section>
@@ -364,13 +388,7 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p
-        data-i18n="footer.copy"
-        data-i18n-en="© 2026 Shadies &amp; The Lady. All rights reserved."
-        data-i18n-nl="© 2026 Shadies &amp; The Lady. Alle rechten voorbehouden."
-      >
-        &copy; 2026 Shadies &amp; The Lady. Alle rechten voorbehouden.
-      </p>
+      <p data-i18n-key="footer.copy">© 2026 Shadies &amp; The Lady. Alle rechten voorbehouden.</p>
     </div>
   </footer>
 
