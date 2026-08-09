@@ -98,6 +98,13 @@
       "gallery.intro": "Live momenten, sfeerbeelden en foto's achter de schermen.",
       "gallery.photoGuide": "Fototip: gebruik beelden van ongeveer 1600px breed en 250-600 KB voor goede kwaliteit en snelle laadtijd.",
       "gallery.placeholder": "Foto Placeholder",
+      "gallery.lightboxDialogAria": "Vergrote galerijfoto",
+      "gallery.lightboxCloseAria": "Sluiten",
+      "gallery.lightboxPrevAria": "Vorige foto",
+      "gallery.lightboxNextAria": "Volgende foto",
+      "gallery.lightboxCloseTitle": "Sluiten",
+      "gallery.lightboxPrevTitle": "Vorige",
+      "gallery.lightboxNextTitle": "Volgende",
 
       "videos.title": "Video's",
       "videos.intro": "Bekijk ons live en voel de sfeer.",
@@ -263,6 +270,13 @@
       "gallery.intro": "Live moments, crowd energy, and behind-the-scenes photos.",
       "gallery.photoGuide": "Photo tip: use images around 1600px wide and 250-600 KB for good quality and fast loading.",
       "gallery.placeholder": "Photo Placeholder",
+      "gallery.lightboxDialogAria": "Expanded gallery photo",
+      "gallery.lightboxCloseAria": "Close",
+      "gallery.lightboxPrevAria": "Previous photo",
+      "gallery.lightboxNextAria": "Next photo",
+      "gallery.lightboxCloseTitle": "Close",
+      "gallery.lightboxPrevTitle": "Previous",
+      "gallery.lightboxNextTitle": "Next",
 
       "videos.title": "Videos",
       "videos.intro": "Watch us live and feel the atmosphere.",
@@ -509,6 +523,157 @@
     }
   }
 
+  function initializeGalleryLightbox() {
+    var galleryItems = Array.prototype.slice.call(document.querySelectorAll(".gallery-grid .gallery-item"));
+    var lightbox = document.getElementById("galleryLightbox");
+    var lightboxImage = document.getElementById("lightboxImage");
+    var lightboxCaption = document.getElementById("lightboxCaption");
+    var lightboxCounter = document.getElementById("lightboxCounter");
+    var closeButton = document.getElementById("lightboxClose");
+    var prevButton = document.getElementById("lightboxPrev");
+    var nextButton = document.getElementById("lightboxNext");
+
+    if (!lightbox || !lightboxImage || !lightboxCaption || !lightboxCounter || !closeButton || !prevButton || !nextButton || galleryItems.length === 0) {
+      return;
+    }
+
+    var currentIndex = 0;
+    var lastTrigger = null;
+    var touchStartX = null;
+
+    function getImageFromIndex(index) {
+      var item = galleryItems[index];
+      if (!item) {
+        return null;
+      }
+      return item.querySelector("img");
+    }
+
+    function setLightboxImage(index) {
+      if (galleryItems.length === 0) {
+        return;
+      }
+
+      if (index < 0) {
+        currentIndex = galleryItems.length - 1;
+      } else if (index >= galleryItems.length) {
+        currentIndex = 0;
+      } else {
+        currentIndex = index;
+      }
+
+      var sourceImage = getImageFromIndex(currentIndex);
+      if (!sourceImage) {
+        return;
+      }
+
+      lightboxImage.src = sourceImage.src;
+      lightboxImage.alt = sourceImage.alt;
+      lightboxCaption.textContent = sourceImage.alt;
+      lightboxCounter.textContent = String(currentIndex + 1) + " / " + String(galleryItems.length);
+    }
+
+    function openLightbox(index, triggerElement) {
+      lastTrigger = triggerElement || null;
+      setLightboxImage(index);
+      lightbox.classList.add("is-open");
+      lightbox.setAttribute("aria-hidden", "false");
+      document.body.classList.add("has-lightbox-open");
+      closeButton.focus();
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove("is-open");
+      lightbox.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("has-lightbox-open");
+
+      if (lastTrigger && typeof lastTrigger.focus === "function") {
+        lastTrigger.focus();
+      }
+    }
+
+    function showPreviousImage() {
+      setLightboxImage(currentIndex - 1);
+    }
+
+    function showNextImage() {
+      setLightboxImage(currentIndex + 1);
+    }
+
+    galleryItems.forEach(function (item, index) {
+      item.setAttribute("tabindex", "0");
+      item.setAttribute("role", "button");
+
+      var previewImage = item.querySelector("img");
+      if (previewImage && previewImage.alt) {
+        item.setAttribute("aria-label", previewImage.alt);
+      }
+
+      item.addEventListener("click", function () {
+        openLightbox(index, item);
+      });
+
+      item.addEventListener("keydown", function (event) {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          openLightbox(index, item);
+        }
+      });
+    });
+
+    closeButton.addEventListener("click", closeLightbox);
+    prevButton.addEventListener("click", showPreviousImage);
+    nextButton.addEventListener("click", showNextImage);
+
+    lightbox.addEventListener("click", function (event) {
+      if (event.target === lightbox) {
+        closeLightbox();
+      }
+    });
+
+    lightbox.addEventListener("touchstart", function (event) {
+      if (!event.touches || event.touches.length === 0) {
+        return;
+      }
+      touchStartX = event.touches[0].clientX;
+    });
+
+    lightbox.addEventListener("touchend", function (event) {
+      if (touchStartX === null || !event.changedTouches || event.changedTouches.length === 0) {
+        touchStartX = null;
+        return;
+      }
+
+      var touchEndX = event.changedTouches[0].clientX;
+      var deltaX = touchEndX - touchStartX;
+      touchStartX = null;
+
+      if (Math.abs(deltaX) < 40) {
+        return;
+      }
+
+      if (deltaX > 0) {
+        showPreviousImage();
+      } else {
+        showNextImage();
+      }
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (!lightbox.classList.contains("is-open")) {
+        return;
+      }
+
+      if (event.key === "Escape") {
+        closeLightbox();
+      } else if (event.key === "ArrowLeft") {
+        showPreviousImage();
+      } else if (event.key === "ArrowRight") {
+        showNextImage();
+      }
+    });
+  }
+
   function setFormStatus(type, message) {
     var statusElement = document.getElementById("form-status");
     if (!statusElement) {
@@ -636,6 +801,7 @@
   initializeLanguageSwitcher();
   initializeMobileNavigation();
   initializeRevealAnimations();
+  initializeGalleryLightbox();
   initializeCopyEmail();
   initializeContactForm();
 })();
