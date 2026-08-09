@@ -534,6 +534,24 @@ p {
   text-transform: uppercase;
 }
 
+.gig-cta {
+  margin-top: 0.55rem;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff6ee;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255, 246, 238, 0.55);
+}
+
+.gig-cta:hover,
+.gig-cta:focus-visible {
+  color: #fff;
+  border-bottom-color: rgba(255, 255, 255, 0.9);
+}
+
 .booking-grid {
   margin-top: 0.5rem;
   display: grid;
@@ -636,9 +654,34 @@ p {
 }
 
 .contact-layout {
-  display: grid;
-  grid-template-columns: 1fr 1.15fr;
-  gap: 1rem;
+  display: block;
+}
+
+.contact-direct {
+  margin: 0.15rem 0 1rem;
+  color: var(--color-text-muted);
+  font-size: 0.96rem;
+  line-height: 1.7;
+}
+
+.contact-direct strong {
+  color: var(--color-primary);
+}
+
+.contact-direct a {
+  color: var(--color-primary);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(242, 196, 155, 0.55);
+}
+
+.contact-direct a:hover,
+.contact-direct a:focus-visible {
+  color: #fff;
+  border-bottom-color: rgba(255, 255, 255, 0.75);
+}
+
+.contact-direct-sep {
+  margin: 0 0.5rem;
 }
 
 .contact-card {
