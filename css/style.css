@@ -381,28 +381,28 @@ p {
 }
 
 .member-photo-diana {
-  --headshot-pos: 50% 22%;
-  --headshot-zoom: 1.36;
+  --headshot-pos: 50% 18%;
+  --headshot-zoom: 1.46;
 }
 
 .member-photo-matthew {
-  --headshot-pos: 43% 24%;
-  --headshot-zoom: 1.34;
-}
-
-.member-photo-bart {
-  --headshot-pos: 34% 22%;
-  --headshot-zoom: 1.56;
-}
-
-.member-photo-dirk {
-  --headshot-pos: 44% 24%;
+  --headshot-pos: 40% 20%;
   --headshot-zoom: 1.42;
 }
 
+.member-photo-bart {
+  --headshot-pos: 45% 14%;
+  --headshot-zoom: 1.85;
+}
+
+.member-photo-dirk {
+  --headshot-pos: 43% 19%;
+  --headshot-zoom: 1.55;
+}
+
 .member-photo-philippe {
-  --headshot-pos: 38% 26%;
-  --headshot-zoom: 1.40;
+  --headshot-pos: 34% 20%;
+  --headshot-zoom: 1.52;
 }
 
 .member-card p {
