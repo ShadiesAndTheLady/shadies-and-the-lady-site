@@ -83,16 +83,6 @@
       "booking.priceTitle": "Een offerte op maat",
       "booking.priceText": "Vraag je offerte aan via het formulier. We antwoorden snel met een voorstel op maat van je event.",
 
-      "tech.title": "Technische Setup",
-      "tech.provideTitle": "Wat wij kunnen voorzien",
-      "tech.provide1": "Volledig PA-systeem voor kleine tot middelgrote events",
-      "tech.provide2": "Podiumverlichting",
-      "tech.provide3": "Flexibele setlengtes en pauzeplanning",
-      "tech.needTitle": "Wat wij nodig hebben",
-      "tech.need1": "Stabiele stroomvoorziening dicht bij de speelplek",
-      "tech.need2": "Voldoende speelruimte",
-      "tech.need3": "Vlotte toegang voor opbouw en afbouw",
-
       "request.title": "Boekingsaanvraag Template",
       "request.item1": "Type event",
       "request.item2": "Datum en locatie",
@@ -133,7 +123,7 @@
       "social.instagramTitle": "Instagram",
       "social.linktreeTitle": "Linktree",
 
-      "form.note": "Snelle aanvraag: naam, e-mail, eventtype, datum, locatie en bericht.",
+      "form.note": "Boekingsflow: contact opnemen, voorstel ontvangen en bevestigen.",
       "form.fullNameLabel": "Naam",
       "form.firstNameLabel": "Voornaam",
       "form.lastNameLabel": "Achternaam",
@@ -257,16 +247,6 @@
       "booking.priceTitle": "A Tailored Quote",
       "booking.priceText": "Request your quote through the form. We reply quickly with a proposal tailored to your event.",
 
-      "tech.title": "Technical Setup",
-      "tech.provideTitle": "What we can provide",
-      "tech.provide1": "Full PA system for small to medium events",
-      "tech.provide2": "Stage lighting setup",
-      "tech.provide3": "Flexible set lengths and break planning",
-      "tech.needTitle": "What we need",
-      "tech.need1": "Stable power access near performance area",
-      "tech.need2": "Sufficient stage/performance space",
-      "tech.need3": "Clear load-in and load-out access",
-
       "request.title": "Booking Request Template",
       "request.item1": "Event type",
       "request.item2": "Date and location",
@@ -307,7 +287,7 @@
       "social.instagramTitle": "Instagram",
       "social.linktreeTitle": "Linktree",
 
-      "form.note": "Quick request: name, email, event type, date, location, and message.",
+      "form.note": "Booking flow: contact us, receive a proposal, and confirm.",
       "form.fullNameLabel": "Name",
       "form.firstNameLabel": "First name",
       "form.lastNameLabel": "Last name",
