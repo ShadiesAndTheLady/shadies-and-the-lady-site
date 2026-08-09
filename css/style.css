@@ -485,8 +485,8 @@ p {
 
 .gig-card {
   position: relative;
-  background: linear-gradient(180deg, rgba(207, 43, 33, 0.12), rgba(255, 255, 255, 0.02));
-  border: 1px solid rgba(207, 43, 33, 0.35);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: var(--radius-md);
   padding: 1rem 1rem 1rem 1.1rem;
   box-shadow: var(--shadow-soft);
@@ -494,8 +494,13 @@ p {
 
 .gig-card.featured {
   grid-column: 1 / -1;
+  border-width: 2px;
   border-color: rgba(242, 196, 155, 0.5);
   background: linear-gradient(145deg, rgba(207, 43, 33, 0.22), rgba(242, 196, 155, 0.08));
+}
+
+.gig-card.featured h4 {
+  color: #fff8f2;
 }
 
 .gig-card::before {
