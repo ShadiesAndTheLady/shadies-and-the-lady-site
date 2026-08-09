@@ -381,23 +381,28 @@ p {
 }
 
 .member-photo-diana {
-  --headshot-pos: 42% 24%;
+  --headshot-pos: 44% 28%;
+  --headshot-zoom: 1.3;
 }
 
 .member-photo-matthew {
-  --headshot-pos: 32% 18%;
+  --headshot-pos: 28% 10%;
+  --headshot-zoom: 1.3;
 }
 
 .member-photo-bart {
-  --headshot-pos: 33% 18%;
+  --headshot-pos: 25% 10%;
+  --headshot-zoom: 1.3;
 }
 
 .member-photo-dirk {
-  --headshot-pos: 36% 24%;
+  --headshot-pos: 30% 20%;
+  --headshot-zoom: 1.3;
 }
 
 .member-photo-philippe {
-  --headshot-pos: 24% 20%;
+  --headshot-pos: 20% 15%;
+  --headshot-zoom: 1.3;
 }
 
 .member-card p {
