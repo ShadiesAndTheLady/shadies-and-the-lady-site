@@ -605,6 +605,7 @@ p {
   border: 1px solid rgba(242, 196, 155, 0.28);
   background: rgba(0, 0, 0, 0.25);
   box-shadow: var(--shadow-soft);
+  cursor: zoom-in;
 }
 
 .gallery-item img {
@@ -617,6 +618,117 @@ p {
 .gallery-item:hover img,
 .gallery-item:focus-within img {
   transform: scale(1.04);
+}
+
+.gallery-item:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+body.has-lightbox-open {
+  overflow: hidden;
+}
+
+.gallery-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  background: rgba(7, 7, 7, 0.94);
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 200ms ease;
+}
+
+.gallery-lightbox.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.lightbox-figure {
+  grid-column: 2;
+  grid-row: 2;
+  margin: 0;
+  display: grid;
+  justify-items: center;
+  gap: 0.65rem;
+  padding: 0 1rem;
+}
+
+.lightbox-figure img {
+  width: auto;
+  max-width: min(1080px, 92vw);
+  max-height: 78vh;
+  border-radius: 14px;
+  border: 1px solid rgba(242, 196, 155, 0.3);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
+}
+
+.lightbox-caption {
+  margin: 0;
+  color: #ddd2c8;
+  font-size: 0.95rem;
+}
+
+.lightbox-counter {
+  grid-column: 2;
+  grid-row: 3;
+  justify-self: center;
+  margin: 0.25rem 0 1rem;
+  color: #c7b9ab;
+  font-size: 0.88rem;
+}
+
+.lightbox-btn {
+  border: 1px solid rgba(242, 196, 155, 0.4);
+  background: rgba(28, 22, 18, 0.68);
+  color: #f9e7d6;
+  cursor: pointer;
+}
+
+.lightbox-btn:hover,
+.lightbox-btn:focus-visible {
+  background: rgba(207, 43, 33, 0.35);
+}
+
+.lightbox-close {
+  grid-column: 3;
+  grid-row: 1;
+  justify-self: end;
+  align-self: start;
+  margin: 1rem 1rem 0 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  font-size: 1.65rem;
+  line-height: 1;
+}
+
+.lightbox-nav {
+  width: 48px;
+  height: 62px;
+  border-radius: 12px;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.lightbox-prev {
+  grid-column: 1;
+  grid-row: 2;
+  justify-self: start;
+  margin-left: 0.8rem;
+}
+
+.lightbox-next {
+  grid-column: 3;
+  grid-row: 2;
+  justify-self: end;
+  margin-right: 0.8rem;
 }
 
 .video-grid {
@@ -1185,6 +1297,31 @@ button:focus-visible {
 
   .contact-direct-sep {
     display: none;
+  }
+
+  .lightbox-close {
+    margin: 0.7rem 0.7rem 0 0;
+    width: 40px;
+    height: 40px;
+  }
+
+  .lightbox-nav {
+    width: 42px;
+    height: 56px;
+    font-size: 1.8rem;
+  }
+
+  .lightbox-prev {
+    margin-left: 0.4rem;
+  }
+
+  .lightbox-next {
+    margin-right: 0.4rem;
+  }
+
+  .lightbox-figure img {
+    max-width: 90vw;
+    max-height: 72vh;
   }
 
   .booking-flow-inline {
