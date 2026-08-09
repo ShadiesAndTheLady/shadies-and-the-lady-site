@@ -408,24 +408,25 @@
             <label for="email" data-i18n-key="form.emailLabel">E-mail</label>
             <input id="email" name="email" type="email" required />
 
-            <div class="form-grid-two">
+            <div class="form-grid-two phone-row">
               <div>
                 <label for="phoneCountryCode" data-i18n-key="form.phoneCodeLabel">Landcode</label>
                 <select id="phoneCountryCode" name="phoneCountryCode">
-                  <option value="+32">🇧🇪 +32 Belgium</option>
-                  <option value="+31">🇳🇱 +31 Netherlands</option>
-                  <option value="+33">🇫🇷 +33 France</option>
-                  <option value="+49">🇩🇪 +49 Germany</option>
-                  <option value="+44">🇬🇧 +44 United Kingdom</option>
-                  <option value="+1">🇺🇸 +1 United States/Canada</option>
+                  <option value="+32">BE +32 Belgium</option>
+                  <option value="+31">NL +31 Netherlands</option>
+                  <option value="+33">FR +33 France</option>
+                  <option value="+49">DE +49 Germany</option>
+                  <option value="+44">UK +44 United Kingdom</option>
+                  <option value="+1">US +1 United States/Canada</option>
                   <option value="other" data-i18n-key="form.phoneCodeOther">Andere</option>
                 </select>
               </div>
               <div>
-                <label for="phoneNumber" data-i18n-key="form.phoneOptionalLabel">Telefoonnummer (optioneel)</label>
-                <input id="phoneNumber" name="phoneNumber" type="tel" inputmode="tel" placeholder="456 12 34 56" />
+                <label for="phoneNumber" data-i18n-key="form.phoneNumberOptionalLabel">Telefoonnummer (optioneel)</label>
+                <input id="phoneNumber" name="phoneNumber" type="tel" inputmode="tel" placeholder="478 12 34 56" />
               </div>
             </div>
+            <p class="field-help" data-i18n-key="form.phoneHelp">Vul alleen het lokale nummer in zonder landcode.</p>
 
             <div class="form-grid-two">
               <div>
