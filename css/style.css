@@ -376,6 +376,8 @@ p {
   height: 100%;
   object-fit: cover;
   object-position: var(--headshot-pos, 50% 24%);
+  transform: scale(var(--headshot-zoom, 1.24));
+  transform-origin: center;
 }
 
 .member-photo-diana {
@@ -383,11 +385,11 @@ p {
 }
 
 .member-photo-matthew {
-  --headshot-pos: 36% 22%;
+  --headshot-pos: 32% 18%;
 }
 
 .member-photo-bart {
-  --headshot-pos: 37% 22%;
+  --headshot-pos: 33% 18%;
 }
 
 .member-photo-dirk {
@@ -395,7 +397,7 @@ p {
 }
 
 .member-photo-philippe {
-  --headshot-pos: 28% 24%;
+  --headshot-pos: 24% 20%;
 }
 
 .member-card p {
