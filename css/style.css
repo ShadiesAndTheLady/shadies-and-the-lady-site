@@ -636,6 +636,17 @@ p {
   gap: 0.8rem;
 }
 
+.phone-row {
+  grid-template-columns: minmax(150px, 0.9fr) minmax(220px, 1.5fr);
+}
+
+.field-help {
+  margin-top: 0.35rem;
+  margin-bottom: 0.15rem;
+  font-size: 0.84rem;
+  color: #b4aaa1;
+}
+
 .contact-form input,
 .contact-form select,
 .contact-form textarea {
