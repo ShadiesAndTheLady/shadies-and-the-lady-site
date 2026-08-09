@@ -361,8 +361,8 @@ p {
 }
 
 .member-photo {
-  width: 88px;
-  height: 88px;
+  width: 104px;
+  height: 104px;
   margin: 0 auto 0.75rem;
   border-radius: 50%;
   overflow: hidden;
@@ -381,28 +381,28 @@ p {
 }
 
 .member-photo-diana {
-  --headshot-pos: 50% 24%;
-  --headshot-zoom: 1.34;
+  --headshot-pos: 50% 28%;
+  --headshot-zoom: 1.56;
 }
 
 .member-photo-matthew {
-  --headshot-pos: 40% 24%;
-  --headshot-zoom: 1.34;
+  --headshot-pos: 40% 27%;
+  --headshot-zoom: 1.58;
 }
 
 .member-photo-bart {
-  --headshot-pos: 42% 24%;
-  --headshot-zoom: 1.50;
+  --headshot-pos: 54% 30%;
+  --headshot-zoom: 2.08;
 }
 
 .member-photo-dirk {
-  --headshot-pos: 43% 24%;
-  --headshot-zoom: 1.40;
+  --headshot-pos: 45% 27%;
+  --headshot-zoom: 1.66;
 }
 
 .member-photo-philippe {
-  --headshot-pos: 37% 25%;
-  --headshot-zoom: 1.40;
+  --headshot-pos: 39% 27%;
+  --headshot-zoom: 1.64;
 }
 
 .member-card p {
