@@ -103,6 +103,12 @@
       "contact.phoneLabel": "Telefoon:",
       "contact.locationLabel": "Locatie:",
       "contact.socialLabel": "Socials:",
+      "contact.copyEmail": "Kopieer",
+
+      "social.follow": "Volg ons hier:",
+      "social.facebookAria": "Facebook",
+      "social.instagramAria": "Instagram",
+      "social.linktreeAria": "Linktree",
 
       "form.note": "Vul het formulier in voor een snelle offerte op maat.",
       "form.nameLabel": "Naam",
@@ -125,6 +131,18 @@
       "form.error": "Er liep iets mis bij het versturen. Probeer opnieuw of mail ons rechtstreeks.",
       "form.invalid": "Controleer de verplichte velden en probeer opnieuw.",
 
+      "copy.success": "E-mailadres gekopieerd.",
+      "copy.error": "Kopieren niet gelukt. Selecteer en kopieer handmatig.",
+
+      "footer.aboutTitle": "Shadies & The Lady",
+      "footer.aboutText": "Pop/rock coverband uit Limburg voor feesten, festivals en bedrijfsevents.",
+      "footer.quickTitle": "Snelle Links",
+      "footer.linkBand": "Band",
+      "footer.linkBooking": "Boeken",
+      "footer.linkGallery": "Galerij",
+      "footer.linkContact": "Contact",
+      "footer.bookingTitle": "Boeking",
+      "footer.bookingText": "Gebruik het formulier of mail ons rechtstreeks voor een offerte op maat.",
       "footer.copy": "© 2026 Shadies & The Lady. Alle rechten voorbehouden."
     },
     en: {
@@ -215,6 +233,12 @@
       "contact.phoneLabel": "Phone:",
       "contact.locationLabel": "Location:",
       "contact.socialLabel": "Social:",
+      "contact.copyEmail": "Copy",
+
+      "social.follow": "Follow us here:",
+      "social.facebookAria": "Facebook",
+      "social.instagramAria": "Instagram",
+      "social.linktreeAria": "Linktree",
 
       "form.note": "Fill in the form to receive a fast tailored quote.",
       "form.nameLabel": "Name",
@@ -237,6 +261,18 @@
       "form.error": "Something went wrong while sending. Please try again or email us directly.",
       "form.invalid": "Please check required fields and try again.",
 
+      "copy.success": "Email address copied.",
+      "copy.error": "Copy failed. Please copy the address manually.",
+
+      "footer.aboutTitle": "Shadies & The Lady",
+      "footer.aboutText": "Pop/rock cover band from Limburg for parties, festivals, and corporate events.",
+      "footer.quickTitle": "Quick Links",
+      "footer.linkBand": "Band",
+      "footer.linkBooking": "Booking",
+      "footer.linkGallery": "Gallery",
+      "footer.linkContact": "Contact",
+      "footer.bookingTitle": "Booking",
+      "footer.bookingText": "Use the form or email us directly for a tailored quote.",
       "footer.copy": "© 2026 Shadies & The Lady. All rights reserved."
     }
   };
@@ -408,6 +444,69 @@
     }
   }
 
+  function setCopyStatus(type, message) {
+    var statusElement = document.getElementById("copy-status");
+    if (!statusElement) {
+      return;
+    }
+
+    statusElement.textContent = message;
+    statusElement.classList.remove("is-success", "is-error");
+
+    if (type === "success") {
+      statusElement.classList.add("is-success");
+    } else if (type === "error") {
+      statusElement.classList.add("is-error");
+    }
+  }
+
+  function initializeCopyEmail() {
+    var copyButton = document.getElementById("copyEmailButton");
+    var emailElement = document.getElementById("contactEmail");
+
+    if (!copyButton || !emailElement) {
+      return;
+    }
+
+    copyButton.addEventListener("click", function () {
+      var currentLang = document.documentElement.getAttribute("data-current-lang") || DEFAULT_LANGUAGE;
+      var emailAddress = emailElement.textContent.trim();
+
+      if (!emailAddress) {
+        setCopyStatus("error", t("copy.error", currentLang));
+        return;
+      }
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard
+          .writeText(emailAddress)
+          .then(function () {
+            setCopyStatus("success", t("copy.success", currentLang));
+          })
+          .catch(function () {
+            setCopyStatus("error", t("copy.error", currentLang));
+          });
+        return;
+      }
+
+      // Fallback for older browsers
+      var tempInput = document.createElement("input");
+      tempInput.value = emailAddress;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      tempInput.setSelectionRange(0, 99999);
+
+      try {
+        document.execCommand("copy");
+        setCopyStatus("success", t("copy.success", currentLang));
+      } catch (error) {
+        setCopyStatus("error", t("copy.error", currentLang));
+      }
+
+      document.body.removeChild(tempInput);
+    });
+  }
+
   function initializeContactForm() {
     var form = document.getElementById("contact-form");
     if (!form) {
@@ -456,5 +555,6 @@
   initializeLanguageSwitcher();
   initializeMobileNavigation();
   initializeRevealAnimations();
+  initializeCopyEmail();
   initializeContactForm();
 })();
