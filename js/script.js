@@ -540,7 +540,8 @@
     var currentIndex = 0;
     var lastTrigger = null;
     var touchStartX = null;
-    var scrollTop = 0;
+    var previousBodyOverflow = "";
+    var previousHtmlOverflow = "";
 
     // Keep fixed positioning viewport-based even inside transformed section wrappers.
     if (lightbox.parentNode !== document.body) {
@@ -548,19 +549,17 @@
     }
 
     function lockPageScroll() {
-      scrollTop = window.pageYOffset || document.documentElement.scrollTop || 0;
-      document.body.style.position = "fixed";
-      document.body.style.top = "-" + String(scrollTop) + "px";
-      document.body.style.width = "100%";
+      previousBodyOverflow = document.body.style.overflow;
+      previousHtmlOverflow = document.documentElement.style.overflow;
+      document.documentElement.style.overflow = "hidden";
+      document.body.style.overflow = "hidden";
       document.body.classList.add("has-lightbox-open");
     }
 
     function unlockPageScroll() {
       document.body.classList.remove("has-lightbox-open");
-      document.body.style.position = "";
-      document.body.style.top = "";
-      document.body.style.width = "";
-      window.scrollTo(0, scrollTop);
+      document.documentElement.style.overflow = previousHtmlOverflow;
+      document.body.style.overflow = previousBodyOverflow;
     }
 
     function getImageFromIndex(index) {
