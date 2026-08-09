@@ -377,7 +377,10 @@
     textElements.forEach(function (element) {
       var key = element.getAttribute("data-i18n-key");
       if (key) {
-        element.textContent = t(key, lang);
+        var translatedText = t(key, lang);
+        if (translatedText !== key) {
+          element.textContent = translatedText;
+        }
       }
     });
 
