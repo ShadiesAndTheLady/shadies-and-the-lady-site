@@ -833,11 +833,14 @@ p {
 }
 
 .photo-credits {
-  width: 100%;
-  margin-top: 0.35rem;
+  margin: 0;
   color: #8f847a;
   font-size: 0.82rem;
-  line-height: 1.35;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  white-space: nowrap;
 }
 
 .photo-credits a {
