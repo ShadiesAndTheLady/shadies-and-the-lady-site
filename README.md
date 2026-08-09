@@ -24,10 +24,11 @@ No frameworks or build tools are required.
 - EN/NL bilingual interface (Dutch default)
 - Hero section with booking call-to-action
 - Band section (about + members merged)
-- Repertoire artist chips
+- Repertoire in three clean song-list blocks (Classics, 90s/00s, Modern)
 - Combined gigs and booking section
-- Technical setup information (inside booking)
+- Featured next gig card with non-link CTA text
 - Contact form integrated with Formspree
+- Inline booking flow inside the form (3 steps)
 - Email copy-to-clipboard button
 - Social icon links (Facebook, Instagram, Linktree) with tooltips
 - Footer with quick links and legal/privacy references
@@ -72,12 +73,11 @@ Recommended lightweight flow:
 
 Current recommended release stage:
 
-- `v1.2.0-beta` - Booking & Contact Upgrade
+- `v1.3.0` - Contact Flow Polish
 
 ## Planned Next Improvements
 
-- Add real gallery photos
-- Replace video placeholders with real YouTube IDs
+- Optional technical rider as downloadable PDF (on request)
 - Optional captcha if spam appears
 - Optional analytics/privacy banner if needed
 - Final legal text review
