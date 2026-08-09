@@ -288,26 +288,79 @@
         <p class="section-intro" data-i18n-key="gallery.intro">Live momenten, sfeerbeelden en foto's achter de schermen.</p>
         <div class="gallery-grid">
           <figure class="gallery-item">
-            <img src="assets/images/live-moments-1000.jpg" alt="Live optreden moment 1" loading="lazy" />
+            <img src="assets/images/live-moments-1000.jpg" alt="Banners are cool!" loading="lazy" />
           </figure>
           <figure class="gallery-item">
-            <img src="assets/images/live-moments-1001.jpg" alt="Live optreden moment 2" loading="lazy" />
+            <img src="assets/images/live-moments-1001.jpg" alt="Our work station" loading="lazy" />
           </figure>
           <figure class="gallery-item">
-            <img src="assets/images/live-moments-1002.jpg" alt="Live optreden moment 3" loading="lazy" />
+            <img src="assets/images/live-moments-1002.jpg" alt="Matthew rocking the guitar" loading="lazy" />
           </figure>
           <figure class="gallery-item">
-            <img src="assets/images/live-moments-1003.jpg" alt="Live optreden moment 4" loading="lazy" />
+            <img src="assets/images/live-moments-1003.jpg" alt="Philippe rocking the drums" loading="lazy" />
           </figure>
           <figure class="gallery-item">
-            <img src="assets/images/live-moments-1004.jpg" alt="Live optreden moment 5" loading="lazy" />
+            <img src="assets/images/live-moments-1004.jpg" alt="Diana singing her heart out" loading="lazy" />
           </figure>
           <figure class="gallery-item">
-            <img src="assets/images/live-moments-1005.jpg" alt="Live optreden moment 6" loading="lazy" />
+            <img src="assets/images/live-moments-1005.jpg" alt="Bart making guitar faces" loading="lazy" />
           </figure>
           <figure class="gallery-item">
-            <img src="assets/images/live-moments-1006.jpeg" alt="Live optreden moment 7" loading="lazy" />
+            <img src="assets/images/live-moments-1006.jpeg" alt="Dirk keeping the groove" loading="lazy" />
           </figure>
+        </div>
+
+        <div
+          id="galleryLightbox"
+          class="gallery-lightbox"
+          role="dialog"
+          aria-modal="true"
+          aria-hidden="true"
+          aria-label="Vergrote galerijfoto"
+          data-i18n-aria-label-key="gallery.lightboxDialogAria"
+        >
+          <button
+            type="button"
+            id="lightboxClose"
+            class="lightbox-btn lightbox-close"
+            aria-label="Sluiten"
+            data-i18n-aria-label-key="gallery.lightboxCloseAria"
+            title="Sluiten"
+            data-i18n-title-key="gallery.lightboxCloseTitle"
+          >
+            ×
+          </button>
+
+          <button
+            type="button"
+            id="lightboxPrev"
+            class="lightbox-btn lightbox-nav lightbox-prev"
+            aria-label="Vorige foto"
+            data-i18n-aria-label-key="gallery.lightboxPrevAria"
+            title="Vorige"
+            data-i18n-title-key="gallery.lightboxPrevTitle"
+          >
+            ‹
+          </button>
+
+          <figure class="lightbox-figure">
+            <img id="lightboxImage" src="" alt="" />
+            <figcaption id="lightboxCaption" class="lightbox-caption"></figcaption>
+          </figure>
+
+          <p id="lightboxCounter" class="lightbox-counter" aria-live="polite"></p>
+
+          <button
+            type="button"
+            id="lightboxNext"
+            class="lightbox-btn lightbox-nav lightbox-next"
+            aria-label="Volgende foto"
+            data-i18n-aria-label-key="gallery.lightboxNextAria"
+            title="Volgende"
+            data-i18n-title-key="gallery.lightboxNextTitle"
+          >
+            ›
+          </button>
         </div>
       </div>
     </section>
