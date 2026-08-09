@@ -89,6 +89,23 @@ letter-spacing: 0.06em;
 white-space: nowrap;
 }
 
+.brand {
+display: inline-flex;
+align-items: center;
+gap: 0.55rem;
+}
+
+.brand-logo {
+height: 42px;
+width: auto;
+border-radius: 50%;
+object-fit: cover;
+}
+
+.brand-text {
+line-height: 1;
+}
+
 .site-nav {
 display: flex;
 align-items: center;
@@ -515,5 +532,9 @@ padding: 3.3rem 0;
 
 .gallery-grid {
 grid-template-columns: 1fr;
+}
+
+.brand-logo {
+height: 34px;
 }
 }
