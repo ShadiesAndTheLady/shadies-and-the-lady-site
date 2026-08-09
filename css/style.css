@@ -503,6 +503,42 @@ p {
   color: var(--color-primary);
 }
 
+.contact-email {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.copy-btn {
+  margin-left: 0.55rem;
+  padding: 0.24rem 0.65rem;
+  border: 1px solid rgba(242, 196, 155, 0.45);
+  background: rgba(242, 196, 155, 0.08);
+  color: var(--color-primary);
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.copy-btn:hover,
+.copy-btn:focus-visible {
+  background: rgba(242, 196, 155, 0.18);
+}
+
+.copy-status {
+  min-height: 1.2rem;
+  margin: 0.15rem 0 0.6rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.copy-status.is-success {
+  color: #8fe68f;
+}
+
+.copy-status.is-error {
+  color: #ff9d9d;
+}
+
 .contact-card a {
   color: var(--color-primary);
   text-decoration: none;
@@ -513,6 +549,49 @@ p {
 .contact-card a:focus-visible {
   color: #fff;
   border-bottom-color: rgba(255, 255, 255, 0.7);
+}
+
+.social-intro {
+  margin-bottom: 0.45rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.social-link {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(242, 196, 155, 0.4);
+  border-bottom: 1px solid rgba(242, 196, 155, 0.4);
+  background: rgba(242, 196, 155, 0.08);
+  display: grid;
+  place-items: center;
+  color: var(--color-primary);
+  transition: transform var(--ease), background var(--ease), border-color var(--ease);
+  text-decoration: none;
+}
+
+.social-link svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.social-link:hover,
+.social-link:focus-visible {
+  transform: translateY(-2px);
+  background: rgba(207, 43, 33, 0.2);
+  border-color: rgba(207, 43, 33, 0.65);
+  color: #ffe3e0;
+}
+
+.contact-card .social-link,
+.contact-card .social-link:hover,
+.contact-card .social-link:focus-visible {
+  border-bottom: none;
 }
 
 .contact-form label {
@@ -572,13 +651,46 @@ p {
 }
 
 .site-footer {
-  padding: 1.4rem 0 1.7rem;
+  padding: 2rem 0 1.2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .site-footer p {
   margin: 0;
   color: #aa9f95;
   font-size: 0.92rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.2rem;
+  margin-bottom: 1.1rem;
+}
+
+.footer-grid h3 {
+  color: var(--color-primary);
+  margin-bottom: 0.6rem;
+}
+
+.footer-links {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.footer-links a {
+  color: var(--color-text-muted);
+  text-decoration: none;
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+  color: var(--color-primary);
+}
+
+.footer-bottom {
+  padding-top: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .reveal {
@@ -661,6 +773,10 @@ button:focus-visible {
   .booking-grid,
   .tech-layout,
   .video-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
     grid-template-columns: 1fr;
   }
 }
