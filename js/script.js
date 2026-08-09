@@ -540,6 +540,28 @@
     var currentIndex = 0;
     var lastTrigger = null;
     var touchStartX = null;
+    var scrollTop = 0;
+
+    // Keep fixed positioning viewport-based even inside transformed section wrappers.
+    if (lightbox.parentNode !== document.body) {
+      document.body.appendChild(lightbox);
+    }
+
+    function lockPageScroll() {
+      scrollTop = window.pageYOffset || document.documentElement.scrollTop || 0;
+      document.body.style.position = "fixed";
+      document.body.style.top = "-" + String(scrollTop) + "px";
+      document.body.style.width = "100%";
+      document.body.classList.add("has-lightbox-open");
+    }
+
+    function unlockPageScroll() {
+      document.body.classList.remove("has-lightbox-open");
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.width = "";
+      window.scrollTo(0, scrollTop);
+    }
 
     function getImageFromIndex(index) {
       var item = galleryItems[index];
@@ -578,14 +600,14 @@
       setLightboxImage(index);
       lightbox.classList.add("is-open");
       lightbox.setAttribute("aria-hidden", "false");
-      document.body.classList.add("has-lightbox-open");
+      lockPageScroll();
       closeButton.focus();
     }
 
     function closeLightbox() {
       lightbox.classList.remove("is-open");
       lightbox.setAttribute("aria-hidden", "true");
-      document.body.classList.remove("has-lightbox-open");
+      unlockPageScroll();
 
       if (lastTrigger && typeof lastTrigger.focus === "function") {
         lastTrigger.focus();
