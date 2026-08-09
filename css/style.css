@@ -361,17 +361,41 @@ p {
 }
 
 .member-photo {
-  width: 74px;
-  height: 74px;
+  width: 88px;
+  height: 88px;
   margin: 0 auto 0.75rem;
   border-radius: 50%;
-  display: grid;
-  place-items: center;
-  color: var(--color-primary);
-  font-size: 0.75rem;
-  font-weight: 700;
-  border: 1px dashed rgba(242, 196, 155, 0.45);
-  background: rgba(242, 196, 155, 0.08);
+  overflow: hidden;
+  border: 1px solid rgba(242, 196, 155, 0.45);
+  background: rgba(10, 10, 10, 0.7);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.member-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: var(--headshot-pos, 50% 24%);
+}
+
+.member-photo-diana {
+  --headshot-pos: 42% 24%;
+}
+
+.member-photo-matthew {
+  --headshot-pos: 36% 22%;
+}
+
+.member-photo-bart {
+  --headshot-pos: 37% 22%;
+}
+
+.member-photo-dirk {
+  --headshot-pos: 36% 24%;
+}
+
+.member-photo-philippe {
+  --headshot-pos: 28% 24%;
 }
 
 .member-card p {
