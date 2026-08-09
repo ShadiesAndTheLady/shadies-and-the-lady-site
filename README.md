@@ -1,98 +1,91 @@
 # Shadies & The Lady Website
 
-Official one-page website for Shadies & The Lady, a Belgian pop/rock cover band from Limburg.
+Official one-page website for **Shadies & The Lady**, a Belgian pop/rock cover band from Limburg.
 
-Live site: https://shadiesandthelady.github.io/shadies-and-the-lady-site/
+## Live Website
 
-## Overview
+https://shadiesandthelady.github.io/shadies-and-the-lady-site/
 
-This project is a modern, responsive one-page band website built with:
+## Project Overview
+
+This website is built as a clean, maintainable static project with:
 
 - HTML5
 - CSS3
 - Vanilla JavaScript
-- GitHub Pages for free hosting
+- GitHub Pages
 
-The site is bilingual and supports:
+No frameworks or build tools are required.
 
-- Dutch (default)
-- English
-
-## Current Features
+## Main Features
 
 - Responsive one-page layout
 - Sticky navigation with smooth scrolling
+- EN/NL bilingual interface (Dutch default)
 - Hero section with booking call-to-action
-- Band info and members
-- Repertoire artist list
-- Upcoming gigs section
-- Gallery placeholders
-- Video placeholders
-- Contact section with social links
-- EN/NL language switcher with saved preference
-- Brand logo and favicon integration
+- Band section (about + members merged)
+- Repertoire artist chips
+- Combined gigs and booking section
+- Technical setup information (inside booking)
+- Contact form integrated with Formspree
+- Email copy-to-clipboard button
+- Social icon links (Facebook, Instagram, Linktree) with tooltips
+- Footer with quick links and legal/privacy references
+- Legal + Privacy/GDPR section
 
-## Brand
+## Contact Form Setup
 
-Main colors:
+Form submissions are handled through Formspree.
 
-- Shady Beige: #F2C49B
-- Lady Red: #CF2B21
-- Black background base
+Current endpoint used in the project:
 
-## Project Goal
+`https://formspree.io/f/mwlevdzy`
 
-Create a premium, energetic, and professional online presence suitable for:
+### Anti-spam
 
-- Weddings
-- Festivals
-- Pubs
-- Private parties
-- Corporate events
+This project currently uses:
+
+- Formspree spam filtering
+- Hidden honeypot field (`_gotcha`)
+
+Captcha can be enabled later if spam volume increases.
+
+## Bilingual Support
+
+Language switcher supports:
+
+- NL (default)
+- EN
+
+Translations are managed in `script.js` through a centralized dictionary. Language preference is saved in browser local storage.
 
 ## Repository Workflow
 
-Main workflow used:
+Recommended lightweight flow:
 
-- Direct updates on main for quick changes
-- Tagged releases for stable milestones
+1. Make focused changes in one update batch.
+2. Commit with a clear message.
+3. Verify on GitHub Pages.
+4. Tag stable milestones with releases.
 
-Recommended safe update process:
+## Release Status
 
-1. Make one focused change
-2. Commit with a clear message
-3. Verify live deployment
-4. Create a release tag at key milestones
+Current recommended release stage:
 
-## Release
+- `v1.2.0-beta` - Booking & Contact Upgrade
 
-Current release:
+## Planned Next Improvements
 
-- v1.1.0-beta
+- Add real gallery photos
+- Replace video placeholders with real YouTube IDs
+- Optional captcha if spam appears
+- Optional analytics/privacy banner if needed
+- Final legal text review
 
-This release includes:
+## Legal and Privacy Note
 
-- Bilingual foundation (EN/NL)
-- Navigation and header polish
-- Social links integration
-- Brand asset setup
+Website contact data is used only to respond to booking requests and is not shared with third parties.
 
-## Upcoming Improvements
+## Maintainer
 
-- Replace gallery placeholders with real photos
-- Replace video placeholders with real YouTube embeds
-- Add booking information and request template
-- Add technical setup or rider summary
-- Add contact form integration for inquiry handling
-- Improve SEO and social share metadata further
-
-## Contact
-
-- Email: shadiesandthelady@pm.me
-- Facebook: https://www.facebook.com/people/Shadies-The-Lady/61582410604672/
-- Instagram: https://www.instagram.com/shadiesandthelady
-- Linktree: https://linktr.ee/shadiesandthelady
-
-## License
-
-All rights reserved by Shadies & The Lady.
+Shadies & The Lady
