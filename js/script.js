@@ -92,6 +92,7 @@
 
       "gallery.title": "Galerij",
       "gallery.intro": "Live momenten, sfeerbeelden en foto's achter de schermen.",
+      "gallery.photoGuide": "Fototip: gebruik beelden van ongeveer 1600px breed en 250-600 KB voor goede kwaliteit en snelle laadtijd.",
       "gallery.placeholder": "Foto Placeholder",
 
       "videos.title": "Video's",
@@ -105,6 +106,11 @@
       "contact.locationLabel": "Locatie:",
       "contact.socialLabel": "Socials:",
       "contact.copyEmail": "Kopieer",
+      "contact.snapshotTitle": "Boekingssnapshot",
+      "contact.snapshot1": "Gemiddelde reactietijd: binnen 48 uur",
+      "contact.snapshot2": "Beschikbaar voor trouw, festival, prive en corporate events",
+      "contact.snapshot3": "PA en verlichting mogelijk op aanvraag",
+      "contact.snapshot4": "Actief in Limburg en ver daarbuiten",
 
       "social.facebookAria": "Facebook",
       "social.instagramAria": "Instagram",
@@ -117,6 +123,8 @@
       "form.firstNameLabel": "Voornaam",
       "form.lastNameLabel": "Achternaam",
       "form.emailLabel": "E-mail",
+      "form.phoneCodeLabel": "Landcode",
+      "form.phoneCodeOther": "Andere",
       "form.eventTypeLabel": "Type event",
       "form.selectDefault": "Selecteer",
       "form.eventWedding": "Trouwfeest",
@@ -234,6 +242,7 @@
 
       "gallery.title": "Gallery",
       "gallery.intro": "Live moments, crowd energy, and behind-the-scenes photos.",
+      "gallery.photoGuide": "Photo tip: use images around 1600px wide and 250-600 KB for good quality and fast loading.",
       "gallery.placeholder": "Photo Placeholder",
 
       "videos.title": "Videos",
@@ -247,6 +256,11 @@
       "contact.locationLabel": "Location:",
       "contact.socialLabel": "Social:",
       "contact.copyEmail": "Copy",
+      "contact.snapshotTitle": "Booking Snapshot",
+      "contact.snapshot1": "Average response time: within 48 hours",
+      "contact.snapshot2": "Available for weddings, festivals, private and corporate events",
+      "contact.snapshot3": "PA and lighting available on request",
+      "contact.snapshot4": "Active in Limburg and beyond",
 
       "social.facebookAria": "Facebook",
       "social.instagramAria": "Instagram",
@@ -259,6 +273,8 @@
       "form.firstNameLabel": "First name",
       "form.lastNameLabel": "Last name",
       "form.emailLabel": "Email",
+      "form.phoneCodeLabel": "Country code",
+      "form.phoneCodeOther": "Other",
       "form.eventTypeLabel": "Event type",
       "form.selectDefault": "Select",
       "form.eventWedding": "Wedding",
