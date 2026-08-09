@@ -3,7 +3,7 @@
   File purpose: Main one-page website for Shadies & The Lady.
   Contains all content sections, semantic structure, and links to CSS/JS.
 -->
-<html lang="en">
+<html lang="nl" data-current-lang="nl">
 <head>
   <!-- Basic page setup -->
   <meta charset="UTF-8" />
@@ -12,22 +12,43 @@
   <!-- SEO basics -->
   <meta
     name="description"
-    content="Shadies & The Lady is an all-round Belgian pop/rock cover band from Limburg. We play at weddings, festivals, private parties, pubs, and corporate events."
+    content="Shadies & The Lady is een all-round Belgische pop/rock coverband uit Limburg. Wij spelen op trouwfeesten, festivals, privéfeesten, cafés en bedrijfsevents."
+    data-i18n="meta.description"
+    data-i18n-attr="content"
+    data-i18n-en="Shadies & The Lady is an all-round Belgian pop/rock cover band from Limburg. We play at weddings, festivals, private parties, pubs, and corporate events."
+    data-i18n-nl="Shadies & The Lady is een all-round Belgische pop/rock coverband uit Limburg. Wij spelen op trouwfeesten, festivals, privéfeesten, cafés en bedrijfsevents."
   />
   <meta
     name="keywords"
-    content="Shadies & The Lady, cover band, pop covers, rock covers, Limburg, Belgium, wedding band, festival band, live music"
+    content="Shadies & The Lady, coverband, pop covers, rock covers, Limburg, België, trouwband, festivalband, live muziek"
   />
 
   <!-- Social sharing preview -->
-  <meta property="og:title" content="Shadies & The Lady | Belgian Pop/Rock Cover Band" />
+  <meta
+    property="og:title"
+    content="Shadies & The Lady | Belgische Pop/Rock Coverband"
+    data-i18n="meta.ogTitle"
+    data-i18n-attr="content"
+    data-i18n-en="Shadies & The Lady | Belgian Pop/Rock Cover Band"
+    data-i18n-nl="Shadies & The Lady | Belgische Pop/Rock Coverband"
+  />
   <meta
     property="og:description"
-    content="Energetic live covers for weddings, festivals, private parties, pubs, and corporate events."
+    content="Energetische live covers voor trouwfeesten, festivals, privéfeesten, cafés en bedrijfsevents."
+    data-i18n="meta.ogDescription"
+    data-i18n-attr="content"
+    data-i18n-en="Energetic live covers for weddings, festivals, private parties, pubs, and corporate events."
+    data-i18n-nl="Energetische live covers voor trouwfeesten, festivals, privéfeesten, cafés en bedrijfsevents."
   />
   <meta property="og:type" content="website" />
 
-  <title>Shadies & The Lady | Belgian Pop/Rock Cover Band</title>
+  <title
+    data-i18n="meta.title"
+    data-i18n-en="Shadies & The Lady | Belgian Pop/Rock Cover Band"
+    data-i18n-nl="Shadies & The Lady | Belgische Pop/Rock Coverband"
+  >
+    Shadies & The Lady | Belgische Pop/Rock Coverband
+  </title>
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="css/style.css" />
@@ -44,7 +65,7 @@
   <!-- Site Header + Navigation -->
   <header class="site-header">
     <div class="container nav-container">
-      <a class="brand" href="#home" aria-label="Go to homepage section">
+      <a class="brand" href="#home" aria-label="Ga naar home sectie">
         <img
           class="brand-logo"
           src="assets/images/Shadies-and-the-lady_logo.png"
@@ -52,107 +73,133 @@
           width="400"
           height="400"
         />
-        <span class="brand-text">Shadies &amp; The Lady</span>
+        <span
+          class="brand-text"
+          data-i18n="brand.name"
+          data-i18n-en="Shadies &amp; The Lady"
+          data-i18n-nl="Shadies &amp; The Lady"
+        >Shadies &amp; The Lady</span>
       </a>
 
-      <button class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false">
+      <button
+        class="nav-toggle"
+        aria-label="Open navigatiemenu"
+        aria-expanded="false"
+        data-i18n-aria-label="nav.toggle"
+        data-i18n-aria-label-en="Open navigation menu"
+        data-i18n-aria-label-nl="Open navigatiemenu"
+      >
         <span></span>
         <span></span>
         <span></span>
       </button>
 
-      <nav class="site-nav" aria-label="Main navigation">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#members">Members</a>
-        <a href="#repertoire">Repertoire</a>
-        <a href="#gigs">Gigs</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#videos">Videos</a>
-        <a href="#contact">Contact</a>
-        <a class="btn btn-nav" href="#contact">Book Us</a>
+      <nav class="site-nav" aria-label="Hoofdnavigatie">
+        <a href="#home" data-i18n="nav.home" data-i18n-en="Home" data-i18n-nl="Home">Home</a>
+        <a href="#about" data-i18n="nav.about" data-i18n-en="About" data-i18n-nl="Over Ons">Over Ons</a>
+        <a href="#members" data-i18n="nav.members" data-i18n-en="Members" data-i18n-nl="Bandleden">Bandleden</a>
+        <a href="#repertoire" data-i18n="nav.repertoire" data-i18n-en="Repertoire" data-i18n-nl="Repertoire">Repertoire</a>
+        <a href="#gigs" data-i18n="nav.gigs" data-i18n-en="Gigs" data-i18n-nl="Optredens">Optredens</a>
+        <a href="#gallery" data-i18n="nav.gallery" data-i18n-en="Gallery" data-i18n-nl="Galerij">Galerij</a>
+        <a href="#videos" data-i18n="nav.videos" data-i18n-en="Videos" data-i18n-nl="Video's">Video's</a>
+        <a href="#contact" data-i18n="nav.contact" data-i18n-en="Contact" data-i18n-nl="Contact">Contact</a>
+        <a class="btn btn-nav" href="#contact" data-i18n="nav.book" data-i18n-en="Book Us" data-i18n-nl="Boek Ons">Boek Ons</a>
       </nav>
 
-      <!-- Language switcher (EN/NL behavior comes from script.js) -->
-      <div class="language-switcher" aria-label="Language switcher">
-        <button type="button" class="lang-btn is-active" data-lang="en" aria-pressed="true">EN</button>
-        <button type="button" class="lang-btn" data-lang="nl" aria-pressed="false">NL</button>
+      <div class="language-switcher" aria-label="Taalkeuze">
+        <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        <button type="button" class="lang-btn is-active" data-lang="nl" aria-pressed="true">NL</button>
       </div>
     </div>
   </header>
 
   <main>
-    <!-- Home / Hero -->
     <section id="home" class="section hero">
       <div class="container hero-content">
-        <p class="eyebrow">Belgian Pop/Rock Cover Band</p>
-        <h1>Shadies &amp; The Lady</h1>
-        <p class="lead">
-          Energetic live covers for weddings, festivals, pubs, private parties,
-          and corporate events.
+        <p class="eyebrow" data-i18n="hero.eyebrow" data-i18n-en="Belgian Pop/Rock Cover Band" data-i18n-nl="Belgische Pop/Rock Coverband">Belgische Pop/Rock Coverband</p>
+        <h1 data-i18n="hero.title" data-i18n-en="Shadies &amp; The Lady" data-i18n-nl="Shadies &amp; The Lady">Shadies &amp; The Lady</h1>
+        <p
+          class="lead"
+          data-i18n="hero.lead"
+          data-i18n-en="Energetic live covers for weddings, festivals, pubs, private parties, and corporate events."
+          data-i18n-nl="Energetische live covers voor trouwfeesten, festivals, cafés, privéfeesten en bedrijfsevents."
+        >
+          Energetische live covers voor trouwfeesten, festivals, cafés, privéfeesten en bedrijfsevents.
         </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#contact">Book the Band</a>
-          <a class="btn btn-secondary" href="#gigs">See Upcoming Gigs</a>
+          <a class="btn btn-primary" href="#contact" data-i18n="hero.ctaPrimary" data-i18n-en="Book the Band" data-i18n-nl="Boek de Band">Boek de Band</a>
+          <a class="btn btn-secondary" href="#gigs" data-i18n="hero.ctaSecondary" data-i18n-en="See Upcoming Gigs" data-i18n-nl="Bekijk Optredens">Bekijk Optredens</a>
         </div>
       </div>
     </section>
 
-    <!-- About -->
     <section id="about" class="section reveal">
       <div class="container">
-        <h2>About the Band</h2>
-        <p>
-          We are an all-round pop/rock cover band from Limburg, Belgium.
+        <h2 data-i18n="about.title" data-i18n-en="About the Band" data-i18n-nl="Over de Band">Over de Band</h2>
+        <p
+          data-i18n="about.p1"
+          data-i18n-en="We are an all-round pop/rock cover band from Limburg, Belgium."
+          data-i18n-nl="Wij zijn een all-round pop/rock coverband uit Limburg, België."
+        >
+          Wij zijn een all-round pop/rock coverband uit Limburg, België.
         </p>
-        <p>
-          We all share a big passion for music, both old and new, and love to make
-          people happy by playing their favorite songs.
+        <p
+          data-i18n="about.p2"
+          data-i18n-en="We all share a big passion for music, both old and new, and love to make people happy by playing their favorite songs."
+          data-i18n-nl="We delen allemaal een grote passie voor muziek, zowel oud als nieuw, en we maken mensen graag blij met hun favoriete songs."
+        >
+          We delen allemaal een grote passie voor muziek, zowel oud als nieuw, en we maken mensen graag blij met hun favoriete songs.
         </p>
-        <p>
-          Our repertoire spans several decades, combining timeless classics with
-          modern hits. Whether it is a festival, wedding, private party, pub, or
-          corporate event, we enjoy creating an energetic atmosphere that gets
-          people singing and dancing.
+        <p
+          data-i18n="about.p3"
+          data-i18n-en="Our repertoire spans several decades, combining timeless classics with modern hits. Whether it is a festival, wedding, private party, pub, or corporate event, we enjoy creating an energetic atmosphere that gets people singing and dancing."
+          data-i18n-nl="Ons repertoire gaat over meerdere decennia en combineert tijdloze klassiekers met moderne hits. Of het nu een festival, trouwfeest, privéfeest, café-optreden of bedrijfsevent is: wij zorgen voor een energieke sfeer die mensen laat zingen en dansen."
+        >
+          Ons repertoire gaat over meerdere decennia en combineert tijdloze klassiekers met moderne hits. Of het nu een festival, trouwfeest, privéfeest, café-optreden of bedrijfsevent is: wij zorgen voor een energieke sfeer die mensen laat zingen en dansen.
         </p>
       </div>
     </section>
 
-    <!-- Band Members -->
     <section id="members" class="section reveal">
       <div class="container">
-        <h2>Band Members</h2>
+        <h2 data-i18n="members.title" data-i18n-en="Band Members" data-i18n-nl="Bandleden">Bandleden</h2>
         <div class="members-grid">
           <article class="member-card">
             <h3>Diana Breat</h3>
-            <p>Singer</p>
+            <p data-i18n="members.role.singer" data-i18n-en="Singer" data-i18n-nl="Zang">Zang</p>
           </article>
           <article class="member-card">
             <h3>Matthew Coppens</h3>
-            <p>Guitar</p>
+            <p data-i18n="members.role.guitar" data-i18n-en="Guitar" data-i18n-nl="Gitaar">Gitaar</p>
           </article>
           <article class="member-card">
             <h3>Bart Vangerven</h3>
-            <p>Guitar</p>
+            <p data-i18n="members.role.guitar" data-i18n-en="Guitar" data-i18n-nl="Gitaar">Gitaar</p>
           </article>
           <article class="member-card">
             <h3>Dirk Geens</h3>
-            <p>Bass</p>
+            <p data-i18n="members.role.bass" data-i18n-en="Bass" data-i18n-nl="Bas">Bas</p>
           </article>
           <article class="member-card">
             <h3>Philippe Pauwels</h3>
-            <p>Drums</p>
+            <p data-i18n="members.role.drums" data-i18n-en="Drums" data-i18n-nl="Drums">Drums</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Repertoire -->
     <section id="repertoire" class="section reveal">
       <div class="container">
-        <h2>Repertoire</h2>
-        <p class="section-intro">We perform songs by artists including:</p>
-        <ul class="artist-list" aria-label="Artists in repertoire">
+        <h2 data-i18n="repertoire.title" data-i18n-en="Repertoire" data-i18n-nl="Repertoire">Repertoire</h2>
+        <p
+          class="section-intro"
+          data-i18n="repertoire.intro"
+          data-i18n-en="We perform songs by artists including:"
+          data-i18n-nl="Wij spelen songs van artiesten zoals:"
+        >
+          Wij spelen songs van artiesten zoals:
+        </p>
+        <ul class="artist-list" aria-label="Artiesten in repertoire">
           <li>Roxette</li>
           <li>The Outfield</li>
           <li>Meredith Brooks</li>
@@ -184,10 +231,9 @@
       </div>
     </section>
 
-    <!-- Upcoming Gigs -->
     <section id="gigs" class="section reveal">
       <div class="container">
-        <h2>Upcoming Gigs</h2>
+        <h2 data-i18n="gigs.title" data-i18n-en="Upcoming Gigs" data-i18n-nl="Aankomende Optredens">Aankomende Optredens</h2>
         <div class="gigs-timeline">
           <article class="gig-card">
             <p class="gig-date">29 August</p>
@@ -218,36 +264,41 @@
       </div>
     </section>
 
-    <!-- Gallery -->
     <section id="gallery" class="section reveal">
       <div class="container">
-        <h2>Gallery</h2>
-        <p class="section-intro">
-          Live moments, crowd energy, and behind-the-scenes photos.
+        <h2 data-i18n="gallery.title" data-i18n-en="Gallery" data-i18n-nl="Galerij">Galerij</h2>
+        <p
+          class="section-intro"
+          data-i18n="gallery.intro"
+          data-i18n-en="Live moments, crowd energy, and behind-the-scenes photos."
+          data-i18n-nl="Live momenten, publiekssfeer en beelden achter de schermen."
+        >
+          Live momenten, publiekssfeer en beelden achter de schermen.
         </p>
 
-        <!--
-          Replace each placeholder with an image later, for example:
-          <img src="assets/images/photo-01.jpg" alt="Band performing on stage in Limburg" />
-        -->
         <div class="gallery-grid">
-          <div class="gallery-placeholder">Photo Placeholder</div>
-          <div class="gallery-placeholder">Photo Placeholder</div>
-          <div class="gallery-placeholder">Photo Placeholder</div>
-          <div class="gallery-placeholder">Photo Placeholder</div>
-          <div class="gallery-placeholder">Photo Placeholder</div>
-          <div class="gallery-placeholder">Photo Placeholder</div>
+          <div class="gallery-placeholder" data-i18n="gallery.placeholder" data-i18n-en="Photo Placeholder" data-i18n-nl="Foto Placeholder">Foto Placeholder</div>
+          <div class="gallery-placeholder" data-i18n="gallery.placeholder" data-i18n-en="Photo Placeholder" data-i18n-nl="Foto Placeholder">Foto Placeholder</div>
+          <div class="gallery-placeholder" data-i18n="gallery.placeholder" data-i18n-en="Photo Placeholder" data-i18n-nl="Foto Placeholder">Foto Placeholder</div>
+          <div class="gallery-placeholder" data-i18n="gallery.placeholder" data-i18n-en="Photo Placeholder" data-i18n-nl="Foto Placeholder">Foto Placeholder</div>
+          <div class="gallery-placeholder" data-i18n="gallery.placeholder" data-i18n-en="Photo Placeholder" data-i18n-nl="Foto Placeholder">Foto Placeholder</div>
+          <div class="gallery-placeholder" data-i18n="gallery.placeholder" data-i18n-en="Photo Placeholder" data-i18n-nl="Foto Placeholder">Foto Placeholder</div>
         </div>
       </div>
     </section>
 
-    <!-- Videos -->
     <section id="videos" class="section reveal">
       <div class="container">
-        <h2>Videos</h2>
-        <p class="section-intro">Watch us live and feel the atmosphere.</p>
+        <h2 data-i18n="videos.title" data-i18n-en="Videos" data-i18n-nl="Video's">Video's</h2>
+        <p
+          class="section-intro"
+          data-i18n="videos.intro"
+          data-i18n-en="Watch us live and feel the atmosphere."
+          data-i18n-nl="Bekijk ons live en voel de sfeer."
+        >
+          Bekijk ons live en voel de sfeer.
+        </p>
 
-        <!-- Keep placeholders until you have final YouTube links -->
         <div class="video-grid">
           <article class="video-card">
             <div class="video-frame">
@@ -273,20 +324,33 @@
       </div>
     </section>
 
-    <!-- Contact -->
     <section id="contact" class="section reveal">
       <div class="container">
-        <h2>Contact</h2>
-        <p class="section-intro">
-          Ready to bring live energy to your event? Get in touch for bookings.
+        <h2 data-i18n="contact.title" data-i18n-en="Contact" data-i18n-nl="Contact">Contact</h2>
+        <p
+          class="section-intro"
+          data-i18n="contact.intro"
+          data-i18n-en="Ready to bring live energy to your event? Get in touch for bookings."
+          data-i18n-nl="Klaar om live energie naar jouw event te brengen? Neem contact op voor boekingen."
+        >
+          Klaar om live energie naar jouw event te brengen? Neem contact op voor boekingen.
         </p>
 
         <div class="contact-card">
-          <p><strong>Email:</strong> shadiesandthelady@pm.me</p>
-          <p><strong>Phone:</strong> +32 XX XX XX XX</p>
-          <p><strong>Location:</strong> Limburg, Belgium</p>
           <p>
-            <strong>Social:</strong>
+            <strong data-i18n="contact.emailLabel" data-i18n-en="Email:" data-i18n-nl="E-mail:">E-mail:</strong>
+            shadiesandthelady@pm.me
+          </p>
+          <p>
+            <strong data-i18n="contact.phoneLabel" data-i18n-en="Phone:" data-i18n-nl="Telefoon:">Telefoon:</strong>
+            +32 XX XX XX XX
+          </p>
+          <p>
+            <strong data-i18n="contact.locationLabel" data-i18n-en="Location:" data-i18n-nl="Locatie:">Locatie:</strong>
+            Limburg, Belgium
+          </p>
+          <p>
+            <strong data-i18n="contact.socialLabel" data-i18n-en="Social:" data-i18n-nl="Socials:">Socials:</strong>
             <a href="https://www.facebook.com/people/Shadies-The-Lady/61582410604672/" target="_blank" rel="noopener noreferrer">Facebook</a>
             |
             <a href="https://www.instagram.com/shadiesandthelady" target="_blank" rel="noopener noreferrer">Instagram</a>
@@ -300,7 +364,13 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; 2026 Shadies &amp; The Lady. All rights reserved.</p>
+      <p
+        data-i18n="footer.copy"
+        data-i18n-en="© 2026 Shadies &amp; The Lady. All rights reserved."
+        data-i18n-nl="© 2026 Shadies &amp; The Lady. Alle rechten voorbehouden."
+      >
+        &copy; 2026 Shadies &amp; The Lady. Alle rechten voorbehouden.
+      </p>
     </div>
   </footer>
 
