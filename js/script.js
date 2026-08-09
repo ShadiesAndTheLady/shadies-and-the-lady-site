@@ -308,6 +308,12 @@
 
     document.title = t("meta.title", lang);
 
+    // Store current UI language with each form submission.
+    var formLanguageField = document.getElementById("formLanguage");
+    if (formLanguageField) {
+      formLanguageField.value = lang;
+    }
+
     updateLanguageButtons(lang);
     saveLanguage(lang);
   }
