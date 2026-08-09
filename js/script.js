@@ -16,9 +16,9 @@
 
   var translations = {
     nl: {
-      "meta.title": "Shadies & The Lady | Belgische Pop/Rock Coverband",
+      "meta.title": "Shadies & The Lady | Pop & Rock Coverband Limburg Belgie",
       "meta.description": "Shadies & The Lady is een all-round Belgische pop/rock coverband uit Limburg. Wij spelen op trouwfeesten, festivals, privefeesten, cafes en bedrijfsevents.",
-      "meta.ogTitle": "Shadies & The Lady | Belgische Pop/Rock Coverband",
+      "meta.ogTitle": "Shadies & The Lady | Pop & Rock Coverband Limburg Belgie",
       "meta.ogDescription": "Energetische live covers voor trouwfeesten, festivals, privefeesten, cafes en bedrijfsevents.",
 
       "brand.homeAria": "Ga naar home sectie",
@@ -66,11 +66,12 @@
       "gigsBooking.intro": "Actieve kalender, duidelijke boekingsflow en praktische technische info op een plek.",
       "gigs.title": "Aankomende Optredens",
       "gigs.nextBadge": "Volgende show",
-      "gigs.date1": "29 AUG",
-      "gigs.date2": "19 SEP",
-      "gigs.date3": "20 SEP",
-      "gigs.date4": "3 OKT",
-      "gigs.date5": "10 NOV",
+      "gigs.date1": "29 AUG 2026",
+      "gigs.date2": "19 SEP 2026",
+      "gigs.date3": "20 SEP 2026",
+      "gigs.date4": "3 OKT 2026",
+      "gigs.date5": "10 NOV 2026",
+      "gigs.nextCta": "IK BEN ERBIJ ->",
 
       "booking.title": "Boekingsinformatie",
       "booking.step1Title": "1. Neem contact op",
@@ -79,8 +80,8 @@
       "booking.step2Text": "Wij bevestigen beschikbaarheid en bezorgen een voorstel op maat.",
       "booking.step3Title": "3. Bevestiging",
       "booking.step3Text": "Na akkoord stemmen we opbouw, setduur en praktische details af.",
-      "booking.priceTitle": "Prijsrichtlijn",
-      "booking.priceText": "Prijs hangt af van eventtype, duur, locatie en technische noden.",
+      "booking.priceTitle": "Een offerte op maat",
+      "booking.priceText": "Vraag je offerte aan via het formulier. We antwoorden snel met een voorstel op maat van je event.",
 
       "tech.title": "Technische Setup",
       "tech.provideTitle": "Wat wij kunnen voorzien",
@@ -157,7 +158,7 @@
       "form.locationLabel": "Locatie",
       "form.messageLabel": "Bericht",
       "form.specialRequestsLabel": "Speciale wensen of verzoeknummers",
-      "form.optionalDetailsSummary": "Telefoon en extra details (optioneel)",
+      "form.optionalDetailsSummary": "Bericht / extra details (optioneel)",
       "form.privacyConsent": "Ik ga akkoord dat mijn gegevens worden verwerkt om mijn aanvraag te beantwoorden.",
       "form.privacyNote": "Lees ons privacy- en GDPR-beleid in de footer links hieronder.",
       "form.submit": "Verstuur aanvraag",
@@ -185,13 +186,13 @@
       "legal.title": "Juridische Informatie",
       "legal.text": "Deze website dient als informatie- en contactkanaal voor boekingen van Shadies & The Lady.",
       "privacy.title": "Privacy & GDPR",
-      "privacy.text": "We gebruiken ingezonden contactgegevens uitsluitend om je aanvraag te beantwoorden. Formulierinzendingen worden verwerkt via Formspree. Daarnaast gebruikt deze website externe diensten via links en webverzoeken (zoals Google Fonts en social platformen). We bewaren gegevens niet langer dan nodig voor opvolging.",
+      "privacy.text": "We gebruiken ingezonden contactgegevens uitsluitend om je aanvraag te beantwoorden. Formulierinzendingen worden verwerkt via Formspree als verwerker. Volgens hun publieke documentatie worden inzendingen op het gratis plan tot 30 dagen bewaard, en gebruikt Formspree Standard Contractual Clauses voor internationale gegevensoverdracht. Wij bewaren je gegevens zelf niet langer dan nodig voor de opvolging van je aanvraag.",
       "footer.copy": "© 2026 Shadies & The Lady. Alle rechten voorbehouden."
     },
     en: {
-      "meta.title": "Shadies & The Lady | Belgian Pop/Rock Cover Band",
+      "meta.title": "Shadies & The Lady | Pop & Rock Cover Band Limburg Belgium",
       "meta.description": "Shadies & The Lady is an all-round Belgian pop/rock cover band from Limburg. We play at weddings, festivals, private parties, pubs, and corporate events.",
-      "meta.ogTitle": "Shadies & The Lady | Belgian Pop/Rock Cover Band",
+      "meta.ogTitle": "Shadies & The Lady | Pop & Rock Cover Band Limburg Belgium",
       "meta.ogDescription": "Energetic live covers for weddings, festivals, private parties, pubs, and corporate events.",
 
       "brand.homeAria": "Go to home section",
@@ -239,11 +240,12 @@
       "gigsBooking.intro": "Live calendar, clear booking flow, and practical technical info in one place.",
       "gigs.title": "Upcoming Gigs",
       "gigs.nextBadge": "Next Show",
-      "gigs.date1": "29 AUG",
-      "gigs.date2": "19 SEP",
-      "gigs.date3": "20 SEP",
-      "gigs.date4": "3 OCT",
-      "gigs.date5": "10 NOV",
+      "gigs.date1": "29 AUG 2026",
+      "gigs.date2": "19 SEP 2026",
+      "gigs.date3": "20 SEP 2026",
+      "gigs.date4": "3 OCT 2026",
+      "gigs.date5": "10 NOV 2026",
+      "gigs.nextCta": "BE THERE ->",
 
       "booking.title": "Booking Information",
       "booking.step1Title": "1. Contact Us",
@@ -252,8 +254,8 @@
       "booking.step2Text": "We confirm availability and send a tailored proposal.",
       "booking.step3Title": "3. Confirmation",
       "booking.step3Text": "After agreement, we align setup, set duration, and practical details.",
-      "booking.priceTitle": "Pricing Guidance",
-      "booking.priceText": "Pricing depends on event type, duration, location, and technical needs.",
+      "booking.priceTitle": "A Tailored Quote",
+      "booking.priceText": "Request your quote through the form. We reply quickly with a proposal tailored to your event.",
 
       "tech.title": "Technical Setup",
       "tech.provideTitle": "What we can provide",
@@ -330,7 +332,7 @@
       "form.locationLabel": "Location",
       "form.messageLabel": "Message",
       "form.specialRequestsLabel": "Special requests or song wishes",
-      "form.optionalDetailsSummary": "Phone and extra details (optional)",
+      "form.optionalDetailsSummary": "Message / extra details (optional)",
       "form.privacyConsent": "I agree that my data will be processed to respond to my inquiry.",
       "form.privacyNote": "Read our privacy and GDPR statement in the footer links below.",
       "form.submit": "Send request",
@@ -358,7 +360,7 @@
       "legal.title": "Legal Information",
       "legal.text": "This website serves as an information and booking contact channel for Shadies & The Lady.",
       "privacy.title": "Privacy & GDPR",
-      "privacy.text": "We use submitted contact details only to respond to your inquiry. Form submissions are processed via Formspree. This website also uses external services through links and web requests (such as Google Fonts and social platforms). We do not store personal data longer than needed for follow-up.",
+      "privacy.text": "We use submitted contact details only to respond to your inquiry. Form submissions are processed via Formspree as our data processor. According to their public documentation, submissions on the free plan are retained for up to 30 days, and Formspree relies on Standard Contractual Clauses for international data transfers. We do not keep your personal data ourselves longer than needed to follow up on your inquiry.",
       "footer.copy": "© 2026 Shadies & The Lady. All rights reserved."
     }
   };
