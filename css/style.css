@@ -551,10 +551,6 @@ p {
   border-bottom-color: rgba(255, 255, 255, 0.7);
 }
 
-.social-intro {
-  margin-bottom: 0.45rem;
-}
-
 .social-links {
   display: flex;
   gap: 0.6rem;
@@ -601,6 +597,12 @@ p {
   font-weight: 600;
 }
 
+.form-grid-two {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
 .contact-form input,
 .contact-form select,
 .contact-form textarea {
@@ -627,6 +629,25 @@ p {
 .form-note {
   color: var(--color-text-muted);
   margin-bottom: 0.4rem;
+}
+
+.consent-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  margin-top: 0.8rem;
+}
+
+.consent-row input[type="checkbox"] {
+  margin-top: 0.15rem;
+  width: 16px;
+  height: 16px;
+}
+
+.privacy-note {
+  margin-top: 0.4rem;
+  margin-bottom: 0.1rem;
+  font-size: 0.88rem;
 }
 
 .form-status {
@@ -691,6 +712,33 @@ p {
 .footer-bottom {
   padding-top: 0.9rem;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-mini-links {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.55rem;
+}
+
+.footer-mini-links a {
+  color: var(--color-text-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.footer-mini-links a:hover,
+.footer-mini-links a:focus-visible {
+  color: var(--color-primary);
+}
+
+.legal-section {
+  padding-top: 2.2rem;
+}
+
+.legal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
 }
 
 .reveal {
@@ -772,7 +820,9 @@ button:focus-visible {
   .gigs-timeline,
   .booking-grid,
   .tech-layout,
-  .video-grid {
+  .video-grid,
+  .legal-grid,
+  .form-grid-two {
     grid-template-columns: 1fr;
   }
 
