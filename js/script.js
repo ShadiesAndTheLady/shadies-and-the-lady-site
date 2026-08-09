@@ -101,19 +101,22 @@
       "contact.intro": "Klaar om live energie op jouw event te brengen? Stuur je aanvraag hieronder.",
       "contact.emailLabel": "E-mail:",
       "contact.phoneLabel": "Telefoon:",
+      "contact.phoneOptionalLabel": "Telefoon (optioneel)",
       "contact.locationLabel": "Locatie:",
       "contact.socialLabel": "Socials:",
       "contact.copyEmail": "Kopieer",
 
-      "social.follow": "Volg ons hier:",
       "social.facebookAria": "Facebook",
       "social.instagramAria": "Instagram",
       "social.linktreeAria": "Linktree",
+      "social.facebookTitle": "Facebook",
+      "social.instagramTitle": "Instagram",
+      "social.linktreeTitle": "Linktree",
 
       "form.note": "Vul het formulier in voor een snelle offerte op maat.",
-      "form.nameLabel": "Naam",
+      "form.firstNameLabel": "Voornaam",
+      "form.lastNameLabel": "Achternaam",
       "form.emailLabel": "E-mail",
-      "form.phoneLabel": "Telefoon",
       "form.eventTypeLabel": "Type event",
       "form.selectDefault": "Selecteer",
       "form.eventWedding": "Trouwfeest",
@@ -124,6 +127,9 @@
       "form.dateLabel": "Datum",
       "form.locationLabel": "Locatie",
       "form.messageLabel": "Bericht",
+      "form.specialRequestsLabel": "Speciale wensen of verzoeknummers",
+      "form.privacyConsent": "Ik ga akkoord dat mijn gegevens worden verwerkt om mijn aanvraag te beantwoorden.",
+      "form.privacyNote": "Lees ons privacy- en GDPR-beleid in de footer links hieronder.",
       "form.submit": "Verstuur aanvraag",
 
       "form.setup": "Formulier is nog niet gekoppeld. Vervang YOUR_FORM_ID in index.html.",
@@ -143,6 +149,12 @@
       "footer.linkContact": "Contact",
       "footer.bookingTitle": "Boeking",
       "footer.bookingText": "Gebruik het formulier of mail ons rechtstreeks voor een offerte op maat.",
+      "footer.legalLink": "Juridisch",
+      "footer.privacyLink": "Privacy & GDPR",
+      "legal.title": "Juridische Informatie",
+      "legal.text": "Deze website dient als informatie- en contactkanaal voor boekingen van Shadies & The Lady.",
+      "privacy.title": "Privacy & GDPR",
+      "privacy.text": "We gebruiken ingezonden contactgegevens uitsluitend om je aanvraag te beantwoorden. We delen deze gegevens niet met derden en bewaren ze niet langer dan nodig voor opvolging.",
       "footer.copy": "© 2026 Shadies & The Lady. Alle rechten voorbehouden."
     },
     en: {
@@ -231,19 +243,22 @@
       "contact.intro": "Ready to bring live energy to your event? Send your request below.",
       "contact.emailLabel": "Email:",
       "contact.phoneLabel": "Phone:",
+      "contact.phoneOptionalLabel": "Phone (optional)",
       "contact.locationLabel": "Location:",
       "contact.socialLabel": "Social:",
       "contact.copyEmail": "Copy",
 
-      "social.follow": "Follow us here:",
       "social.facebookAria": "Facebook",
       "social.instagramAria": "Instagram",
       "social.linktreeAria": "Linktree",
+      "social.facebookTitle": "Facebook",
+      "social.instagramTitle": "Instagram",
+      "social.linktreeTitle": "Linktree",
 
       "form.note": "Fill in the form to receive a fast tailored quote.",
-      "form.nameLabel": "Name",
+      "form.firstNameLabel": "First name",
+      "form.lastNameLabel": "Last name",
       "form.emailLabel": "Email",
-      "form.phoneLabel": "Phone",
       "form.eventTypeLabel": "Event type",
       "form.selectDefault": "Select",
       "form.eventWedding": "Wedding",
@@ -254,6 +269,9 @@
       "form.dateLabel": "Date",
       "form.locationLabel": "Location",
       "form.messageLabel": "Message",
+      "form.specialRequestsLabel": "Special requests or song wishes",
+      "form.privacyConsent": "I agree that my data will be processed to respond to my inquiry.",
+      "form.privacyNote": "Read our privacy and GDPR statement in the footer links below.",
       "form.submit": "Send request",
 
       "form.setup": "Form is not connected yet. Replace YOUR_FORM_ID in index.html.",
@@ -273,6 +291,12 @@
       "footer.linkContact": "Contact",
       "footer.bookingTitle": "Booking",
       "footer.bookingText": "Use the form or email us directly for a tailored quote.",
+      "footer.legalLink": "Legal",
+      "footer.privacyLink": "Privacy & GDPR",
+      "legal.title": "Legal Information",
+      "legal.text": "This website serves as an information and booking contact channel for Shadies & The Lady.",
+      "privacy.title": "Privacy & GDPR",
+      "privacy.text": "We use submitted contact details only to respond to your inquiry. We do not share this data with third parties and do not store it longer than needed for follow-up.",
       "footer.copy": "© 2026 Shadies & The Lady. All rights reserved."
     }
   };
@@ -339,6 +363,14 @@
       var key = element.getAttribute("data-i18n-aria-label-key");
       if (key) {
         element.setAttribute("aria-label", t(key, lang));
+      }
+    });
+
+    var titleElements = document.querySelectorAll("[data-i18n-title-key]");
+    titleElements.forEach(function (element) {
+      var titleKey = element.getAttribute("data-i18n-title-key");
+      if (titleKey) {
+        element.setAttribute("title", t(titleKey, lang));
       }
     });
 
