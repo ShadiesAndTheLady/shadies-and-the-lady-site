@@ -20,6 +20,7 @@
       "meta.description": "Shadies & The Lady is een all-round Belgische pop/rock coverband uit Limburg. Wij spelen op trouwfeesten, festivals, privefeesten, cafes en bedrijfsevents.",
       "meta.ogTitle": "Shadies & The Lady | Pop & Rock Coverband Limburg Belgie",
       "meta.ogDescription": "Energetische live covers voor trouwfeesten, festivals, privefeesten, cafes en bedrijfsevents.",
+      "meta.ogImageAlt": "Shadies & The Lady bandlogo",
 
       "brand.homeAria": "Ga naar home sectie",
       "nav.toggleAria": "Open navigatiemenu",
@@ -184,6 +185,7 @@
       "meta.description": "Shadies & The Lady is an all-round Belgian pop/rock cover band from Limburg. We play at weddings, festivals, private parties, pubs, and corporate events.",
       "meta.ogTitle": "Shadies & The Lady | Pop & Rock Cover Band Limburg Belgium",
       "meta.ogDescription": "Energetic live covers for weddings, festivals, private parties, pubs, and corporate events.",
+      "meta.ogImageAlt": "Shadies & The Lady band logo",
 
       "brand.homeAria": "Go to home section",
       "nav.toggleAria": "Open navigation menu",
