@@ -172,7 +172,6 @@
         <div class="repertoire-grid">
           <article class="repertoire-card">
             <h3 data-i18n-key="repertoire.classicsTitle">Classics</h3>
-            <p data-i18n-key="repertoire.classicsText">Tijdloze rock- en popanthems die iedereen meezingt.</p>
             <ul class="repertoire-songs">
               <li><span class="song-artist">The Beatles</span> - <span class="song-title">Come Together</span></li>
               <li><span class="song-artist">Queen</span> - <span class="song-title">We Will Rock You</span></li>
@@ -189,7 +188,6 @@
 
           <article class="repertoire-card">
             <h3 data-i18n-key="repertoire.ninetiesTitle">90s / 00s</h3>
-            <p data-i18n-key="repertoire.ninetiesText">Songs waarmee het publiek opgroeide, van grunge tot poprock.</p>
             <ul class="repertoire-songs">
               <li><span class="song-artist">Roxette</span> - <span class="song-title">Sleeping in My Car</span></li>
               <li><span class="song-artist">The Outfield</span> - <span class="song-title">Your Love</span></li>
@@ -208,7 +206,6 @@
 
           <article class="repertoire-card">
             <h3 data-i18n-key="repertoire.modernTitle">Modern & Crowd Favorites</h3>
-            <p data-i18n-key="repertoire.modernText">Nieuwe tracks en vaste publieksfavorieten voor een volle dansvloer.</p>
             <ul class="repertoire-songs">
               <li><span class="song-artist">Benson Boone</span> - <span class="song-title">Beautiful Things</span></li>
               <li><span class="song-artist">The Beaches</span> - <span class="song-title">Blame Brett</span></li>
@@ -234,13 +231,7 @@
             <p class="gig-date" data-i18n-key="gigs.date1">29 AUG 2026</p>
             <h4>2 Jaar De Stip</h4>
             <p>Stevoort</p>
-            <a
-              class="gig-cta"
-              href="https://www.facebook.com/people/Shadies-The-Lady/61582410604672/"
-              target="_blank"
-              rel="noopener noreferrer"
-              data-i18n-key="gigs.nextCta"
-            >BE THERE -></a>
+            <p class="gig-cta" data-i18n-key="gigs.nextCta">BE THERE -></p>
           </article>
           <article class="gig-card">
             <p class="gig-date" data-i18n-key="gigs.date2">19 SEP 2026</p>
@@ -261,46 +252,6 @@
             <p class="gig-date" data-i18n-key="gigs.date5">10 NOV 2026</p>
             <h4>Durango Sessions</h4>
             <p>Paal</p>
-          </article>
-        </div>
-
-        <h3 class="subsection-title" data-i18n-key="booking.title">Boekingsinformatie</h3>
-        <div class="booking-grid">
-          <article class="booking-card">
-            <h4 data-i18n-key="booking.step1Title">1. Neem contact op</h4>
-            <p data-i18n-key="booking.step1Text">Stuur ons je datum, locatie, type event en verwachte timing.</p>
-          </article>
-          <article class="booking-card">
-            <h4 data-i18n-key="booking.step2Title">2. Ontvang voorstel</h4>
-            <p data-i18n-key="booking.step2Text">Wij bevestigen beschikbaarheid en bezorgen een voorstel op maat.</p>
-          </article>
-          <article class="booking-card">
-            <h4 data-i18n-key="booking.step3Title">3. Bevestiging</h4>
-            <p data-i18n-key="booking.step3Text">Na akkoord stemmen we opbouw, setduur en praktische details af.</p>
-          </article>
-          <article class="booking-card">
-            <h4 data-i18n-key="booking.priceTitle">Een offerte op maat</h4>
-            <p data-i18n-key="booking.priceText">Vraag je offerte aan via het formulier. We antwoorden snel met een voorstel op maat van je event.</p>
-          </article>
-        </div>
-
-        <h3 class="subsection-title" data-i18n-key="tech.title">Technische Setup</h3>
-        <div class="tech-layout">
-          <article class="contact-card">
-            <h4 data-i18n-key="tech.provideTitle">Wat wij kunnen voorzien</h4>
-            <ul class="check-list">
-              <li data-i18n-key="tech.provide1">Volledig PA-systeem voor kleine tot middelgrote events</li>
-              <li data-i18n-key="tech.provide2">Podiumverlichting</li>
-              <li data-i18n-key="tech.provide3">Flexibele setlengtes en pauzeplanning</li>
-            </ul>
-          </article>
-          <article class="contact-card">
-            <h4 data-i18n-key="tech.needTitle">Wat wij nodig hebben</h4>
-            <ul class="check-list">
-              <li data-i18n-key="tech.need1">Stabiele stroomvoorziening dicht bij de speelplek</li>
-              <li data-i18n-key="tech.need2">Voldoende speelruimte</li>
-              <li data-i18n-key="tech.need3">Vlotte toegang voor opbouw en afbouw</li>
-            </ul>
           </article>
         </div>
       </div>
@@ -343,17 +294,98 @@
           Klaar om live energie op jouw event te brengen? Stuur je aanvraag hieronder.
         </p>
 
-        <p class="contact-direct">
+        <div class="contact-direct" role="group" aria-label="Direct contact">
           <strong data-i18n-key="contact.emailLabel">E-mail:</strong>
-          <a href="mailto:shadiesandthelady@pm.me">shadiesandthelady@pm.me</a>
+          <span id="contactEmail" class="contact-email">shadiesandthelady@pm.me</span>
+          <button type="button" id="copyEmailButton" class="copy-btn" data-i18n-key="contact.copyEmail">Kopieer</button>
           <span class="contact-direct-sep" aria-hidden="true">|</span>
           <strong data-i18n-key="contact.socialLabel">Socials:</strong>
-          <a href="https://www.facebook.com/people/Shadies-The-Lady/61582410604672/" target="_blank" rel="noopener noreferrer">Facebook</a>
-          <span aria-hidden="true">-</span>
-          <a href="https://www.instagram.com/shadiesandthelady" target="_blank" rel="noopener noreferrer">Instagram</a>
-          <span aria-hidden="true">-</span>
-          <a href="https://linktr.ee/shadiesandthelady" target="_blank" rel="noopener noreferrer">Linktree</a>
-        </p>
+          <div class="social-links" role="list">
+            <a
+              class="social-link"
+              href="https://www.facebook.com/people/Shadies-The-Lady/61582410604672/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+              data-i18n-aria-label-key="social.facebookAria"
+              title="Facebook"
+              data-i18n-title-key="social.facebookTitle"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M13.5 21v-8h2.7l.4-3h-3.1V8.2c0-.9.3-1.5 1.6-1.5h1.7V4c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3V10H8v3h2.6v8h2.9z" />
+              </svg>
+            </a>
+            <a
+              class="social-link"
+              href="https://www.instagram.com/shadiesandthelady"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              data-i18n-aria-label-key="social.instagramAria"
+              title="Instagram"
+              data-i18n-title-key="social.instagramTitle"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M7.5 2h9C19 2 22 5 22 7.5v9c0 2.5-3 5.5-5.5 5.5h-9C5 22 2 19 2 16.5v-9C2 5 5 2 7.5 2zm-.1 2C6 4 4 6 4 7.4v9.2C4 18 6 20 7.4 20h9.2c1.4 0 3.4-2 3.4-3.4V7.4C20 6 18 4 16.6 4H7.4zM12 7a5 5 0 100 10 5 5 0 000-10zm0 2.1a2.9 2.9 0 110 5.8 2.9 2.9 0 010-5.8zm5.2-2.7a1.2 1.2 0 100 2.4 1.2 1.2 0 000-2.4z" />
+              </svg>
+            </a>
+            <a
+              class="social-link"
+              href="https://linktr.ee/shadiesandthelady"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Linktree"
+              data-i18n-aria-label-key="social.linktreeAria"
+              title="Linktree"
+              data-i18n-title-key="social.linktreeTitle"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M11 2h2v5.2l3.7-3.7 1.4 1.4L14.4 8.6H20v2h-5.6l3.7 3.7-1.4 1.4L13 12v5.2h-2V12l-3.7 3.7-1.4-1.4 3.7-3.7H4v-2h5.6L5.9 4.9l1.4-1.4L11 7.2V2zM8 19h8v3H8v-3z" />
+              </svg>
+            </a>
+          </div>
+          <p id="copy-status" class="copy-status" aria-live="polite"></p>
+        </div>
+
+        <h3 class="subsection-title" data-i18n-key="booking.title">Boekingsinformatie</h3>
+        <div class="booking-grid booking-grid-compact">
+          <article class="booking-card">
+            <h4 data-i18n-key="booking.step1Title">1. Neem contact op</h4>
+            <p data-i18n-key="booking.step1Text">Stuur ons je datum, locatie, type event en verwachte timing.</p>
+          </article>
+          <article class="booking-card">
+            <h4 data-i18n-key="booking.step2Title">2. Ontvang voorstel</h4>
+            <p data-i18n-key="booking.step2Text">Wij bevestigen beschikbaarheid en bezorgen een voorstel op maat.</p>
+          </article>
+          <article class="booking-card">
+            <h4 data-i18n-key="booking.step3Title">3. Bevestiging</h4>
+            <p data-i18n-key="booking.step3Text">Na akkoord stemmen we opbouw, setduur en praktische details af.</p>
+          </article>
+          <article class="booking-card">
+            <h4 data-i18n-key="booking.priceTitle">Een offerte op maat</h4>
+            <p data-i18n-key="booking.priceText">Vraag je offerte aan via het formulier. We antwoorden snel met een voorstel op maat van je event.</p>
+          </article>
+        </div>
+
+        <h3 class="subsection-title" data-i18n-key="tech.title">Technische Setup</h3>
+        <div class="tech-layout tech-layout-compact">
+          <article class="contact-card">
+            <h4 data-i18n-key="tech.provideTitle">Wat wij kunnen voorzien</h4>
+            <ul class="check-list">
+              <li data-i18n-key="tech.provide1">Volledig PA-systeem voor kleine tot middelgrote events</li>
+              <li data-i18n-key="tech.provide2">Podiumverlichting</li>
+              <li data-i18n-key="tech.provide3">Flexibele setlengtes en pauzeplanning</li>
+            </ul>
+          </article>
+          <article class="contact-card">
+            <h4 data-i18n-key="tech.needTitle">Wat wij nodig hebben</h4>
+            <ul class="check-list">
+              <li data-i18n-key="tech.need1">Stabiele stroomvoorziening dicht bij de speelplek</li>
+              <li data-i18n-key="tech.need2">Voldoende speelruimte</li>
+              <li data-i18n-key="tech.need3">Vlotte toegang voor opbouw en afbouw</li>
+            </ul>
+          </article>
+        </div>
 
         <div class="contact-layout">
           <form
