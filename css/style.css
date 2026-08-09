@@ -260,6 +260,30 @@ p {
   align-items: center;
 }
 
+.hero-layout {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.hero-brandmark {
+  width: 170px;
+  height: 170px;
+  border-radius: 20px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(145deg, rgba(242, 196, 155, 0.16), rgba(207, 43, 33, 0.12));
+  border: 1px solid rgba(242, 196, 155, 0.35);
+  box-shadow: var(--shadow-soft);
+}
+
+.hero-logo {
+  width: 138px;
+  height: 138px;
+  object-fit: contain;
+}
+
 .eyebrow {
   color: var(--color-accent);
   text-transform: uppercase;
@@ -501,6 +525,15 @@ p {
 
 .contact-card strong {
   color: var(--color-primary);
+}
+
+.contact-snapshot-title {
+  margin-top: 1.2rem;
+  margin-bottom: 0.45rem;
+}
+
+.contact-snapshot-list {
+  margin-top: 0.25rem;
 }
 
 .contact-email {
@@ -784,6 +817,26 @@ button:focus-visible {
 
   .contact-layout {
     grid-template-columns: 1fr;
+  }
+
+  .hero-layout {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-brandmark {
+    margin: 0 auto;
+    width: 140px;
+    height: 140px;
+  }
+
+  .hero-logo {
+    width: 110px;
+    height: 110px;
+  }
+
+  .hero-actions {
+    justify-content: center;
   }
 }
 
