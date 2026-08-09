@@ -83,15 +83,26 @@
 
   <main>
     <section id="home" class="section hero">
-      <div class="container hero-content">
-        <p class="eyebrow" data-i18n-key="hero.eyebrow">Belgische Pop/Rock Coverband</p>
-        <h1>Shadies &amp; The Lady</h1>
-        <p class="lead" data-i18n-key="hero.lead">
-          Energetische live covers voor trouwfeesten, festivals, cafes, privefeesten en bedrijfsevents.
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#contact" data-i18n-key="hero.ctaPrimary">Boek de Band</a>
-          <a class="btn btn-secondary" href="#gigs-booking" data-i18n-key="hero.ctaSecondary">Bekijk Optredens</a>
+      <div class="container hero-content hero-layout">
+        <div class="hero-brandmark">
+          <img
+            class="hero-logo"
+            src="assets/images/Shadies-and-the-lady_logo.png"
+            alt="Shadies and The Lady hero logo"
+            width="400"
+            height="400"
+          />
+        </div>
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n-key="hero.eyebrow">Belgische Pop/Rock Coverband</p>
+          <h1>Shadies &amp; The Lady</h1>
+          <p class="lead" data-i18n-key="hero.lead">
+            Energetische live covers voor trouwfeesten, festivals, cafes, privefeesten en bedrijfsevents.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact" data-i18n-key="hero.ctaPrimary">Boek de Band</a>
+            <a class="btn btn-secondary" href="#gigs-booking" data-i18n-key="hero.ctaSecondary">Bekijk Optredens</a>
+          </div>
         </div>
       </div>
     </section>
@@ -260,6 +271,7 @@
       <div class="container">
         <h2 data-i18n-key="gallery.title">Galerij</h2>
         <p class="section-intro" data-i18n-key="gallery.intro">Live momenten, sfeerbeelden en foto's achter de schermen.</p>
+        <p class="privacy-note" data-i18n-key="gallery.photoGuide">Fototip: gebruik beelden van ongeveer 1600px breed en 250-600 KB voor goede kwaliteit en snelle laadtijd.</p>
         <div class="gallery-grid">
           <div class="gallery-placeholder" data-i18n-key="gallery.placeholder">Foto Placeholder</div>
           <div class="gallery-placeholder" data-i18n-key="gallery.placeholder">Foto Placeholder</div>
@@ -361,6 +373,14 @@
                 </svg>
               </a>
             </div>
+
+            <h4 class="contact-snapshot-title" data-i18n-key="contact.snapshotTitle">Boekingssnapshot</h4>
+            <ul class="check-list contact-snapshot-list">
+              <li data-i18n-key="contact.snapshot1">Gemiddelde reactietijd: binnen 48 uur</li>
+              <li data-i18n-key="contact.snapshot2">Beschikbaar voor trouw, festival, prive en corporate events</li>
+              <li data-i18n-key="contact.snapshot3">PA en verlichting mogelijk op aanvraag</li>
+              <li data-i18n-key="contact.snapshot4">Actief in Limburg en ver daarbuiten</li>
+            </ul>
           </article>
 
           <form
@@ -388,21 +408,42 @@
             <label for="email" data-i18n-key="form.emailLabel">E-mail</label>
             <input id="email" name="email" type="email" required />
 
-            <label for="phone" data-i18n-key="form.phoneOptionalLabel">Telefoon (optioneel)</label>
-            <input id="phone" name="phone" type="text" />
+            <div class="form-grid-two">
+              <div>
+                <label for="phoneCountryCode" data-i18n-key="form.phoneCodeLabel">Landcode</label>
+                <select id="phoneCountryCode" name="phoneCountryCode">
+                  <option value="+32">🇧🇪 +32 Belgium</option>
+                  <option value="+31">🇳🇱 +31 Netherlands</option>
+                  <option value="+33">🇫🇷 +33 France</option>
+                  <option value="+49">🇩🇪 +49 Germany</option>
+                  <option value="+44">🇬🇧 +44 United Kingdom</option>
+                  <option value="+1">🇺🇸 +1 United States/Canada</option>
+                  <option value="other" data-i18n-key="form.phoneCodeOther">Andere</option>
+                </select>
+              </div>
+              <div>
+                <label for="phoneNumber" data-i18n-key="form.phoneOptionalLabel">Telefoonnummer (optioneel)</label>
+                <input id="phoneNumber" name="phoneNumber" type="tel" inputmode="tel" placeholder="456 12 34 56" />
+              </div>
+            </div>
 
-            <label for="eventType" data-i18n-key="form.eventTypeLabel">Type event</label>
-            <select id="eventType" name="eventType" required>
-              <option value="" data-i18n-key="form.selectDefault">Selecteer</option>
-              <option value="wedding" data-i18n-key="form.eventWedding">Trouwfeest</option>
-              <option value="festival" data-i18n-key="form.eventFestival">Festival</option>
-              <option value="private" data-i18n-key="form.eventPrivate">Privefeest</option>
-              <option value="corporate" data-i18n-key="form.eventCorporate">Bedrijfsevent</option>
-              <option value="other" data-i18n-key="form.eventOther">Anders</option>
-            </select>
-
-            <label for="eventDate" data-i18n-key="form.dateLabel">Datum</label>
-            <input id="eventDate" name="eventDate" type="date" />
+            <div class="form-grid-two">
+              <div>
+                <label for="eventType" data-i18n-key="form.eventTypeLabel">Type event</label>
+                <select id="eventType" name="eventType" required>
+                  <option value="" data-i18n-key="form.selectDefault">Selecteer</option>
+                  <option value="wedding" data-i18n-key="form.eventWedding">Trouwfeest</option>
+                  <option value="festival" data-i18n-key="form.eventFestival">Festival</option>
+                  <option value="private" data-i18n-key="form.eventPrivate">Privefeest</option>
+                  <option value="corporate" data-i18n-key="form.eventCorporate">Bedrijfsevent</option>
+                  <option value="other" data-i18n-key="form.eventOther">Anders</option>
+                </select>
+              </div>
+              <div>
+                <label for="eventDate" data-i18n-key="form.dateLabel">Datum</label>
+                <input id="eventDate" name="eventDate" type="date" />
+              </div>
+            </div>
 
             <label for="location" data-i18n-key="form.locationLabel">Locatie</label>
             <input id="location" name="location" type="text" />
