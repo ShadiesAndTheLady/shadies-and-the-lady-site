@@ -835,7 +835,20 @@ p {
 
 .form-note {
   color: var(--color-text-muted);
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.35rem;
+}
+
+.booking-flow-inline {
+  margin: 0 0 0.95rem;
+  padding-left: 1.15rem;
+  color: var(--color-text);
+  display: grid;
+  gap: 0.22rem;
+  font-size: 0.95rem;
+}
+
+.booking-flow-inline li {
+  color: var(--color-text-muted);
 }
 
 .optional-details {
@@ -1172,6 +1185,10 @@ button:focus-visible {
 
   .contact-direct-sep {
     display: none;
+  }
+
+  .booking-flow-inline {
+    font-size: 0.92rem;
   }
 
   .brand-logo {
