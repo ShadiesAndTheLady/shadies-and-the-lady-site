@@ -429,6 +429,54 @@ p {
   font-size: 0.92rem;
 }
 
+.repertoire-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.repertoire-card {
+  background: linear-gradient(180deg, rgba(242, 196, 155, 0.07), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(242, 196, 155, 0.22);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.repertoire-card h3 {
+  margin-bottom: 0.35rem;
+  color: var(--color-primary);
+  font-size: 1.15rem;
+}
+
+.repertoire-card p {
+  margin-bottom: 0.7rem;
+  font-size: 0.9rem;
+}
+
+.repertoire-songs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.46rem;
+}
+
+.repertoire-songs li {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  line-height: 1.35;
+}
+
+.song-artist {
+  color: var(--color-text);
+  font-weight: 700;
+}
+
+.song-title {
+  color: #d7c8bb;
+}
+
 .gigs-timeline {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -442,6 +490,12 @@ p {
   border-radius: var(--radius-md);
   padding: 1rem 1rem 1rem 1.1rem;
   box-shadow: var(--shadow-soft);
+}
+
+.gig-card.featured {
+  grid-column: 1 / -1;
+  border-color: rgba(242, 196, 155, 0.5);
+  background: linear-gradient(145deg, rgba(207, 43, 33, 0.22), rgba(242, 196, 155, 0.08));
 }
 
 .gig-card::before {
@@ -459,6 +513,20 @@ p {
   color: var(--color-primary);
   font-weight: 800;
   margin-bottom: 0.25rem;
+}
+
+.gig-badge {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid rgba(242, 196, 155, 0.55);
+  background: rgba(242, 196, 155, 0.12);
+  color: var(--color-primary);
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 .booking-grid {
@@ -728,6 +796,29 @@ p {
   margin-bottom: 0.4rem;
 }
 
+.optional-details {
+  margin-top: 0.95rem;
+  border: 1px solid rgba(242, 196, 155, 0.26);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  padding: 0.35rem 0.75rem 0.8rem;
+}
+
+.optional-details summary {
+  cursor: pointer;
+  color: var(--color-primary);
+  font-weight: 700;
+  margin: 0.25rem 0 0.35rem;
+}
+
+.optional-details[open] summary {
+  margin-bottom: 0.6rem;
+}
+
+.optional-name-row {
+  margin-top: 0.15rem;
+}
+
 .consent-row {
   display: flex;
   align-items: flex-start;
@@ -902,6 +993,10 @@ button:focus-visible {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .repertoire-grid {
+    grid-template-columns: 1fr;
+  }
+
   .gallery-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -987,6 +1082,10 @@ button:focus-visible {
 
   .footer-grid {
     grid-template-columns: 1fr;
+  }
+
+  .gig-card.featured {
+    grid-column: auto;
   }
 
   .footer-bottom {
