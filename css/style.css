@@ -712,12 +712,16 @@ p {
 .footer-bottom {
   padding-top: 0.9rem;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.9rem;
+  flex-wrap: wrap;
 }
 
 .footer-mini-links {
   display: flex;
   gap: 1rem;
-  margin-bottom: 0.55rem;
 }
 
 .footer-mini-links a {
@@ -733,6 +737,11 @@ p {
 
 .legal-section {
   padding-top: 2.2rem;
+}
+
+#legal-info,
+#privacy-policy {
+  scroll-margin-top: 90px;
 }
 
 .legal-grid {
@@ -828,6 +837,11 @@ button:focus-visible {
 
   .footer-grid {
     grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
