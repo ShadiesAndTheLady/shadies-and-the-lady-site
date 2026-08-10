@@ -150,36 +150,36 @@
 
         <h3 class="subsection-title" data-i18n-key="band.membersTitle">Bandleden</h3>
 
-        <div class="members-grid">
-          <article class="member-card">
+        <div class="members-grid" id="membersGrid">
+          <article class="member-card member-toggle" data-member-id="diana" tabindex="0" role="button" aria-expanded="false" aria-controls="memberBioPanel">
             <div class="member-photo member-photo-diana">
               <img src="assets/images/headshot-diana.jpg" alt="Diana Braet" loading="lazy" />
             </div>
             <h4>Diana Braet</h4>
             <p data-i18n-key="role.singer">Zang</p>
           </article>
-          <article class="member-card">
+          <article class="member-card member-toggle" data-member-id="matthew" tabindex="0" role="button" aria-expanded="false" aria-controls="memberBioPanel">
             <div class="member-photo member-photo-matthew">
               <img src="assets/images/headshot-matthew.jpg" alt="Matthew Coppens" loading="lazy" />
             </div>
             <h4>Matthew Coppens</h4>
             <p data-i18n-key="role.guitar">Gitaar</p>
           </article>
-          <article class="member-card">
+          <article class="member-card member-toggle" data-member-id="bart" tabindex="0" role="button" aria-expanded="false" aria-controls="memberBioPanel">
             <div class="member-photo member-photo-bart">
               <img src="assets/images/headshot-bart.jpg" alt="Bart Vangerven" loading="lazy" />
             </div>
             <h4>Bart Vangerven</h4>
             <p data-i18n-key="role.guitar">Gitaar</p>
           </article>
-          <article class="member-card">
+          <article class="member-card member-toggle" data-member-id="dirk" tabindex="0" role="button" aria-expanded="false" aria-controls="memberBioPanel">
             <div class="member-photo member-photo-dirk">
               <img src="assets/images/headshot-dirk.jpg" alt="Dirk Geens" loading="lazy" />
             </div>
             <h4>Dirk Geens</h4>
             <p data-i18n-key="role.bass">Bas</p>
           </article>
-          <article class="member-card">
+          <article class="member-card member-toggle" data-member-id="philippe" tabindex="0" role="button" aria-expanded="false" aria-controls="memberBioPanel">
             <div class="member-photo member-photo-philippe">
               <img src="assets/images/headshot-philippe.jpg" alt="Philippe Pauwels" loading="lazy" />
             </div>
@@ -187,6 +187,12 @@
             <p data-i18n-key="role.drums">Drums</p>
           </article>
         </div>
+
+        <article id="memberBioPanel" class="member-bio-panel" hidden aria-live="polite">
+          <h4 id="memberBioName"></h4>
+          <p id="memberBioRole" class="member-bio-role"></p>
+          <p id="memberBioText" class="member-bio-text"></p>
+        </article>
       </div>
     </section>
 
@@ -522,18 +528,6 @@
       </div>
     </section>
 
-    <section id="legal-info" class="section reveal legal-section">
-      <div class="container legal-grid">
-        <article class="contact-card">
-          <h3 data-i18n-key="legal.title">Juridische Informatie</h3>
-          <p data-i18n-key="legal.text">Deze website dient als informatie- en contactkanaal voor boekingen van Shadies &amp; The Lady.</p>
-        </article>
-        <article id="privacy-policy" class="contact-card">
-          <h3 data-i18n-key="privacy.title">Privacy &amp; GDPR</h3>
-          <p data-i18n-key="privacy.text">We gebruiken ingezonden contactgegevens uitsluitend om je aanvraag te beantwoorden. Formulierinzendingen worden verwerkt via Formspree als verwerker. Volgens hun publieke documentatie worden inzendingen op het gratis plan tot 30 dagen bewaard, en gebruikt Formspree Standard Contractual Clauses voor internationale gegevensoverdracht. Wij bewaren je gegevens zelf niet langer dan nodig voor de opvolging van je aanvraag.</p>
-        </article>
-      </div>
-    </section>
   </main>
 
   <footer class="site-footer">
@@ -557,9 +551,15 @@
       </section>
     </div>
     <div class="container footer-bottom">
-      <div class="footer-mini-links">
-        <a href="#legal-info" data-i18n-key="footer.legalLink">Juridisch</a>
-        <a href="#privacy-policy" data-i18n-key="footer.privacyLink">Privacy &amp; GDPR</a>
+      <div class="footer-legal-accordion">
+        <details class="footer-legal-item">
+          <summary data-i18n-key="footer.legalLink">Juridisch</summary>
+          <p data-i18n-key="legal.text">Deze website dient als informatie- en contactkanaal voor boekingen van Shadies &amp; The Lady.</p>
+        </details>
+        <details class="footer-legal-item">
+          <summary data-i18n-key="footer.privacyLink">Privacy &amp; GDPR</summary>
+          <p data-i18n-key="privacy.text">We gebruiken ingezonden contactgegevens uitsluitend om je aanvraag te beantwoorden. Formulierinzendingen worden verwerkt via Formspree als verwerker. Volgens hun publieke documentatie worden inzendingen op het gratis plan tot 30 dagen bewaard, en gebruikt Formspree Standard Contractual Clauses voor internationale gegevensoverdracht. Wij bewaren je gegevens zelf niet langer dan nodig voor de opvolging van je aanvraag.</p>
+        </details>
       </div>
       <span class="photo-credits">
         <span data-i18n-key="footer.photoCreditsLabel">Foto's door</span>
