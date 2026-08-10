@@ -1128,12 +1128,17 @@ body.has-lightbox-open {
   padding-top: 0.9rem;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "credits copy"
+    "legal legal";
   align-items: start;
   gap: 1rem;
 }
 
 .footer-legal-accordion {
+  grid-area: legal;
   display: grid;
   gap: 0.35rem;
   min-width: 260px;
@@ -1177,6 +1182,7 @@ body.has-lightbox-open {
 }
 
 .photo-credits {
+  grid-area: credits;
   margin: 0;
   color: #8f847a;
   font-size: 0.82rem;
@@ -1184,11 +1190,12 @@ body.has-lightbox-open {
   display: inline-flex;
   align-items: center;
   gap: 0.3rem;
-  justify-self: center;
+  justify-self: start;
   white-space: nowrap;
 }
 
 .footer-bottom > p[data-i18n-key="footer.copy"] {
+  grid-area: copy;
   justify-self: end;
 }
 
@@ -1322,6 +1329,10 @@ button:focus-visible {
 
   .footer-bottom {
     grid-template-columns: 1fr;
+    grid-template-areas:
+      "credits"
+      "copy"
+      "legal";
     justify-items: start;
   }
 
