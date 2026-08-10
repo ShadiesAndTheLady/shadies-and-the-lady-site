@@ -14,6 +14,7 @@
   var STORAGE_KEY = "shadies-site-language";
   var DEFAULT_LANGUAGE = "nl";
   var SUPPORTED_LANGUAGES = ["en", "nl"];
+  var memberBioRefreshHandler = null;
 
   var translations = {
     nl: {
@@ -48,6 +49,11 @@
       "band.p3": "Ons repertoire gaat over meerdere decennia en combineert tijdloze klassiekers met moderne hits. Of het nu een festival, trouwfeest, privefeest, cafe-optreden of bedrijfsevent is: wij zorgen voor een energieke sfeer die mensen laat zingen en dansen.",
       "band.membersTitle": "Bandleden",
       "band.membersIntro": "Voeg later kleine headshots toe per bandlid door de placeholder te vervangen met een foto.",
+      "band.bio.diana": "Diana brengt power en warmte in elke set. Van subtiele coupletten tot volle refreinen trekt ze het publiek mee in elk nummer.",
+      "band.bio.matthew": "Matthew houdt de gitaarlijnen strak en melodisch. Zijn sound verbindt classic rock energie met moderne drive.",
+      "band.bio.bart": "Bart voegt extra punch en karakter toe aan de gitaren. Met sterke riffs en dynamiek zet hij de toon op het podium.",
+      "band.bio.dirk": "Dirk houdt alles stevig samen met een groovende basfundering. Zijn timing en feel zorgen voor constante beweging in de set.",
+      "band.bio.philippe": "Philippe stuurt het tempo met krachtige drums en gecontroleerde accenten. Hij bouwt spanning op en houdt de band strak in sync.",
 
       "role.singer": "Zang",
       "role.guitar": "Gitaar",
@@ -220,6 +226,11 @@
       "band.p3": "Our repertoire spans several decades, combining timeless classics with modern hits. Whether it is a festival, wedding, private party, pub, or corporate event, we enjoy creating an energetic atmosphere that gets people singing and dancing.",
       "band.membersTitle": "Band Members",
       "band.membersIntro": "You can add small headshots for each member later by replacing the placeholder.",
+      "band.bio.diana": "Diana brings both power and warmth to every set. From subtle verses to full choruses, she pulls the crowd into each song.",
+      "band.bio.matthew": "Matthew keeps the guitar lines tight and melodic. His tone blends classic rock energy with modern drive.",
+      "band.bio.bart": "Bart adds extra punch and character to the guitar section. Strong riffs and dynamics help set the live mood.",
+      "band.bio.dirk": "Dirk keeps everything locked with a grooving bass foundation. His timing and feel keep the set moving.",
+      "band.bio.philippe": "Philippe drives the tempo with powerful drumming and controlled accents. He builds momentum and keeps the band in sync.",
 
       "role.singer": "Singer",
       "role.guitar": "Guitar",
@@ -448,6 +459,10 @@
 
     updateLanguageButtons(lang);
     saveLanguage(lang);
+
+    if (typeof memberBioRefreshHandler === "function") {
+      memberBioRefreshHandler(lang);
+    }
   }
 
   function initializeLanguageSwitcher() {
@@ -696,6 +711,108 @@
     });
   }
 
+  function initializeMemberBioToggle() {
+    var memberCards = Array.prototype.slice.call(document.querySelectorAll(".member-toggle[data-member-id]"));
+    var bioPanel = document.getElementById("memberBioPanel");
+    var bioName = document.getElementById("memberBioName");
+    var bioRole = document.getElementById("memberBioRole");
+    var bioText = document.getElementById("memberBioText");
+
+    if (!bioPanel || !bioName || !bioRole || !bioText || memberCards.length === 0) {
+      return;
+    }
+
+    var activeMemberId = null;
+
+    function getCurrentLanguage() {
+      var lang = document.documentElement.getAttribute("data-current-lang");
+      if (SUPPORTED_LANGUAGES.indexOf(lang) !== -1) {
+        return lang;
+      }
+      return DEFAULT_LANGUAGE;
+    }
+
+    function setCardActiveState(memberId) {
+      memberCards.forEach(function (card) {
+        var isActive = card.getAttribute("data-member-id") === memberId;
+        card.classList.toggle("is-active", isActive);
+        card.setAttribute("aria-expanded", isActive ? "true" : "false");
+      });
+    }
+
+    function renderBio(memberId, shouldScrollIntoView) {
+      var card = memberCards.find(function (item) {
+        return item.getAttribute("data-member-id") === memberId;
+      });
+
+      if (!card) {
+        return;
+      }
+
+      var nameElement = card.querySelector("h4");
+      var roleElement = card.querySelector("p");
+      var currentLang = getCurrentLanguage();
+      var bioKey = "band.bio." + memberId;
+
+      bioName.textContent = nameElement ? nameElement.textContent.trim() : "";
+      bioRole.textContent = roleElement ? roleElement.textContent.trim() : "";
+      bioText.textContent = t(bioKey, currentLang);
+
+      bioPanel.hidden = false;
+      setCardActiveState(memberId);
+
+      if (shouldScrollIntoView) {
+        bioPanel.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      }
+    }
+
+    function collapseBio() {
+      activeMemberId = null;
+      bioPanel.hidden = true;
+      setCardActiveState(null);
+    }
+
+    function toggleBio(memberId) {
+      if (activeMemberId === memberId) {
+        collapseBio();
+        return;
+      }
+
+      activeMemberId = memberId;
+      renderBio(memberId, true);
+    }
+
+    memberCards.forEach(function (card) {
+      var memberId = card.getAttribute("data-member-id");
+
+      card.addEventListener("click", function () {
+        if (!memberId) {
+          return;
+        }
+        toggleBio(memberId);
+      });
+
+      card.addEventListener("keydown", function (event) {
+        if (event.key !== "Enter" && event.key !== " ") {
+          return;
+        }
+
+        event.preventDefault();
+        if (!memberId) {
+          return;
+        }
+        toggleBio(memberId);
+      });
+    });
+
+    memberBioRefreshHandler = function () {
+      if (!activeMemberId) {
+        return;
+      }
+      renderBio(activeMemberId, false);
+    };
+  }
+
   function setFormStatus(type, message) {
     var statusElement = document.getElementById("form-status");
     if (!statusElement) {
@@ -823,6 +940,7 @@
   initializeLanguageSwitcher();
   initializeMobileNavigation();
   initializeRevealAnimations();
+  initializeMemberBioToggle();
   initializeGalleryLightbox();
   initializeCopyEmail();
   initializeContactForm();
