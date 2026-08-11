@@ -445,7 +445,8 @@ p {
 }
 
 .member-bio-panel {
-  margin-top: 1rem;
+  grid-column: 1 / -1;
+  margin-top: 0;
   padding: 1rem 1.1rem 1rem 1.3rem;
   border-radius: var(--radius-md);
   border: 1px solid rgba(242, 196, 155, 0.28);
@@ -827,6 +828,13 @@ body.has-lightbox-open {
   align-items: center;
   flex-wrap: wrap;
   gap: 0.5rem;
+}
+
+.contact-direct-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
 }
 
 .contact-direct strong {
@@ -1340,6 +1348,8 @@ button:focus-visible {
 
   .contact-direct {
     align-items: flex-start;
+    flex-direction: column;
+    gap: 0.35rem;
   }
 
   .contact-direct-sep {
