@@ -749,6 +749,8 @@
       var bioKey = "band.bio." + memberId;
 
       var bioContent = t(bioKey, currentLang);
+      // Reposition panel immediately after clicked card so it pushes lower cards down
+      card.insertAdjacentElement("afterend", bioPanel);
       bioText.innerHTML = "";
       bioContent.split("\n").forEach(function (paragraph) {
         if (paragraph.trim()) {
