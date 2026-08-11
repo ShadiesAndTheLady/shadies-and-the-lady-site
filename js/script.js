@@ -749,8 +749,14 @@
       var bioKey = "band.bio." + memberId;
 
       var bioContent = t(bioKey, currentLang);
-      // Reposition panel immediately after clicked card so it pushes lower cards down
-      card.insertAdjacentElement("afterend", bioPanel);
+      var gridContainer = document.querySelector('.members-grid');
+      // On mobile: insert after clicked card (inside grid)
+      // On desktop: insert after grid (outside grid) to preserve 5-column layout
+      if (window.innerWidth <= 860) {
+        card.insertAdjacentElement("afterend", bioPanel);
+      } else {
+        gridContainer.insertAdjacentElement("afterend", bioPanel);
+      }
       bioText.innerHTML = "";
       bioContent.split("\n").forEach(function (paragraph) {
         if (paragraph.trim()) {
