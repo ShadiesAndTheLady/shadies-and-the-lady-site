@@ -714,11 +714,9 @@
   function initializeMemberBioToggle() {
     var memberCards = Array.prototype.slice.call(document.querySelectorAll(".member-toggle[data-member-id]"));
     var bioPanel = document.getElementById("memberBioPanel");
-    var bioName = document.getElementById("memberBioName");
-    var bioRole = document.getElementById("memberBioRole");
     var bioText = document.getElementById("memberBioText");
 
-    if (!bioPanel || !bioName || !bioRole || !bioText || memberCards.length === 0) {
+    if (!bioPanel || !bioText || memberCards.length === 0) {
       return;
     }
 
@@ -749,13 +747,9 @@
         return;
       }
 
-      var nameElement = card.querySelector("h4");
-      var roleElement = card.querySelector("p");
       var currentLang = getCurrentLanguage();
       var bioKey = "band.bio." + memberId;
 
-      bioName.textContent = nameElement ? nameElement.textContent.trim() : "";
-      bioRole.textContent = roleElement ? roleElement.textContent.trim() : "";
       var bioContent = t(bioKey, currentLang);
       bioText.innerHTML = "";
       bioContent.split("\n").forEach(function (paragraph) {
