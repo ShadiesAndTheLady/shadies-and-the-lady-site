@@ -444,21 +444,13 @@ p {
 
 .member-bio-panel {
   margin-top: 1rem;
-  padding: 1rem 1.1rem;
+  padding: 1rem 1.1rem 1rem 1.3rem;
   border-radius: var(--radius-md);
-  border: 1px solid rgba(242, 196, 155, 0.32);
-  background: linear-gradient(180deg, rgba(242, 196, 155, 0.1), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(242, 196, 155, 0.28);
+  border-left: 3px solid var(--color-primary);
+  background: linear-gradient(180deg, rgba(242, 196, 155, 0.08), rgba(255, 255, 255, 0.02));
   box-shadow: var(--shadow-soft);
-}
-
-.member-bio-panel h4 {
-  margin-bottom: 0.2rem;
-}
-
-.member-bio-role {
-  margin-bottom: 0.4rem;
-  color: var(--color-primary);
-  font-weight: 700;
+  max-width: 80ch;
 }
 
 .member-bio-text {
