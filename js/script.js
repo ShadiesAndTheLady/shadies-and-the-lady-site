@@ -117,7 +117,6 @@
       "videos.intro": "Bekijk ons live en voel de sfeer.",
 
       "contact.title": "Contact",
-      "contact.intro": "Klaar om live energie op jouw event te brengen? Stuur je aanvraag hieronder.",
       "contact.emailLabel": "E-mail:",
       "contact.phoneLabel": "Telefoon:",
       "contact.phoneOptionalLabel": "Telefoon (optioneel)",
@@ -294,7 +293,6 @@
       "videos.intro": "Watch us live and feel the atmosphere.",
 
       "contact.title": "Contact",
-      "contact.intro": "Ready to bring live energy to your event? Send your request below.",
       "contact.emailLabel": "Email:",
       "contact.phoneLabel": "Phone:",
       "contact.phoneOptionalLabel": "Phone (optional)",
