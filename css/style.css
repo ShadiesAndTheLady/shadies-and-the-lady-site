@@ -374,6 +374,8 @@ p {
 
 .member-toggle.is-active {
   border-color: rgba(242, 196, 155, 0.78);
+  border-left-color: var(--color-primary);
+  border-left-width: 3px;
   background: linear-gradient(180deg, rgba(242, 196, 155, 0.16), rgba(255, 255, 255, 0.03));
   position: relative;
 }
@@ -450,7 +452,6 @@ p {
   border-left: 3px solid var(--color-primary);
   background: linear-gradient(180deg, rgba(242, 196, 155, 0.08), rgba(255, 255, 255, 0.02));
   box-shadow: var(--shadow-soft);
-  max-width: 80ch;
 }
 
 .member-bio-text {
