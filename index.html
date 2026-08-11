@@ -186,11 +186,11 @@
             <h4>Philippe Pauwels</h4>
             <p data-i18n-key="role.drums">Drums</p>
           </article>
-        </div>
 
-        <article id="memberBioPanel" class="member-bio-panel" hidden aria-live="polite">
-          <div id="memberBioText" class="member-bio-text"></div>
-        </article>
+          <article id="memberBioPanel" class="member-bio-panel" hidden aria-live="polite">
+            <div id="memberBioText" class="member-bio-text"></div>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -374,13 +374,16 @@
         <h2 data-i18n-key="contact.title">Contact</h2>
 
         <div class="contact-direct" role="group" aria-label="Direct contact">
-          <strong data-i18n-key="contact.emailLabel">E-mail:</strong>
-          <span id="contactEmail" class="contact-email">shadiesandthelady@pm.me</span>
-          <button type="button" id="copyEmailButton" class="copy-btn" data-i18n-key="contact.copyEmail">Kopieer</button>
+          <div class="contact-direct-row">
+            <strong data-i18n-key="contact.emailLabel">E-mail:</strong>
+            <span id="contactEmail" class="contact-email">shadiesandthelady@pm.me</span>
+            <button type="button" id="copyEmailButton" class="copy-btn" data-i18n-key="contact.copyEmail">Kopieer</button>
+            <p id="copy-status" class="copy-status" aria-live="polite"></p>
+          </div>
           <span class="contact-direct-sep" aria-hidden="true">|</span>
-          <strong data-i18n-key="contact.socialLabel">Socials:</strong>
-          <div class="social-links" role="list">
-            <a
+          <div class="contact-direct-row">
+            <strong data-i18n-key="contact.socialLabel">Socials:</strong>
+            <div class="social-links" role="list">a
               class="social-link"
               href="https://www.facebook.com/people/Shadies-The-Lady/61582410604672/"
               target="_blank"
@@ -423,7 +426,7 @@
               </svg>
             </a>
           </div>
-          <p id="copy-status" class="copy-status" aria-live="polite"></p>
+          </div>
         </div>
 
         <div class="contact-layout">
