@@ -446,7 +446,7 @@ p {
 
 .member-bio-panel {
   grid-column: 1 / -1;
-  margin-top: 0;
+  margin-top: 1.5rem;
   padding: 1rem 1.1rem 1rem 1.3rem;
   border-radius: var(--radius-md);
   border: 1px solid rgba(242, 196, 155, 0.28);
