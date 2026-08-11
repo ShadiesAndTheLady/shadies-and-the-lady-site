@@ -50,10 +50,10 @@
       "band.membersTitle": "Bandleden",
       "band.membersIntro": "Voeg later kleine headshots toe per bandlid door de placeholder te vervangen met een foto.",
       "band.bio.diana": "placeholder text for Diana Braet",
-      "band.bio.matthew": "placeholder text for Matthew Coppens",
-      "band.bio.bart": "placeholder text for Bart Vangerven",
-      "band.bio.dirk": "placeholder text for Dirk Geens",
-      "band.bio.philippe": "placeholder text for Philippe Pauwels",
+      "band.bio.matthew": "Matthew ontdekte al op jonge leeftijd zijn liefde voor muziek aan de muziekschool. Zijn interesse verschoof al snel naar gitaar, aangewakkerd door bands als Ramones, Led Zeppelin en AC/DC. De klassieke lessen sloten echter steeds minder aan bij zijn muzikale smaak, die duidelijk richting rock en elektrische gitaar evolueerde. En eerlijk is eerlijk: als tiener had hij ook wel andere dingen aan zijn hoofd.\nDe gitaar verdween daarna bijna vijftien jaar uit beeld. Pas op zijn 28ste, dankzij zijn vader, vond Matthew de weg terug naar het instrument. Achteraf bekeken een van de beste beslissingen die hij ooit nam.\nSindsdien is gitaar spelen uitgegroeid tot een echte passie. Hij blijft voortdurend experimenteren met nieuwe sounds, technieken en materiaal, altijd op zoek naar dat beetje extra dat een nummer nog beter laat klinken. Die nieuwsgierigheid en liefde voor muziek hoor je terug in elk optreden van Shadies & The Lady.",
+      "band.bio.bart": "Bart ontdekte zijn passie voor gitaar dankzij Metallica en Disturbed. Later kwamen daar bands als Children of Bodom en AC/DC bij, met Angus Young en Alexi Laiho als zijn grote gitaarhelden. Hoewel metal en rock altijd zijn favoriete genres zijn gebleven, is hij door de jaren heen ook andere muziekstijlen meer gaan waarderen.\nNa een jaartje gitaarles belandde de gitaar jarenlang in de hoek door studies, een doctoraat en een drukke carrière. Dankzij een collega en zangeres Diana vond hij de muzikale vonk terug.\nOp het podium speelt Bart het liefst op ESP/LTD- en Gibson-gitaren. Digitale versterkers? Geen probleem. Over één ding is hij echter onwrikbaar: een Fender zal je hem niet snel zien bespelen.",
+      "band.bio.dirk": "Dirk belandde dankzij zijn moeder, die zelf uit een muzikale familie komt, al op jonge leeftijd in de muziekschool. Op zijn twaalfde moest hij een instrument kiezen en kwam hij eerder toevallig bij gitaar terecht. Al snel bleek echter dat klassieke gitaarlessen niets voor hem waren. Veel te braaf, veel te saai.\nMet een Guitar for Dummies-boek uit de bibliotheek leerde hij zichzelf verder spelen, helemaal op zijn eigen manier. Toen zijn eerste band nog een bassist zocht en er niemand anders kandidaat was, nam Dirk die rol op zich. Wat begon als een praktische oplossing, groeide uit tot een blijvende passie.\nVandaag vormt hij met zijn bas het stevige fundament van Shadies & The Lady. Recent verruilde hij zijn vertrouwde Yamaha voor een Sandberg California TM4, waarmee hij elke groove met plezier neerzet.",
+      "band.bio.philippe": "Philippe wist al op jonge leeftijd dat ritme zijn ding was. Gewapend met pollepels, Dash-tonnen en een flinke portie fantasie bouwde hij als zesjarige zijn eerste drumstel. Tijdens optredens keek hij niet naar de zanger of gitarist, maar uitsluitend naar de drummer. Zijn ouders beseften al snel dat de woonkamer geen concertzaal was en investeerden in een echt drumstel.\nDie passie bracht hem naar de muziekacademie van Mol, waar hij slagwerk studeerde. Een internationale carrière zat er uiteindelijk niet in, maar zijn liefde voor muziek, het podium en een stevige portie pop en rock is sindsdien alleen maar gegroeid.\nVandaag is Philippe de drijvende kracht achter het ritme van Shadies & The Lady. Geef hem een drumstel, een spotlight en een enthousiast publiek, en hij voelt zich helemaal in zijn element.\nAll-time favorite: Purple Rain – Prince",
 
       "role.singer": "Zang",
       "role.guitar": "Gitaar",
@@ -227,10 +227,10 @@
       "band.membersTitle": "Band Members",
       "band.membersIntro": "You can add small headshots for each member later by replacing the placeholder.",
       "band.bio.diana": "placeholder text for Diana Braet",
-      "band.bio.matthew": "placeholder text for Matthew Coppens",
-      "band.bio.bart": "placeholder text for Bart Vangerven",
-      "band.bio.dirk": "placeholder text for Dirk Geens",
-      "band.bio.philippe": "placeholder text for Philippe Pauwels",
+      "band.bio.matthew": "Matthew discovered his love of music at music school from a young age. His interest quickly shifted towards guitar, sparked by bands like the Ramones, Led Zeppelin, and AC/DC. Classical lessons, however, felt less and less aligned with his musical taste, which was clearly heading towards rock and electric guitar. And honestly, as a teenager he had plenty of other things on his mind too.\nThe guitar then disappeared from his life for almost fifteen years. It was not until he was 28, thanks to his father, that Matthew found his way back to the instrument — in hindsight, one of the best decisions he ever made.\nSince then, playing guitar has grown into a real passion. He constantly experiments with new sounds, techniques, and gear, always looking for that little extra that makes a song sound even better. That curiosity and love of music comes through in every performance by Shadies & The Lady.",
+      "band.bio.bart": "Bart discovered his passion for guitar through Metallica and Disturbed. He later added bands like Children of Bodom and AC/DC to the mix, with Angus Young and Alexi Laiho as his guitar heroes. While metal and rock have always been his favourite genres, over the years he has come to appreciate other styles of music too.\nAfter a year of guitar lessons, the guitar gathered dust for years as studies, a doctorate, and a busy career took over. It was thanks to a colleague and singer Diana that he rediscovered the musical spark.\nOn stage, Bart favours ESP/LTD and Gibson guitars. Digital amps? No problem. But there is one thing he is firm about: you won't catch him playing a Fender any time soon.",
+      "band.bio.dirk": "Thanks to his mother, who comes from a musical family herself, Dirk found his way to music school at a young age. At twelve, he had to choose an instrument and ended up with guitar somewhat by chance. It quickly became clear, however, that classical guitar lessons were not for him. Too well-behaved, too dull.\nArmed with a Guitar for Dummies book from the library, he taught himself to play in his own way. When his first band needed a bassist and no one else volunteered, Dirk stepped up. What started as a practical solution grew into a lasting passion.\nToday he forms the solid foundation of Shadies & The Lady with his bass. He recently traded his trusty Yamaha for a Sandberg California TM4, laying down every groove with a smile.",
+      "band.bio.philippe": "Philippe knew from an early age that rhythm was his thing. Armed with wooden spoons, washing powder tubs, and a healthy dose of imagination, he built his first drum kit at the age of six. At live shows, he never watched the singer or guitarist — his eyes were always on the drummer. His parents quickly realised the living room was not a concert hall and invested in a real drum kit.\nThat passion took him to the music academy in Mol, where he studied percussion. An international career was not to be, but his love of music, the stage, and a solid dose of pop and rock has only grown since.\nToday, Philippe is the driving force behind the rhythm of Shadies & The Lady. Give him a drum kit, a spotlight, and an enthusiastic crowd, and he is completely in his element.\nAll-time favourite: Purple Rain – Prince",
 
       "role.singer": "Singer",
       "role.guitar": "Guitar",
@@ -756,7 +756,15 @@
 
       bioName.textContent = nameElement ? nameElement.textContent.trim() : "";
       bioRole.textContent = roleElement ? roleElement.textContent.trim() : "";
-      bioText.textContent = t(bioKey, currentLang);
+      var bioContent = t(bioKey, currentLang);
+      bioText.innerHTML = "";
+      bioContent.split("\n").forEach(function (paragraph) {
+        if (paragraph.trim()) {
+          var p = document.createElement("p");
+          p.textContent = paragraph;
+          bioText.appendChild(p);
+        }
+      });
 
       bioPanel.hidden = false;
       setCardActiveState(memberId);
