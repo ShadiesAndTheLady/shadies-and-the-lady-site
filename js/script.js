@@ -34,7 +34,6 @@
       "nav.repertoire": "Repertoire",
       "nav.gigsBooking": "Optredens & Boeken",
       "nav.gallery": "Galerij",
-      "nav.videos": "Video's",
       "nav.contact": "Contact",
       "nav.book": "Boek Ons",
 
@@ -48,7 +47,6 @@
       "band.p2": "Met nummers uit verschillende decennia brengen we een mix van klassiekers, guilty pleasures, stevige rocksongs en moderne hits. We houden ervan om een publiek mee te nemen op een muzikale reis waarbij iedereen wel een nummer hoort dat herinneringen oproept.",
       "band.p3": "Of het nu een festival, trouwfeest, cafe of bedrijfsevent is, we staan op het podium met een doel: mensen een fantastische avond bezorgen. Samen zingen, dansen en genieten van live muziek – dat is waar Shadies & The Lady voor staat.",
       "band.membersTitle": "Bandleden",
-      "band.membersIntro": "Voeg later kleine headshots toe per bandlid door de placeholder te vervangen met een foto.",
       "band.bio.diana": "placeholder text for Diana Braet",
       "band.bio.matthew": "Matthew ontdekte al op jonge leeftijd zijn liefde voor muziek aan de muziekschool. Zijn interesse verschoof al snel naar gitaar, aangewakkerd door bands als Ramones, Led Zeppelin en AC/DC. De klassieke lessen sloten echter steeds minder aan bij zijn muzikale smaak, die duidelijk richting rock en elektrische gitaar evolueerde. En eerlijk is eerlijk: als tiener had hij ook wel andere dingen aan zijn hoofd.\nDe gitaar verdween daarna bijna vijftien jaar uit beeld. Pas op zijn 28ste, dankzij zijn vader, vond Matthew de weg terug naar het instrument. Achteraf bekeken een van de beste beslissingen die hij ooit nam.\nSindsdien is gitaar spelen uitgegroeid tot een echte passie. Hij blijft voortdurend experimenteren met nieuwe sounds, technieken en materiaal, altijd op zoek naar dat beetje extra dat een nummer nog beter laat klinken. Die nieuwsgierigheid en liefde voor muziek hoor je terug in elk optreden van Shadies & The Lady.",
       "band.bio.bart": "Bart ontdekte zijn passie voor gitaar dankzij Metallica en Disturbed. Later kwamen daar bands als Children of Bodom en AC/DC bij, met Angus Young en Alexi Laiho als zijn grote gitaarhelden. Hoewel metal en rock altijd zijn favoriete genres zijn gebleven, is hij door de jaren heen ook andere muziekstijlen meer gaan waarderen.\nNa een jaartje gitaarles belandde de gitaar jarenlang in de hoek door studies, een doctoraat en een drukke carrière. Dankzij een collega en zangeres Diana vond hij de muzikale vonk terug.\nOp het podium speelt Bart het liefst op ESP/LTD- en Gibson-gitaren. Digitale versterkers? Geen probleem. Over één ding is hij echter onwrikbaar: een Fender zal je hem niet snel zien bespelen.",
@@ -62,16 +60,11 @@
 
       "repertoire.title": "Repertoire",
       "repertoire.intro": "Een selectie uit ons live repertoire:",
-      "repertoire.aria": "Artiesten in repertoire",
       "repertoire.classicsTitle": "Classics",
-      "repertoire.classicsText": "Tijdloze rock- en popanthems die iedereen meezingt.",
       "repertoire.ninetiesTitle": "90s / 00s",
-      "repertoire.ninetiesText": "Songs waarmee het publiek opgroeide, van grunge tot poprock.",
       "repertoire.modernTitle": "Modern & Publieksfavorieten",
-      "repertoire.modernText": "Nieuwe tracks en vaste publieksfavorieten voor een volle dansvloer.",
 
       "gigsBooking.title": "Optredens & Boeken",
-      "gigsBooking.intro": "Actieve kalender, duidelijke boekingsflow en praktische technische info op een plek.",
       "gigs.title": "Aankomende Optredens",
       "gigs.nextBadge": "Volgende show",
       "gigs.date1": "29 AUG 2026",
@@ -81,30 +74,12 @@
       "gigs.date5": "10 NOV 2026",
       "gigs.nextCta": "IK BEN ERBIJ ->",
 
-      "booking.title": "Boekingsinformatie",
       "booking.step1Title": "Neem contact op",
-      "booking.step1Text": "Stuur ons je datum, locatie, type event en verwachte timing.",
       "booking.step2Title": "Ontvang voorstel",
-      "booking.step2Text": "Wij bevestigen beschikbaarheid en bezorgen een voorstel op maat.",
       "booking.step3Title": "Bevestiging",
-      "booking.step3Text": "Na akkoord stemmen we opbouw, setduur en praktische details af.",
-      "booking.priceTitle": "Een offerte op maat",
-      "booking.priceText": "Vraag je offerte aan via het formulier. We antwoorden snel met een voorstel op maat van je event.",
-
-      "request.title": "Boekingsaanvraag Template",
-      "request.item1": "Type event",
-      "request.item2": "Datum en locatie",
-      "request.item3": "Geschat aantal aanwezigen",
-      "request.item4": "Binnen of buiten",
-      "request.item5": "Gewenst speelmoment en duur",
-      "request.item6": "Moeten wij PA/licht voorzien?",
-      "request.item7": "Contactpersoon en telefoonnummer",
-      "request.item8": "Speciale wensen of songvoorkeuren",
 
       "gallery.title": "Galerij",
       "gallery.intro": "Live momenten, sfeerbeelden en foto's achter de schermen.",
-      "gallery.photoGuide": "Fototip: gebruik beelden van ongeveer 1600px breed en 250-600 KB voor goede kwaliteit en snelle laadtijd.",
-      "gallery.placeholder": "Foto Placeholder",
       "gallery.lightboxDialogAria": "Vergrote galerijfoto",
       "gallery.lightboxCloseAria": "Sluiten",
       "gallery.lightboxPrevAria": "Vorige foto",
@@ -120,22 +95,10 @@
       "gallery.photo6": "Bart trekt zijn gitaargezichten",
       "gallery.photo7": "Dirk houdt de groove strak",
 
-      "videos.title": "Video's",
-      "videos.intro": "Bekijk ons live en voel de sfeer.",
-
       "contact.title": "Contact",
       "contact.emailLabel": "E-mail:",
-      "contact.phoneLabel": "Telefoon:",
-      "contact.phoneOptionalLabel": "Telefoon (optioneel)",
-      "contact.locationLabel": "Locatie:",
-      "contact.locationValue": "Limburg, Belgie",
       "contact.socialLabel": "Socials:",
       "contact.copyEmail": "Kopieer",
-      "contact.snapshotTitle": "Boekingssnapshot",
-      "contact.snapshot1": "Gemiddelde reactietijd: binnen 48 uur",
-      "contact.snapshot2": "Beschikbaar voor trouw, festival, prive en corporate events",
-      "contact.snapshot3": "PA en verlichting mogelijk op aanvraag",
-      "contact.snapshot4": "Actief in Limburg en ver daarbuiten",
 
       "social.facebookAria": "Facebook",
       "social.instagramAria": "Instagram",
@@ -145,7 +108,6 @@
       "social.linktreeTitle": "Linktree",
 
       "form.note": "Zo verloopt boeken:",
-      "form.fullNameLabel": "Naam",
       "form.firstNameLabel": "Voornaam",
       "form.lastNameLabel": "Achternaam",
       "form.emailLabel": "E-mail",
@@ -155,7 +117,6 @@
       "form.phoneCodeFR": "FR +33 Frankrijk",
       "form.phoneCodeDE": "DE +49 Duitsland",
       "form.phoneCodeOther": "Andere",
-      "form.phoneOptionalLabel": "Telefoon (optioneel)",
       "form.phoneNumberOptionalLabel": "Telefoonnummer (optioneel)",
       "form.phoneHelp": "Vul alleen het lokale nummer in zonder landcode.",
       "form.eventTypeLabel": "Type event",
@@ -169,12 +130,13 @@
       "form.locationLabel": "Locatie",
       "form.messageLabel": "Bericht",
       "form.specialRequestsLabel": "Speciale wensen of verzoeknummers",
-      "form.optionalDetailsSummary": "Bericht / extra details (optioneel)",
+      "form.optionalDetailsSummary": "Extra details (optioneel)",
       "form.privacyConsent": "Ik ga akkoord dat mijn gegevens worden verwerkt om mijn aanvraag te beantwoorden.",
       "form.privacyNote": "Lees ons privacy- en GDPR-beleid in de footer links hieronder.",
       "form.submit": "Verstuur aanvraag",
 
       "form.setup": "Formulier is nog niet gekoppeld. Vervang YOUR_FORM_ID in index.html.",
+      "form.sending": "Bezig met versturen...",
       "form.success": "Bedankt! Je aanvraag is verstuurd. We nemen snel contact met je op.",
       "form.error": "Er liep iets mis bij het versturen. Probeer opnieuw of mail ons rechtstreeks.",
       "form.invalid": "Controleer de verplichte velden en probeer opnieuw.",
@@ -182,21 +144,10 @@
       "copy.success": "E-mailadres gekopieerd.",
       "copy.error": "Kopieren niet gelukt. Selecteer en kopieer handmatig.",
 
-      "footer.aboutTitle": "Shadies & The Lady",
-      "footer.aboutText": "Pop/rock coverband uit Limburg voor feesten, festivals en bedrijfsevents.",
-      "footer.quickTitle": "Snelle Links",
-      "footer.linkBand": "Band",
-      "footer.linkBooking": "Boeken",
-      "footer.linkGallery": "Galerij",
-      "footer.linkContact": "Contact",
-      "footer.bookingTitle": "Boeking",
-      "footer.bookingText": "Gebruik het formulier of mail ons rechtstreeks voor een offerte op maat.",
       "footer.legalLink": "Juridisch",
       "footer.privacyLink": "Privacy & GDPR",
       "footer.photoCreditsLabel": "Foto's door",
-      "legal.title": "Juridische Informatie",
       "legal.text": "Deze website dient als informatie- en contactkanaal voor boekingen van Shadies & The Lady.",
-      "privacy.title": "Privacy & GDPR",
       "privacy.text": "We gebruiken ingezonden contactgegevens uitsluitend om je aanvraag te beantwoorden. Formulierinzendingen worden verwerkt via Formspree als verwerker. Volgens hun publieke documentatie worden inzendingen op het gratis plan tot 30 dagen bewaard, en gebruikt Formspree Standard Contractual Clauses voor internationale gegevensoverdracht. Wij bewaren je gegevens zelf niet langer dan nodig voor de opvolging van je aanvraag.",
       "footer.copy": "© 2026 Shadies & The Lady. Alle rechten voorbehouden."
     },
@@ -217,7 +168,6 @@
       "nav.repertoire": "Repertoire",
       "nav.gigsBooking": "Gigs & Booking",
       "nav.gallery": "Gallery",
-      "nav.videos": "Videos",
       "nav.contact": "Contact",
       "nav.book": "Book Us",
 
@@ -231,7 +181,6 @@
       "band.p2": "We draw from several decades of music, mixing classics, guilty pleasures, powerful rock songs, and modern hits. We love taking an audience on a musical journey where everyone hears a song that brings back a memory.",
       "band.p3": "Whether it is a festival, wedding, pub, or corporate event, we take the stage with one goal: giving people a fantastic evening. Singing along, dancing, and enjoying live music together — that is what Shadies & The Lady is all about.",
       "band.membersTitle": "Band Members",
-      "band.membersIntro": "You can add small headshots for each member later by replacing the placeholder.",
       "band.bio.diana": "placeholder text for Diana Braet",
       "band.bio.matthew": "Matthew discovered his love of music at music school from a young age. His interest quickly shifted towards guitar, sparked by bands like the Ramones, Led Zeppelin, and AC/DC. Classical lessons, however, felt less and less aligned with his musical taste, which was clearly heading towards rock and electric guitar. And honestly, as a teenager he had plenty of other things on his mind too.\nThe guitar then disappeared from his life for almost fifteen years. It was not until he was 28, thanks to his father, that Matthew found his way back to the instrument — in hindsight, one of the best decisions he ever made.\nSince then, playing guitar has grown into a real passion. He constantly experiments with new sounds, techniques, and gear, always looking for that little extra that makes a song sound even better. That curiosity and love of music comes through in every performance by Shadies & The Lady.",
       "band.bio.bart": "Bart discovered his passion for guitar through Metallica and Disturbed. He later added bands like Children of Bodom and AC/DC to the mix, with Angus Young and Alexi Laiho as his guitar heroes. While metal and rock have always been his favourite genres, over the years he has come to appreciate other styles of music too.\nAfter a year of guitar lessons, the guitar gathered dust for years as studies, a doctorate, and a busy career took over. It was thanks to a colleague and singer Diana that he rediscovered the musical spark.\nOn stage, Bart favours ESP/LTD and Gibson guitars. Digital amps? No problem. But there is one thing he is firm about: you won't catch him playing a Fender any time soon.",
@@ -245,16 +194,11 @@
 
       "repertoire.title": "Repertoire",
       "repertoire.intro": "A selection from our live repertoire:",
-      "repertoire.aria": "Artists in repertoire",
       "repertoire.classicsTitle": "Classics",
-      "repertoire.classicsText": "Timeless rock and pop anthems everyone sings along to.",
       "repertoire.ninetiesTitle": "90s / 00s",
-      "repertoire.ninetiesText": "Songs the crowd grew up with, from grunge to pop-rock.",
       "repertoire.modernTitle": "Modern & Crowd Favorites",
-      "repertoire.modernText": "Newer tracks and proven crowd favorites for a full dance floor.",
 
       "gigsBooking.title": "Gigs & Booking",
-      "gigsBooking.intro": "Live calendar, clear booking flow, and practical technical info in one place.",
       "gigs.title": "Upcoming Gigs",
       "gigs.nextBadge": "Next Show",
       "gigs.date1": "29 AUG 2026",
@@ -264,30 +208,12 @@
       "gigs.date5": "10 NOV 2026",
       "gigs.nextCta": "BE THERE ->",
 
-      "booking.title": "Booking Information",
       "booking.step1Title": "Contact Us",
-      "booking.step1Text": "Send us your date, location, event type, and expected timing.",
       "booking.step2Title": "Receive Proposal",
-      "booking.step2Text": "We confirm availability and send a tailored proposal.",
       "booking.step3Title": "Confirmation",
-      "booking.step3Text": "After agreement, we align setup, set duration, and practical details.",
-      "booking.priceTitle": "A Tailored Quote",
-      "booking.priceText": "Request your quote through the form. We reply quickly with a proposal tailored to your event.",
-
-      "request.title": "Booking Request Template",
-      "request.item1": "Event type",
-      "request.item2": "Date and location",
-      "request.item3": "Estimated audience size",
-      "request.item4": "Indoor or outdoor",
-      "request.item5": "Preferred performance time and duration",
-      "request.item6": "Do you need us to provide PA/lighting?",
-      "request.item7": "Contact person and phone number",
-      "request.item8": "Special requests or song preferences",
 
       "gallery.title": "Gallery",
       "gallery.intro": "Live moments, crowd energy, and behind-the-scenes photos.",
-      "gallery.photoGuide": "Photo tip: use images around 1600px wide and 250-600 KB for good quality and fast loading.",
-      "gallery.placeholder": "Photo Placeholder",
       "gallery.lightboxDialogAria": "Expanded gallery photo",
       "gallery.lightboxCloseAria": "Close",
       "gallery.lightboxPrevAria": "Previous photo",
@@ -303,22 +229,10 @@
       "gallery.photo6": "Bart making guitar faces",
       "gallery.photo7": "Dirk keeping the groove",
 
-      "videos.title": "Videos",
-      "videos.intro": "Watch us live and feel the atmosphere.",
-
       "contact.title": "Contact",
       "contact.emailLabel": "Email:",
-      "contact.phoneLabel": "Phone:",
-      "contact.phoneOptionalLabel": "Phone (optional)",
-      "contact.locationLabel": "Location:",
-      "contact.locationValue": "Limburg, Belgium",
       "contact.socialLabel": "Social:",
       "contact.copyEmail": "Copy",
-      "contact.snapshotTitle": "Booking Snapshot",
-      "contact.snapshot1": "Average response time: within 48 hours",
-      "contact.snapshot2": "Available for weddings, festivals, private and corporate events",
-      "contact.snapshot3": "PA and lighting available on request",
-      "contact.snapshot4": "Active in Limburg and beyond",
 
       "social.facebookAria": "Facebook",
       "social.instagramAria": "Instagram",
@@ -328,7 +242,6 @@
       "social.linktreeTitle": "Linktree",
 
       "form.note": "How booking works:",
-      "form.fullNameLabel": "Name",
       "form.firstNameLabel": "First name",
       "form.lastNameLabel": "Last name",
       "form.emailLabel": "Email",
@@ -338,7 +251,6 @@
       "form.phoneCodeFR": "FR +33 France",
       "form.phoneCodeDE": "DE +49 Germany",
       "form.phoneCodeOther": "Other",
-      "form.phoneOptionalLabel": "Phone (optional)",
       "form.phoneNumberOptionalLabel": "Phone number (optional)",
       "form.phoneHelp": "Enter only the local number without country code.",
       "form.eventTypeLabel": "Event type",
@@ -352,12 +264,13 @@
       "form.locationLabel": "Location",
       "form.messageLabel": "Message",
       "form.specialRequestsLabel": "Special requests or song wishes",
-      "form.optionalDetailsSummary": "Message / extra details (optional)",
+      "form.optionalDetailsSummary": "Additional details (optional)",
       "form.privacyConsent": "I agree that my data will be processed to respond to my inquiry.",
       "form.privacyNote": "Read our privacy and GDPR statement in the footer links below.",
       "form.submit": "Send request",
 
       "form.setup": "Form is not connected yet. Replace YOUR_FORM_ID in index.html.",
+      "form.sending": "Sending...",
       "form.success": "Thank you! Your request has been sent. We will contact you soon.",
       "form.error": "Something went wrong while sending. Please try again or email us directly.",
       "form.invalid": "Please check required fields and try again.",
@@ -365,21 +278,10 @@
       "copy.success": "Email address copied.",
       "copy.error": "Copy failed. Please copy the address manually.",
 
-      "footer.aboutTitle": "Shadies & The Lady",
-      "footer.aboutText": "Pop/rock cover band from Limburg for parties, festivals, and corporate events.",
-      "footer.quickTitle": "Quick Links",
-      "footer.linkBand": "Band",
-      "footer.linkBooking": "Booking",
-      "footer.linkGallery": "Gallery",
-      "footer.linkContact": "Contact",
-      "footer.bookingTitle": "Booking",
-      "footer.bookingText": "Use the form or email us directly for a tailored quote.",
       "footer.legalLink": "Legal",
       "footer.privacyLink": "Privacy & GDPR",
       "footer.photoCreditsLabel": "Photos by",
-      "legal.title": "Legal Information",
       "legal.text": "This website serves as an information and booking contact channel for Shadies & The Lady.",
-      "privacy.title": "Privacy & GDPR",
       "privacy.text": "We use submitted contact details only to respond to your inquiry. Form submissions are processed via Formspree as our data processor. According to their public documentation, submissions on the free plan are retained for up to 30 days, and Formspree relies on Standard Contractual Clauses for international data transfers. We do not keep your personal data ourselves longer than needed to follow up on your inquiry.",
       "footer.copy": "© 2026 Shadies & The Lady. All rights reserved."
     }
@@ -525,11 +427,30 @@
       siteNavigation.classList.toggle("is-open");
     });
 
+    function closeNavigation() {
+      if (!siteNavigation.classList.contains("is-open")) {
+        return;
+      }
+      navToggleButton.setAttribute("aria-expanded", "false");
+      siteNavigation.classList.remove("is-open");
+    }
+
+    document.addEventListener("click", function (event) {
+      if (!siteNavigation.contains(event.target) && !navToggleButton.contains(event.target)) {
+        closeNavigation();
+      }
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        closeNavigation();
+      }
+    });
+
     var navigationLinks = siteNavigation.querySelectorAll('a[href^="#"]');
     navigationLinks.forEach(function (link) {
       link.addEventListener("click", function () {
-        navToggleButton.setAttribute("aria-expanded", "false");
-        siteNavigation.classList.remove("is-open");
+        closeNavigation();
       });
     });
   }
@@ -932,8 +853,20 @@
       return;
     }
 
+    var submitButton = form.querySelector('button[type="submit"]');
+    var isSubmitting = false;
+
+    var dateField = document.getElementById("eventDate");
+    if (dateField && !dateField.getAttribute("min")) {
+      dateField.setAttribute("min", new Date().toISOString().slice(0, 10));
+    }
+
     form.addEventListener("submit", function (event) {
       event.preventDefault();
+
+      if (isSubmitting) {
+        return;
+      }
 
       var currentLang = document.documentElement.getAttribute("data-current-lang") || DEFAULT_LANGUAGE;
       var actionUrl = form.getAttribute("action") || "";
@@ -951,6 +884,12 @@
 
       var formData = new FormData(form);
 
+      isSubmitting = true;
+      if (submitButton) {
+        submitButton.disabled = true;
+      }
+      setFormStatus("", t("form.sending", currentLang));
+
       fetch(actionUrl, {
         method: "POST",
         body: formData,
@@ -963,10 +902,20 @@
             throw new Error("Form submission failed");
           }
           form.reset();
+          var formLanguageField = document.getElementById("formLanguage");
+          if (formLanguageField) {
+            formLanguageField.value = currentLang;
+          }
           setFormStatus("success", t("form.success", currentLang));
         })
         .catch(function () {
           setFormStatus("error", t("form.error", currentLang));
+        })
+        .then(function () {
+          isSubmitting = false;
+          if (submitButton) {
+            submitButton.disabled = false;
+          }
         });
     });
   }
