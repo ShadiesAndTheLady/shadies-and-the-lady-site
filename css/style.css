@@ -32,6 +32,11 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Keeps anchor targets clear of the sticky header. */
+section[id] {
+  scroll-margin-top: 76px;
+}
+
 body {
   margin: 0;
   font-family: "Manrope", "Segoe UI", Tahoma, sans-serif;
@@ -1208,6 +1213,25 @@ body.has-lightbox-open {
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media (max-width: 860px) {
+  .reveal {
+    transform: none;
+    transition: opacity 400ms ease;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 .is-hidden {
