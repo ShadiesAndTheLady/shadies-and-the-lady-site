@@ -838,6 +838,7 @@ body.has-lightbox-open {
 
 .contact-direct strong {
   color: var(--color-primary);
+  white-space: nowrap;
 }
 
 .contact-direct-sep {
