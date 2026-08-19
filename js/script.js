@@ -112,6 +112,13 @@
       "gallery.lightboxCloseTitle": "Sluiten",
       "gallery.lightboxPrevTitle": "Vorige",
       "gallery.lightboxNextTitle": "Volgende",
+      "gallery.photo1": "Banners zijn cool!",
+      "gallery.photo2": "Ons werkstation",
+      "gallery.photo3": "Matthew laat de gitaar knallen",
+      "gallery.photo4": "Philippe gaat los op de drums",
+      "gallery.photo5": "Diana zingt haar hart uit haar lijf",
+      "gallery.photo6": "Bart trekt zijn gitaargezichten",
+      "gallery.photo7": "Dirk houdt de groove strak",
 
       "videos.title": "Video's",
       "videos.intro": "Bekijk ons live en voel de sfeer.",
@@ -288,6 +295,13 @@
       "gallery.lightboxCloseTitle": "Close",
       "gallery.lightboxPrevTitle": "Previous",
       "gallery.lightboxNextTitle": "Next",
+      "gallery.photo1": "Banners are cool!",
+      "gallery.photo2": "Our work station",
+      "gallery.photo3": "Matthew rocking the guitar",
+      "gallery.photo4": "Philippe rocking the drums",
+      "gallery.photo5": "Diana singing her heart out",
+      "gallery.photo6": "Bart making guitar faces",
+      "gallery.photo7": "Dirk keeping the groove",
 
       "videos.title": "Videos",
       "videos.intro": "Watch us live and feel the atmosphere.",
@@ -444,6 +458,18 @@
       var titleKey = element.getAttribute("data-i18n-title-key");
       if (titleKey) {
         element.setAttribute("title", t(titleKey, lang));
+      }
+    });
+
+    var altElements = document.querySelectorAll("[data-i18n-alt-key]");
+    altElements.forEach(function (element) {
+      var altKey = element.getAttribute("data-i18n-alt-key");
+      if (altKey) {
+        element.setAttribute("alt", t(altKey, lang));
+        var galleryItem = element.closest(".gallery-item");
+        if (galleryItem) {
+          galleryItem.setAttribute("aria-label", t(altKey, lang));
+        }
       }
     });
 
