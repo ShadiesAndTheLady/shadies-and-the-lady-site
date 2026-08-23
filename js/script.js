@@ -24,11 +24,11 @@
 
   /*
     Single source of truth for the gig calendar: cards and JSON-LD are both built from this.
-    date     ISO yyyy-mm-dd, formatted per language on render
+    date     ISO yyyy-mm-dd; past gigs drop off automatically and the list sorts itself
     place    shown on the card
     venue    JSON-LD location name; omit together with city for private bookings
     poster   optional image; adds the click-to-enlarge poster button
-    featured optional; renders the wide "next show" card
+    featured optional override; without it the soonest upcoming gig is featured
     private  optional; keeps the gig off search engines and out of JSON-LD
   */
   var GIGS = [
@@ -117,6 +117,7 @@
       "gigs.nextCta": "IK BEN ERBIJ",
       "gigs.posterCta": "Affiche",
       "gigs.posterAria": "Bekijk de affiche van",
+      "gigs.none": "Momenteel staan er geen optredens gepland. Neem contact op om ons te boeken.",
 
       "booking.step1Title": "Neem contact op",
       "booking.step2Title": "Ontvang voorstel",
@@ -248,6 +249,7 @@
       "gigs.nextCta": "BE THERE",
       "gigs.posterCta": "Poster",
       "gigs.posterAria": "View the poster for",
+      "gigs.none": "No gigs are currently scheduled. Get in touch to book us.",
 
       "booking.step1Title": "Contact Us",
       "booking.step2Title": "Receive Proposal",
@@ -529,6 +531,49 @@
     }
   }
 
+  // Built from local date parts so a gig never shifts a day across time zones.
+  function parseGigDate(isoDate) {
+    var parts = String(isoDate).split("-");
+    if (parts.length !== 3) {
+      return NaN;
+    }
+    return new Date(Number(parts[0]), Number(parts[1]) - 1, Number(parts[2])).getTime();
+  }
+
+  function getUpcomingGigs() {
+    var today = new Date();
+    today.setHours(0, 0, 0, 0);
+    var todayStamp = today.getTime();
+
+    return GIGS.filter(function (gig) {
+      var stamp = parseGigDate(gig.date);
+      // A gig stays listed for the whole of its own day.
+      return isNaN(stamp) || stamp >= todayStamp;
+    }).sort(function (first, second) {
+      return parseGigDate(first.date) - parseGigDate(second.date);
+    });
+  }
+
+  function getFeaturedIndex(gigs) {
+    var firstPublic = -1;
+
+    for (var index = 0; index < gigs.length; index += 1) {
+      if (gigs[index].featured) {
+        return index;
+      }
+      // Private bookings are listed but never headlined, since nobody can attend.
+      if (firstPublic === -1 && !gigs[index].private) {
+        firstPublic = index;
+      }
+    }
+
+    if (firstPublic !== -1) {
+      return firstPublic;
+    }
+
+    return gigs.length > 0 ? 0 : -1;
+  }
+
   function formatGigDate(isoDate, lang) {
     var parts = String(isoDate).split("-");
     var months = MONTH_ABBREVIATIONS[lang] || MONTH_ABBREVIATIONS[DEFAULT_LANGUAGE];
@@ -541,7 +586,7 @@
     return Number(parts[2]) + " " + months[monthIndex] + " " + parts[0];
   }
 
-  function buildPosterButton(gig, lang) {
+  function buildPosterButton(gig, lang, isFeatured) {
     var button = document.createElement("button");
     button.type = "button";
     button.className = "gig-cta";
@@ -562,7 +607,7 @@
     label.className = "gig-cta-label";
 
     var labelText = document.createElement("span");
-    labelText.textContent = gig.featured ? t("gigs.nextCta", lang) : t("gigs.posterCta", lang);
+    labelText.textContent = isFeatured ? t("gigs.nextCta", lang) : t("gigs.posterCta", lang);
     label.appendChild(labelText);
 
     var arrow = document.createElementNS("http://www.w3.org/2000/svg", "svg");
@@ -582,14 +627,14 @@
     return button;
   }
 
-  function buildGigCard(gig, lang) {
+  function buildGigCard(gig, lang, isFeatured) {
     var card = document.createElement("article");
-    card.className = gig.featured ? "gig-card featured" : "gig-card";
+    card.className = isFeatured ? "gig-card featured" : "gig-card";
 
     var details = document.createElement("div");
     details.className = "gig-featured-text";
 
-    if (gig.featured) {
+    if (isFeatured) {
       var badge = document.createElement("p");
       badge.className = "gig-badge";
       badge.setAttribute("data-i18n-key", "gigs.nextBadge");
@@ -613,7 +658,7 @@
     card.appendChild(details);
 
     if (gig.poster) {
-      card.appendChild(buildPosterButton(gig, lang));
+      card.appendChild(buildPosterButton(gig, lang, isFeatured));
     }
 
     return card;
@@ -625,7 +670,7 @@
       return;
     }
 
-    var events = GIGS.filter(function (gig) {
+    var events = getUpcomingGigs().filter(function (gig) {
       return !gig.private;
     }).map(function (gig) {
       return {
@@ -661,10 +706,22 @@
 
     function renderGigs(language) {
       var lang = isSupportedLanguage(language) ? language : DEFAULT_LANGUAGE;
+      var upcoming = getUpcomingGigs();
+      var featuredIndex = getFeaturedIndex(upcoming);
+
       timeline.innerHTML = "";
 
-      GIGS.forEach(function (gig) {
-        timeline.appendChild(buildGigCard(gig, lang));
+      if (upcoming.length === 0) {
+        var empty = document.createElement("p");
+        empty.className = "gigs-empty";
+        empty.setAttribute("data-i18n-key", "gigs.none");
+        empty.textContent = t("gigs.none", lang);
+        timeline.appendChild(empty);
+        return;
+      }
+
+      upcoming.forEach(function (gig, index) {
+        timeline.appendChild(buildGigCard(gig, lang, index === featuredIndex));
       });
     }
 
