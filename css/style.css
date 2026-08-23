@@ -1,6 +1,7 @@
 /*
   File purpose: Styling for the one-page bilingual band website.
-  Includes responsive layout, booking/contact styles, gallery lightbox styles, and accessibility-friendly UI.
+  Includes responsive layout, gig cards and poster buttons, booking/contact styles,
+  lightbox styles, and accessibility-friendly UI with reduced-motion support.
 */
 
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700;800&display=swap");
