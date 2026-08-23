@@ -4,8 +4,12 @@
   1) Mobile menu behavior
   2) Reveal animation
   3) EN/NL translations with Dutch default
-  4) Gallery lightbox navigation
-  5) Copy-email and Formspree contact form handling
+  4) Gig calendar rendered from the GIGS array, including JSON-LD structured data
+  5) Member bio expand/collapse
+  6) Lightbox for gallery photos and event posters
+  7) Copy-email and Formspree contact form handling
+
+  To update the gig calendar, edit the GIGS array below. Nothing else needs changing.
 */
 
 (function () {
