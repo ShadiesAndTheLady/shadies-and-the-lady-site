@@ -49,13 +49,6 @@
       city: "Paal"
     },
     {
-      date: "2026-09-20",
-      title: "Den Thijs Aant Water Live",
-      place: "Brasserie Den Thijs, Geel",
-      venue: "Brasserie Den Thijs",
-      city: "Geel"
-    },
-    {
       date: "2026-10-03",
       title: "Private Birthday Party",
       place: "Paal",
