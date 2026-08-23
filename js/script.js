@@ -72,7 +72,8 @@
       "gigs.date3": "20 SEP 2026",
       "gigs.date4": "3 OKT 2026",
       "gigs.date5": "10 NOV 2026",
-      "gigs.nextCta": "IK BEN ERBIJ ->",
+      "gigs.nextCta": "IK BEN ERBIJ",
+      "gigs.posterAria": "Bekijk de affiche van 2 Jaar De Stip",
 
       "booking.step1Title": "Neem contact op",
       "booking.step2Title": "Ontvang voorstel",
@@ -206,7 +207,8 @@
       "gigs.date3": "20 SEP 2026",
       "gigs.date4": "3 OCT 2026",
       "gigs.date5": "10 NOV 2026",
-      "gigs.nextCta": "BE THERE ->",
+      "gigs.nextCta": "BE THERE",
+      "gigs.posterAria": "View the poster for 2 Jaar De Stip",
 
       "booking.step1Title": "Contact Us",
       "booking.step2Title": "Receive Proposal",
@@ -486,6 +488,7 @@
 
   function initializeGalleryLightbox() {
     var galleryItems = Array.prototype.slice.call(document.querySelectorAll(".gallery-grid .gallery-item"));
+    var posterTriggers = Array.prototype.slice.call(document.querySelectorAll("[data-poster-src]"));
     var lightbox = document.getElementById("galleryLightbox");
     var lightboxImage = document.getElementById("lightboxImage");
     var lightboxCaption = document.getElementById("lightboxCaption");
@@ -494,11 +497,16 @@
     var prevButton = document.getElementById("lightboxPrev");
     var nextButton = document.getElementById("lightboxNext");
 
-    if (!lightbox || !lightboxImage || !lightboxCaption || !lightboxCounter || !closeButton || !prevButton || !nextButton || galleryItems.length === 0) {
+    if (!lightbox || !lightboxImage || !lightboxCaption || !lightboxCounter || !closeButton || !prevButton || !nextButton) {
+      return;
+    }
+
+    if (galleryItems.length === 0 && posterTriggers.length === 0) {
       return;
     }
 
     var currentIndex = 0;
+    var activeSlides = [];
     var lastTrigger = null;
     var touchStartX = null;
     var previousBodyOverflow = "";
@@ -523,39 +531,56 @@
       document.body.style.overflow = previousBodyOverflow;
     }
 
-    function getImageFromIndex(index) {
-      var item = galleryItems[index];
-      if (!item) {
-        return null;
-      }
-      return item.querySelector("img");
+    // Read captions at open time so they follow the active language.
+    function buildGallerySlides() {
+      return galleryItems
+        .map(function (item) {
+          var image = item.querySelector("img");
+          if (!image) {
+            return null;
+          }
+          return { src: image.src, caption: image.alt };
+        })
+        .filter(Boolean);
     }
 
     function setLightboxImage(index) {
-      if (galleryItems.length === 0) {
+      if (activeSlides.length === 0) {
         return;
       }
 
       if (index < 0) {
-        currentIndex = galleryItems.length - 1;
-      } else if (index >= galleryItems.length) {
+        currentIndex = activeSlides.length - 1;
+      } else if (index >= activeSlides.length) {
         currentIndex = 0;
       } else {
         currentIndex = index;
       }
 
-      var sourceImage = getImageFromIndex(currentIndex);
-      if (!sourceImage) {
+      var slide = activeSlides[currentIndex];
+      if (!slide) {
         return;
       }
 
-      lightboxImage.src = sourceImage.src;
-      lightboxImage.alt = sourceImage.alt;
-      lightboxCaption.textContent = sourceImage.alt;
-      lightboxCounter.textContent = String(currentIndex + 1) + " / " + String(galleryItems.length);
+      var hasMultipleSlides = activeSlides.length > 1;
+
+      lightboxImage.src = slide.src;
+      lightboxImage.alt = slide.caption;
+      lightboxCaption.textContent = slide.caption;
+      lightboxCounter.textContent = hasMultipleSlides
+        ? String(currentIndex + 1) + " / " + String(activeSlides.length)
+        : "";
+      lightboxCounter.hidden = !hasMultipleSlides;
+      prevButton.hidden = !hasMultipleSlides;
+      nextButton.hidden = !hasMultipleSlides;
     }
 
-    function openLightbox(index, triggerElement) {
+    function openLightbox(slides, index, triggerElement) {
+      if (!slides || slides.length === 0) {
+        return;
+      }
+
+      activeSlides = slides;
       lastTrigger = triggerElement || null;
       setLightboxImage(index);
       lightbox.classList.add("is-open");
@@ -575,10 +600,16 @@
     }
 
     function showPreviousImage() {
+      if (activeSlides.length < 2) {
+        return;
+      }
       setLightboxImage(currentIndex - 1);
     }
 
     function showNextImage() {
+      if (activeSlides.length < 2) {
+        return;
+      }
       setLightboxImage(currentIndex + 1);
     }
 
@@ -592,14 +623,26 @@
       }
 
       item.addEventListener("click", function () {
-        openLightbox(index, item);
+        openLightbox(buildGallerySlides(), index, item);
       });
 
       item.addEventListener("keydown", function (event) {
         if (event.key === "Enter" || event.key === " ") {
           event.preventDefault();
-          openLightbox(index, item);
+          openLightbox(buildGallerySlides(), index, item);
         }
+      });
+    });
+
+    posterTriggers.forEach(function (trigger) {
+      trigger.addEventListener("click", function () {
+        var posterSource = trigger.getAttribute("data-poster-src");
+        if (!posterSource) {
+          return;
+        }
+
+        var posterCaption = trigger.getAttribute("data-poster-caption") || trigger.getAttribute("aria-label") || "";
+        openLightbox([{ src: posterSource, caption: posterCaption }], 0, trigger);
       });
     });
 
