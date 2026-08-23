@@ -668,6 +668,19 @@ p {
   object-fit: cover;
 }
 
+/* Regular gig cards get a compact version of the poster CTA. */
+.gig-card:not(.featured) .gig-cta {
+  margin-top: 0.8rem;
+  flex-direction: row;
+  gap: 0.6rem;
+  padding: 0.4rem 0.85rem 0.4rem 0.4rem;
+  font-size: 0.78rem;
+}
+
+.gig-card:not(.featured) .gig-cta-poster {
+  width: 44px;
+}
+
 .gig-cta-label {
   display: inline-flex;
   align-items: center;
