@@ -561,6 +561,14 @@ p {
   border-width: 2px;
   border-color: rgba(242, 196, 155, 0.5);
   background: linear-gradient(145deg, rgba(207, 43, 33, 0.22), rgba(242, 196, 155, 0.08));
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.gig-featured-text > :last-child {
+  margin-bottom: 0;
 }
 
 .gig-card.featured h4 {
@@ -599,18 +607,19 @@ p {
 }
 
 .gig-cta {
-  margin-top: 0.75rem;
-  margin-bottom: 0;
-  display: inline-flex;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 0.7rem;
-  padding: 0.4rem 0.75rem 0.4rem 0.4rem;
+  gap: 0.6rem;
+  padding: 0.6rem 0.6rem 0.7rem;
   border: 1px solid rgba(242, 196, 155, 0.4);
-  border-radius: 999px;
+  border-radius: var(--radius-md);
   background: rgba(242, 196, 155, 0.08);
   color: #fff6ee;
   font: inherit;
   font-weight: 800;
+  font-size: 0.85rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   cursor: zoom-in;
@@ -621,7 +630,7 @@ p {
 .gig-cta:focus-visible {
   border-color: var(--color-primary);
   background: rgba(242, 196, 155, 0.16);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
 }
 
 .gig-cta:focus-visible {
@@ -631,10 +640,9 @@ p {
 
 .gig-cta-poster {
   display: block;
-  width: 54px;
-  height: 74px;
-  flex: 0 0 auto;
-  border-radius: calc(var(--radius-md) - 4px);
+  width: 172px;
+  aspect-ratio: 1079 / 1517;
+  border-radius: calc(var(--radius-md) - 5px);
   overflow: hidden;
   border: 1px solid rgba(242, 196, 155, 0.45);
   background: rgba(0, 0, 0, 0.35);
@@ -1411,6 +1419,9 @@ button:focus-visible {
 
   .gig-card.featured {
     grid-column: auto;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    justify-items: start;
   }
 
   .footer-bottom {
