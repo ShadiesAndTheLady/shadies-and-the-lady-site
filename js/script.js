@@ -15,6 +15,60 @@
   var DEFAULT_LANGUAGE = "nl";
   var SUPPORTED_LANGUAGES = ["en", "nl"];
   var memberBioRefreshHandler = null;
+  var gigsRefreshHandler = null;
+
+  var MONTH_ABBREVIATIONS = {
+    nl: ["JAN", "FEB", "MRT", "APR", "MEI", "JUN", "JUL", "AUG", "SEP", "OKT", "NOV", "DEC"],
+    en: ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"]
+  };
+
+  /*
+    Single source of truth for the gig calendar: cards and JSON-LD are both built from this.
+    date     ISO yyyy-mm-dd, formatted per language on render
+    place    shown on the card
+    venue    JSON-LD location name; omit together with city for private bookings
+    poster   optional image; adds the click-to-enlarge poster button
+    featured optional; renders the wide "next show" card
+    private  optional; keeps the gig off search engines and out of JSON-LD
+  */
+  var GIGS = [
+    {
+      date: "2026-08-29",
+      title: "2 Jaar De Stip",
+      place: "Stevoort",
+      venue: "De Stip",
+      city: "Stevoort",
+      poster: "assets/images/AfficheDeStip.jpeg",
+      featured: true
+    },
+    {
+      date: "2026-09-19",
+      title: "Pilspop",
+      place: "Paal",
+      venue: "Pilspop",
+      city: "Paal"
+    },
+    {
+      date: "2026-09-20",
+      title: "Den Thijs Aant Water Live",
+      place: "Brasserie Den Thijs, Geel",
+      venue: "Brasserie Den Thijs",
+      city: "Geel"
+    },
+    {
+      date: "2026-10-03",
+      title: "Private Birthday Party",
+      place: "Paal",
+      private: true
+    },
+    {
+      date: "2026-11-10",
+      title: "Durango Sessions",
+      place: "Paal",
+      venue: "Durango Sessions",
+      city: "Paal"
+    }
+  ];
 
   var translations = {
     nl: {
@@ -67,13 +121,9 @@
       "gigsBooking.title": "Optredens & Boeken",
       "gigs.title": "Aankomende Optredens",
       "gigs.nextBadge": "Volgende show",
-      "gigs.date1": "29 AUG 2026",
-      "gigs.date2": "19 SEP 2026",
-      "gigs.date3": "20 SEP 2026",
-      "gigs.date4": "3 OKT 2026",
-      "gigs.date5": "10 NOV 2026",
       "gigs.nextCta": "IK BEN ERBIJ",
-      "gigs.posterAria": "Bekijk de affiche van 2 Jaar De Stip",
+      "gigs.posterCta": "Affiche",
+      "gigs.posterAria": "Bekijk de affiche van",
 
       "booking.step1Title": "Neem contact op",
       "booking.step2Title": "Ontvang voorstel",
@@ -202,13 +252,9 @@
       "gigsBooking.title": "Gigs & Booking",
       "gigs.title": "Upcoming Gigs",
       "gigs.nextBadge": "Next Show",
-      "gigs.date1": "29 AUG 2026",
-      "gigs.date2": "19 SEP 2026",
-      "gigs.date3": "20 SEP 2026",
-      "gigs.date4": "3 OCT 2026",
-      "gigs.date5": "10 NOV 2026",
       "gigs.nextCta": "BE THERE",
-      "gigs.posterAria": "View the poster for 2 Jaar De Stip",
+      "gigs.posterCta": "Poster",
+      "gigs.posterAria": "View the poster for",
 
       "booking.step1Title": "Contact Us",
       "booking.step2Title": "Receive Proposal",
@@ -391,6 +437,10 @@
     if (typeof memberBioRefreshHandler === "function") {
       memberBioRefreshHandler(lang);
     }
+
+    if (typeof gigsRefreshHandler === "function") {
+      gigsRefreshHandler(lang);
+    }
   }
 
   function initializeLanguageSwitcher() {
@@ -486,9 +536,152 @@
     }
   }
 
-  function initializeGalleryLightbox() {
-    var galleryItems = Array.prototype.slice.call(document.querySelectorAll(".gallery-grid .gallery-item"));
-    var posterTriggers = Array.prototype.slice.call(document.querySelectorAll("[data-poster-src]"));
+  function formatGigDate(isoDate, lang) {
+    var parts = String(isoDate).split("-");
+    var months = MONTH_ABBREVIATIONS[lang] || MONTH_ABBREVIATIONS[DEFAULT_LANGUAGE];
+    var monthIndex = Number(parts[1]) - 1;
+
+    if (parts.length !== 3 || !months[monthIndex]) {
+      return isoDate;
+    }
+
+    return Number(parts[2]) + " " + months[monthIndex] + " " + parts[0];
+  }
+
+  function buildPosterButton(gig, lang) {
+    var button = document.createElement("button");
+    button.type = "button";
+    button.className = "gig-cta";
+    button.setAttribute("data-poster-src", gig.poster);
+    button.setAttribute("data-poster-caption", gig.title + " — " + gig.place + ", " + formatGigDate(gig.date, lang));
+    button.setAttribute("aria-label", t("gigs.posterAria", lang) + " " + gig.title);
+
+    var posterWrap = document.createElement("span");
+    posterWrap.className = "gig-cta-poster";
+
+    var posterImage = document.createElement("img");
+    posterImage.src = gig.poster;
+    posterImage.alt = "";
+    posterImage.loading = "lazy";
+    posterWrap.appendChild(posterImage);
+
+    var label = document.createElement("span");
+    label.className = "gig-cta-label";
+
+    var labelText = document.createElement("span");
+    labelText.textContent = gig.featured ? t("gigs.nextCta", lang) : t("gigs.posterCta", lang);
+    label.appendChild(labelText);
+
+    var arrow = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    arrow.setAttribute("class", "gig-cta-arrow");
+    arrow.setAttribute("viewBox", "0 0 24 24");
+    arrow.setAttribute("aria-hidden", "true");
+    arrow.setAttribute("focusable", "false");
+
+    var arrowPath = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    arrowPath.setAttribute("d", "M4 12h13.2l-4.6-4.6L14 6l7 6-7 6-1.4-1.4 4.6-4.6H4z");
+    arrow.appendChild(arrowPath);
+    label.appendChild(arrow);
+
+    button.appendChild(posterWrap);
+    button.appendChild(label);
+
+    return button;
+  }
+
+  function buildGigCard(gig, lang) {
+    var card = document.createElement("article");
+    card.className = gig.featured ? "gig-card featured" : "gig-card";
+
+    var details = document.createElement("div");
+    details.className = "gig-featured-text";
+
+    if (gig.featured) {
+      var badge = document.createElement("p");
+      badge.className = "gig-badge";
+      badge.setAttribute("data-i18n-key", "gigs.nextBadge");
+      badge.textContent = t("gigs.nextBadge", lang);
+      details.appendChild(badge);
+    }
+
+    var date = document.createElement("p");
+    date.className = "gig-date";
+    date.textContent = formatGigDate(gig.date, lang);
+    details.appendChild(date);
+
+    var title = document.createElement("h4");
+    title.textContent = gig.title;
+    details.appendChild(title);
+
+    var place = document.createElement("p");
+    place.textContent = gig.place;
+    details.appendChild(place);
+
+    card.appendChild(details);
+
+    if (gig.poster) {
+      card.appendChild(buildPosterButton(gig, lang));
+    }
+
+    return card;
+  }
+
+  function renderGigStructuredData() {
+    var container = document.getElementById("gigsStructuredData");
+    if (!container) {
+      return;
+    }
+
+    var events = GIGS.filter(function (gig) {
+      return !gig.private;
+    }).map(function (gig) {
+      return {
+        "@type": "MusicEvent",
+        name: gig.title,
+        startDate: gig.date,
+        eventStatus: "https://schema.org/EventScheduled",
+        eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+        location: {
+          "@type": "Place",
+          name: gig.venue || gig.place,
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: gig.city || gig.place,
+            addressCountry: "BE"
+          }
+        },
+        performer: { "@type": "MusicGroup", name: "Shadies & The Lady" }
+      };
+    });
+
+    container.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@graph": events
+    });
+  }
+
+  function initializeGigs() {
+    var timeline = document.getElementById("gigsTimeline");
+    if (!timeline) {
+      return;
+    }
+
+    function renderGigs(language) {
+      var lang = isSupportedLanguage(language) ? language : DEFAULT_LANGUAGE;
+      timeline.innerHTML = "";
+
+      GIGS.forEach(function (gig) {
+        timeline.appendChild(buildGigCard(gig, lang));
+      });
+    }
+
+    renderGigs(document.documentElement.getAttribute("data-current-lang"));
+    renderGigStructuredData();
+
+    gigsRefreshHandler = renderGigs;
+  }
+
+  function initializeGalleryLightbox() {    var galleryItems = Array.prototype.slice.call(document.querySelectorAll(".gallery-grid .gallery-item"));
     var lightbox = document.getElementById("galleryLightbox");
     var lightboxImage = document.getElementById("lightboxImage");
     var lightboxCaption = document.getElementById("lightboxCaption");
@@ -498,10 +691,6 @@
     var nextButton = document.getElementById("lightboxNext");
 
     if (!lightbox || !lightboxImage || !lightboxCaption || !lightboxCounter || !closeButton || !prevButton || !nextButton) {
-      return;
-    }
-
-    if (galleryItems.length === 0 && posterTriggers.length === 0) {
       return;
     }
 
@@ -634,16 +823,20 @@
       });
     });
 
-    posterTriggers.forEach(function (trigger) {
-      trigger.addEventListener("click", function () {
-        var posterSource = trigger.getAttribute("data-poster-src");
-        if (!posterSource) {
-          return;
-        }
+    // Delegated so poster buttons keep working after the gig list re-renders.
+    document.addEventListener("click", function (event) {
+      var trigger = event.target.closest ? event.target.closest("[data-poster-src]") : null;
+      if (!trigger) {
+        return;
+      }
 
-        var posterCaption = trigger.getAttribute("data-poster-caption") || trigger.getAttribute("aria-label") || "";
-        openLightbox([{ src: posterSource, caption: posterCaption }], 0, trigger);
-      });
+      var posterSource = trigger.getAttribute("data-poster-src");
+      if (!posterSource) {
+        return;
+      }
+
+      var posterCaption = trigger.getAttribute("data-poster-caption") || trigger.getAttribute("aria-label") || "";
+      openLightbox([{ src: posterSource, caption: posterCaption }], 0, trigger);
     });
 
     closeButton.addEventListener("click", closeLightbox);
@@ -967,6 +1160,7 @@
   initializeMobileNavigation();
   initializeRevealAnimations();
   initializeMemberBioToggle();
+  initializeGigs();
   initializeGalleryLightbox();
   initializeCopyEmail();
   initializeContactForm();
