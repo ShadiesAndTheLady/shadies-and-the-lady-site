@@ -112,65 +112,7 @@
   }
   </script>
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "MusicEvent",
-        "name": "2 Jaar De Stip",
-        "startDate": "2026-08-29",
-        "eventStatus": "https://schema.org/EventScheduled",
-        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-        "location": {
-          "@type": "Place",
-          "name": "De Stip",
-          "address": { "@type": "PostalAddress", "addressLocality": "Stevoort", "addressCountry": "BE" }
-        },
-        "performer": { "@type": "MusicGroup", "name": "Shadies & The Lady" }
-      },
-      {
-        "@type": "MusicEvent",
-        "name": "Pilspop",
-        "startDate": "2026-09-19",
-        "eventStatus": "https://schema.org/EventScheduled",
-        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-        "location": {
-          "@type": "Place",
-          "name": "Pilspop",
-          "address": { "@type": "PostalAddress", "addressLocality": "Paal", "addressCountry": "BE" }
-        },
-        "performer": { "@type": "MusicGroup", "name": "Shadies & The Lady" }
-      },
-      {
-        "@type": "MusicEvent",
-        "name": "Den Thijs Aant Water Live",
-        "startDate": "2026-09-20",
-        "eventStatus": "https://schema.org/EventScheduled",
-        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-        "location": {
-          "@type": "Place",
-          "name": "Brasserie Den Thijs",
-          "address": { "@type": "PostalAddress", "addressLocality": "Geel", "addressCountry": "BE" }
-        },
-        "performer": { "@type": "MusicGroup", "name": "Shadies & The Lady" }
-      },
-      {
-        "@type": "MusicEvent",
-        "name": "Durango Sessions",
-        "startDate": "2026-11-10",
-        "eventStatus": "https://schema.org/EventScheduled",
-        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-        "location": {
-          "@type": "Place",
-          "name": "Durango Sessions",
-          "address": { "@type": "PostalAddress", "addressLocality": "Paal", "addressCountry": "BE" }
-        },
-        "performer": { "@type": "MusicGroup", "name": "Shadies & The Lady" }
-      }
-    ]
-  }
-  </script>
+  <script type="application/ld+json" id="gigsStructuredData"></script>
 </head>
 <body>
   <header class="site-header">
@@ -357,54 +299,7 @@
         <h2 data-i18n-key="gigsBooking.title">Optredens &amp; Boeken</h2>
 
         <h3 class="subsection-title" data-i18n-key="gigs.title">Aankomende Optredens</h3>
-        <div class="gigs-timeline">
-          <article class="gig-card featured">
-            <div class="gig-featured-text">
-              <p class="gig-badge" data-i18n-key="gigs.nextBadge">Volgende show</p>
-              <p class="gig-date" data-i18n-key="gigs.date1">29 AUG 2026</p>
-              <h4>2 Jaar De Stip</h4>
-              <p>Stevoort</p>
-            </div>
-            <button
-              type="button"
-              class="gig-cta"
-              data-poster-src="assets/images/AfficheDeStip.jpeg"
-              data-poster-caption="2 Jaar De Stip — Stevoort, 29 AUG 2026"
-              aria-label="Bekijk de affiche van 2 Jaar De Stip"
-              data-i18n-aria-label-key="gigs.posterAria"
-            >
-              <span class="gig-cta-poster">
-                <img src="assets/images/AfficheDeStip.jpeg" alt="" loading="lazy" />
-              </span>
-              <span class="gig-cta-label">
-                <span data-i18n-key="gigs.nextCta">IK BEN ERBIJ</span>
-                <svg class="gig-cta-arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                  <path d="M4 12h13.2l-4.6-4.6L14 6l7 6-7 6-1.4-1.4 4.6-4.6H4z" />
-                </svg>
-              </span>
-            </button>
-          </article>
-          <article class="gig-card">
-            <p class="gig-date" data-i18n-key="gigs.date2">19 SEP 2026</p>
-            <h4>Pilspop</h4>
-            <p>Paal</p>
-          </article>
-          <article class="gig-card">
-            <p class="gig-date" data-i18n-key="gigs.date3">20 SEP 2026</p>
-            <h4>Den Thijs Aant Water Live</h4>
-            <p>Brasserie Den Thijs, Geel</p>
-          </article>
-          <article class="gig-card">
-            <p class="gig-date" data-i18n-key="gigs.date4">3 OKT 2026</p>
-            <h4>Private Birthday Party</h4>
-            <p>Paal</p>
-          </article>
-          <article class="gig-card">
-            <p class="gig-date" data-i18n-key="gigs.date5">10 NOV 2026</p>
-            <h4>Durango Sessions</h4>
-            <p>Paal</p>
-          </article>
-        </div>
+        <div class="gigs-timeline" id="gigsTimeline"></div>
       </div>
     </section>
 
