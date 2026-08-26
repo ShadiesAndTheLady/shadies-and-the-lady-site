@@ -4,7 +4,7 @@ Official one-page website for **Shadies & The Lady**, a Belgian pop/rock cover b
 
 ## Live Website
 
-https://shadiesandthelady.github.io/shadies-and-the-lady-site/
+https://www.shadiesandthelady.be/
 
 ## Project Overview
 
