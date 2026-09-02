@@ -50,7 +50,8 @@
       title: "Pilspop",
       place: "Paal",
       venue: "Pilspop",
-      city: "Paal"
+      city: "Paal",
+      poster: "assets/images/AffichePilspop.jpeg"
     },
     {
       date: "2026-10-03",
